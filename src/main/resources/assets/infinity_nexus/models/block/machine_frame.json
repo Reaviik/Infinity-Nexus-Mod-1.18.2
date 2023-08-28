@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "particle": "infinity_nexus:block/machine_frame_top",
+    "down": "infinity_nexus:block/machine_frame_bottom",
+    "up": "infinity_nexus:block/machine_frame_top",
+    "north": "infinity_nexus:block/machine_frame_side",
+    "east": "infinity_nexus:block/machine_frame_side",
+    "south": "infinity_nexus:block/machine_frame_side",
+    "west": "infinity_nexus:block/machine_frame_side"
+  }
+}
