@@ -2,7 +2,6 @@ package com.Infinity.Nexus.blocks;
 
 import com.Infinity.Nexus.InfinityNexus;
 import com.Infinity.Nexus.Tab.ModTabs;
-import com.Infinity.Nexus.blocks.custom.FlatLight;
 import com.Infinity.Nexus.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -23,9 +22,6 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, InfinityNexus.MOD_ID);
 
     //Custom
-    public static final RegistryObject<Block> FLAT_LIGHT = registerBlock("flat_light",
-            () -> new FlatLight(BlockBehaviour.Properties.of(Material.METAL).noOcclusion()
-                    .strength(3f).lightLevel(LUZ -> {return 12;})), ModTabs.INFINITY_NEXUS,Rarity.COMMON);
 
     public static final RegistryObject<Block> COPPER_MACHINE_CASING = registerBlock("copper_machine_casing",
             () -> new Block(BlockBehaviour.Properties.of(Material.METAL).noOcclusion()
