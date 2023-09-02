@@ -27,7 +27,7 @@ displayName="Infinity Nexus Mod" #mandatory
 # A URL for the "homepage" for this mod, displayed in the mod UI
 #displayURL="https://change.me.to.your.mods.homepage.example.invalid/" #optional
 # A file name (in the root of the mod JAR) containing a logo for display
-logoFile="infinity_nexus_mod.png" #optional
+logoFile="infinity_nexus_mod_mod.png" #optional
 # A text field displayed in the mod UI
 credits="Thanks for this example mod goes to Java" #optional
 # A text field displayed in the mod UI
@@ -36,7 +36,7 @@ authors="Reavik, Player_rs, HarryKaray, Goodinhoo" #optional
 description='''
 Mod oficial do servidor Infinity Nexus 1.18.2'''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
-[[dependencies.infinity_nexus]] #optional
+[[dependencies.infinity_nexus_mod]] #optional
     # the modid of the dependency
     modId="forge" #mandatory
     # Does this dependency have to exist - if not, ordering below must be specified

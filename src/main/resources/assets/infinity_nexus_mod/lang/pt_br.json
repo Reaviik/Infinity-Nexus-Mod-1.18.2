@@ -1,0 +1,45 @@
+{
+  "itemGroup.infinity_nexus_mod": "§x§9§0§0§0§9§dInfinity Nexus",
+
+  "block.infinity_nexus_mod.flat_light": "Luz Plana",
+
+  "item.infinity_nexus_mod.copper_wire": "Fio de Cobre",
+  "item.infinity_nexus_mod.aluminum_wire": "Fio de Alumínio",
+  "item.infinity_nexus_mod.iron_wire": "Fio de Ferro",
+  "item.infinity_nexus_mod.gold_wire": "Fio de Ouro",
+  "item.infinity_nexus_mod.magic_wire": "Fio Mágico",
+  "item.infinity_nexus_mod.steel_wire": "Fio de Aço",
+  "item.infinity_nexus_mod.industrial_wire": "Fio Industrial",
+
+  "item.infinity_nexus_mod.copper_screw": "Parafuso de Cobre",
+  "item.infinity_nexus_mod.aluminum_screw": "Parafuso de Alumínio",
+  "item.infinity_nexus_mod.iron_screw": "Parafuso de Ferro",
+  "item.infinity_nexus_mod.gold_screw": "Parafuso de Ouro",
+  "item.infinity_nexus_mod.magic_screw": "Parafuso Mágico",
+  "item.infinity_nexus_mod.steel_screw": "Parafuso de Aço",
+  "item.infinity_nexus_mod.industrial_screw": "Parafuso Industrial",
+
+  "item.infinity_nexus_mod.copper_rod": "Barra de Cobre",
+  "item.infinity_nexus_mod.aluminum_rod": "Barra de Alumínio",
+  "item.infinity_nexus_mod.iron_rod": "Barra de Ferro",
+  "item.infinity_nexus_mod.gold_rod": "Barra de Ouro",
+  "item.infinity_nexus_mod.magic_rod": "Barra Mágica",
+  "item.infinity_nexus_mod.steel_rod": "Barra de Aço",
+  "item.infinity_nexus_mod.industrial_rod": "Barra Industrial",
+
+  "item.infinity_nexus_mod.copper_sheet": "Chapa de Cobre",
+  "item.infinity_nexus_mod.aluminum_sheet": "Chapa de Alumínio",
+  "item.infinity_nexus_mod.iron_sheet": "Chapa de Ferro",
+  "item.infinity_nexus_mod.gold_sheet": "Chapa de Ouro",
+  "item.infinity_nexus_mod.magic_sheet": "Chapa Mágica",
+  "item.infinity_nexus_mod.steel_sheet": "Chapa de Aço",
+  "item.infinity_nexus_mod.industrial_sheet": "Chapa Industrial",
+
+  "block.infinity_nexus_mod.copper_machine_casing": "Chassi de Máquina de Cobre",
+  "block.infinity_nexus_mod.aluminum_machine_casing": "Chassi de Máquina de Alumínio",
+  "block.infinity_nexus_mod.iron_machine_casing": "Chassi de Máquina de Ferro",
+  "block.infinity_nexus_mod.gold_machine_casing": "Chassi de Máquina de Ouro",
+  "block.infinity_nexus_mod.magic_machine_casing": "Chassi de Máquina Mágica",
+  "block.infinity_nexus_mod.steel_machine_casing": "Chassi de Máquina de Aço",
+  "block.infinity_nexus_mod.industrial_machine_casing": "Chassi de Máquina Industrial"
+}

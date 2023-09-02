@@ -64,7 +64,7 @@ minecraft {
             property 'forge.enabledGameTestNamespaces', 'infinity_nexus_mod'
 
             mods {
-                infinity_nexus {
+                infinity_nexus_mod {
                     source sourceSets.main
                 }
             }
@@ -109,7 +109,7 @@ minecraft {
             property 'forge.enabledGameTestNamespaces', 'infinity_nexus_mod'
 
             mods {
-                infinity_nexus {
+                infinity_nexus_mod {
                     source sourceSets.main
                 }
             }
@@ -126,7 +126,7 @@ minecraft {
             args '--mod', 'infinity_nexus_mod', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
 
             mods {
-                infinity_nexus {
+                infinity_nexus_mod {
                     source sourceSets.main
                 }
             }
