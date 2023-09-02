@@ -1,3 +1,45 @@
 {
-  "item.infinity_nexus.machine": "Machine Frame"
+  "itemGroup.infinity_nexus": "§x§9§0§0§0§9§dInfinity Nexus",
+
+  "block.infinity_nexus.flat_light": "Flat Light",
+
+  "item.infinity_nexus.copper_wire": "Copper Wire",
+  "item.infinity_nexus.aluminum_wire": "Aluminum Wire",
+  "item.infinity_nexus.iron_wire": "Iron Wire",
+  "item.infinity_nexus.gold_wire": "Gold Wire",
+  "item.infinity_nexus.magic_wire": "Magic Wire",
+  "item.infinity_nexus.steel_wire": "Steel Wire",
+  "item.infinity_nexus.industrial_wire": "Industrial Wire",
+
+  "item.infinity_nexus.copper_screw": "Copper Screw",
+  "item.infinity_nexus.aluminum_screw": "Aluminum Screw",
+  "item.infinity_nexus.iron_screw": "Iron Screw",
+  "item.infinity_nexus.gold_screw": "Gold Screw",
+  "item.infinity_nexus.magic_screw": "Magic Screw",
+  "item.infinity_nexus.steel_screw": "Steel Screw",
+  "item.infinity_nexus.industrial_screw": "Industrial Screw",
+
+  "item.infinity_nexus.copper_rod": "Copper Rod",
+  "item.infinity_nexus.aluminum_rod": "Aluminum Rod",
+  "item.infinity_nexus.iron_rod": "Iron Rod",
+  "item.infinity_nexus.gold_rod": "Gold Rod",
+  "item.infinity_nexus.magic_rod": "Magic Rod",
+  "item.infinity_nexus.steel_rod": "Steel Rod",
+  "item.infinity_nexus.industrial_rod": "Industrial Rod",
+
+  "item.infinity_nexus.copper_sheet": "Copper Sheet",
+  "item.infinity_nexus.aluminum_sheet": "Aluminum Sheet",
+  "item.infinity_nexus.iron_sheet": "Iron Sheet",
+  "item.infinity_nexus.gold_sheet": "Gold Sheet",
+  "item.infinity_nexus.magic_sheet": "Magic Sheet",
+  "item.infinity_nexus.steel_sheet": "Steel Sheet",
+  "item.infinity_nexus.industrial_sheet": "Industrial Sheet",
+
+  "block.infinity_nexus.copper_machine_casing": "Copper Machine Casing",
+  "block.infinity_nexus.aluminum_machine_casing": "Aluminum Machine Casing",
+  "block.infinity_nexus.iron_machine_casing": "Iron Machine Casing",
+  "block.infinity_nexus.gold_machine_casing": "Gold Machine Casing",
+  "block.infinity_nexus.magic_machine_casing": "Magic Machine Casing",
+  "block.infinity_nexus.steel_machine_casing": "Steel Machine Casing",
+  "block.infinity_nexus.industrial_machine_casing": "Industrial Machine Casing"
 }

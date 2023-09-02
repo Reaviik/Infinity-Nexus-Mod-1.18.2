@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # eclipse
 bin
 *.launch
@@ -23,3 +24,7 @@ run
 
 # Files from Forge MDK
 forge*changelog.txt
+=======
+node_modules/
+config/config.js
+>>>>>>> a6e1ca5442119fa2ee7108b668b562d59cef3739
