@@ -1,6 +1,6 @@
 package com.Infinity.Nexus.networking.packet;
 
-import com.Infinity.Nexus.blocks.entity.FoundryBlockEntity;
+import com.Infinity.Nexus.block.entity.FoundryBlockEntity;
 import com.Infinity.Nexus.screen.foundry.FoundryMenu;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;

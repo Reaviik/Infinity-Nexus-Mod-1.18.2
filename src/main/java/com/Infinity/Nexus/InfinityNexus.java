@@ -2,8 +2,8 @@ package com.Infinity.Nexus;
 
 import com.Infinity.Nexus.networking.ModMessages;
 import com.Infinity.Nexus.screen.ModMenuTypes;
-import com.Infinity.Nexus.blocks.ModBlocks;
-import com.Infinity.Nexus.blocks.custom.ModBlockEntities;
+import com.Infinity.Nexus.block.ModBlocks;
+import com.Infinity.Nexus.block.custom.ModBlockEntities;
 import com.Infinity.Nexus.config.InfinityNexusClientConfigs;
 import com.Infinity.Nexus.config.InfinityNexusCommonConfigs;
 import com.Infinity.Nexus.config.InfinityNexusServerConfigs;

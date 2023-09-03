@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: mekanism:Mekanism:api:1.18.2-10.2.5.465" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="mekanism" artifactId="Mekanism" version="1.18.2-10.2.5.465" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/mekanism/Mekanism/1.18.2-10.2.5.465/89b867a4e899437493a0069bd3be33e18d23c8eb/Mekanism-1.18.2-10.2.5.465-api.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/mekanism/Mekanism/1.18.2-10.2.5.465/284ea90ceb2c18b8a3eee2312e251888809c5158/Mekanism-1.18.2-10.2.5.465-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

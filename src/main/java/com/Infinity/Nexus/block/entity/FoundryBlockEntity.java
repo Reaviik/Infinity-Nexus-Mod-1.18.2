@@ -1,6 +1,6 @@
-package com.Infinity.Nexus.blocks.entity;
+package com.Infinity.Nexus.block.entity;
 
-import com.Infinity.Nexus.blocks.custom.ModBlockEntities;
+import com.Infinity.Nexus.block.custom.ModBlockEntities;
 import com.Infinity.Nexus.config.InfinityNexusServerConfigs;
 import com.Infinity.Nexus.item.ModItems;
 import com.Infinity.Nexus.networking.ModMessages;
@@ -155,10 +155,10 @@ public class FoundryBlockEntity extends BlockEntity implements MenuProvider{
     public void hasSpeedUP(FoundryBlockEntity entity) {
         //TODO recipe
         int speed = InfinityNexusServerConfigs.FOUNDRY_PROCESS_SPEED.get();
-        if (entity.itemHandler.getStackInSlot(13).getItem() == ModItems.ALUMINUM_ROD.get()) {
+        if (entity.itemHandler.getStackInSlot(1).getItem() == ModItems.ALUMINUM_ROD.get()) {
             speed = speed - InfinityNexusServerConfigs.FOUNDRY_SPEED_LENS.get();
         }
-        if(entity.itemHandler.getStackInSlot(14).getItem() == ModItems.ALUMINUM_ROD.get()) {
+        if(entity.itemHandler.getStackInSlot(1).getItem() == ModItems.ALUMINUM_ROD.get()) {
             speed = speed - InfinityNexusServerConfigs.FOUNDRY_SPEED_LENS.get();
         }
         this.maxProgress = speed;
@@ -166,7 +166,7 @@ public class FoundryBlockEntity extends BlockEntity implements MenuProvider{
     public void hasStrengthUP(FoundryBlockEntity entity) {
         //todo display
         int strength_lens = 0;
-        for (int i = 15; i <= 18; i++) {
+        for (int i = 1; i <= 2; i++) {
             //TODO
             if (entity.itemHandler.getStackInSlot(i).getItem() == ModItems.ALUMINUM_ROD.get()) {
                 strength_lens = strength_lens + 1;
@@ -229,7 +229,7 @@ public class FoundryBlockEntity extends BlockEntity implements MenuProvider{
 
         inv.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
             if (capability instanceof IItemHandlerModifiable) {
-                for (int i = 1; i <= 12; i++) {
+                for (int i = 1; i <= 2; i++) {
                     ItemStack item = capability.getStackInSlot(i);
                     if (item.isEmpty() || ((item.getItem() == output.getItem()) && (item.getCount() < item.getMaxStackSize()))) {
                         slot.set(i);
@@ -300,7 +300,7 @@ public class FoundryBlockEntity extends BlockEntity implements MenuProvider{
 
         inv.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
             if (capability instanceof IItemHandlerModifiable) {
-                for (int i = 1; i <= 12; i++) {
+                for (int i = 1; i <= 2; i++) {
                     ItemStack item = capability.getStackInSlot(i);
                     if (item.isEmpty() || (item.getItem() == match.get().getResultItem().getItem() && item.getCount() < capability.getSlotLimit(i))) {
                         canInsert.set(true);

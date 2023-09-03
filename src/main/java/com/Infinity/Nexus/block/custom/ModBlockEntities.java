@@ -1,8 +1,8 @@
-package com.Infinity.Nexus.blocks.custom;
+package com.Infinity.Nexus.block.custom;
 
 import com.Infinity.Nexus.InfinityNexus;
-import com.Infinity.Nexus.blocks.ModBlocks;
-import com.Infinity.Nexus.blocks.entity.FoundryBlockEntity;
+import com.Infinity.Nexus.block.ModBlocks;
+import com.Infinity.Nexus.block.entity.FoundryBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;

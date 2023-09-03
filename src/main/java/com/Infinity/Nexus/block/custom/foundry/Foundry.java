@@ -1,7 +1,7 @@
-package com.Infinity.Nexus.blocks.custom.foundry;
+package com.Infinity.Nexus.block.custom.foundry;
 
-import com.Infinity.Nexus.blocks.custom.ModBlockEntities;
-import com.Infinity.Nexus.blocks.entity.FoundryBlockEntity;
+import com.Infinity.Nexus.block.custom.ModBlockEntities;
+import com.Infinity.Nexus.block.entity.FoundryBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
@@ -23,8 +23,6 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.network.NetworkHooks;
 import org.jetbrains.annotations.Nullable;
-
-import java.util.Map;
 
 public class Foundry extends BaseEntityBlock {
 

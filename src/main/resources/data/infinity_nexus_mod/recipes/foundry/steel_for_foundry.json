@@ -2,11 +2,12 @@
   "type": "infinity_nexus_mod:foundry_recipe",
   "ingredients": [
     {
-      "item":[
-        "minecraft:iron_ingot",
-        "minecraft:coal"
-      ]
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "minecraft:coal"
     }
+
   ],
   "output": {
     "item": "minecraft:sand"

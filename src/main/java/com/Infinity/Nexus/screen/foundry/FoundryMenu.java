@@ -1,7 +1,7 @@
 package com.Infinity.Nexus.screen.foundry;
 
-import com.Infinity.Nexus.blocks.ModBlocks;
-import com.Infinity.Nexus.blocks.entity.FoundryBlockEntity;
+import com.Infinity.Nexus.block.ModBlocks;
+import com.Infinity.Nexus.block.entity.FoundryBlockEntity;
 import com.Infinity.Nexus.screen.ModMenuTypes;
 import com.Infinity.Nexus.screen.slot.ModInputSlot;
 import com.Infinity.Nexus.screen.slot.ModResultSlot;

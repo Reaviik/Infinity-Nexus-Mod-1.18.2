@@ -1,8 +1,8 @@
-package com.Infinity.Nexus.blocks;
+package com.Infinity.Nexus.block;
 
 import com.Infinity.Nexus.InfinityNexus;
 import com.Infinity.Nexus.tab.ModTabs;
-import com.Infinity.Nexus.blocks.custom.foundry.Foundry;
+import com.Infinity.Nexus.block.custom.foundry.Foundry;
 import com.Infinity.Nexus.item.ModItems;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
