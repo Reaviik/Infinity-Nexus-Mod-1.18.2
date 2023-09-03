@@ -1,8 +1,7 @@
 package com.Infinity.Nexus.item;
 
 import com.Infinity.Nexus.InfinityNexus;
-import com.Infinity.Nexus.Tab.ModTabs;
-import net.minecraft.world.item.CreativeModeTab;
+import com.Infinity.Nexus.tab.ModTabs;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import net.minecraftforge.eventbus.api.IEventBus;
