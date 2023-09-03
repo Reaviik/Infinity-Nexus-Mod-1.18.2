@@ -24,8 +24,7 @@ public class ModTags {
 
     public static class Items {
 
-        public  static final TagKey<Item> CAPSULE = tag("capsules");
-        public  static final TagKey<Item> EMPTY_CAPSULE = tag("empty_capsules");
+        public  static final TagKey<Item> UPGRADE = tag("upgrade");
 
         private static TagKey<Item> tag(String name) {
             return ItemTags.create(new ResourceLocation(InfinityNexus.MOD_ID, name));

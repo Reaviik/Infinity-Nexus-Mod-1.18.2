@@ -5,6 +5,8 @@ import com.Infinity.Nexus.block.entity.FoundryBlockEntity;
 import com.Infinity.Nexus.screen.ModMenuTypes;
 import com.Infinity.Nexus.screen.slot.ModInputSlot;
 import com.Infinity.Nexus.screen.slot.ModResultSlot;
+import com.Infinity.Nexus.screen.slot.ModSpeedSlot;
+import com.Infinity.Nexus.screen.slot.ModStrengthSlot;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -20,12 +22,12 @@ public class FoundryMenu extends AbstractContainerMenu {
     private final ContainerData data;
 
     public FoundryMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
-        this(id, inv, inv.player.level.getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(2));
+        this(id, inv, inv.player.level.getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(8));
     }
 
     public FoundryMenu(int id, Inventory inv, BlockEntity entity, ContainerData data) {
         super(ModMenuTypes.FOUNDRY_MENU.get(), id);
-        checkContainerSize(inv, 3);
+        checkContainerSize(inv, 8);
         blockEntity = (FoundryBlockEntity) entity;
         this.level = inv.player.level;
         this.data = data;
@@ -35,10 +37,17 @@ public class FoundryMenu extends AbstractContainerMenu {
 
         this.blockEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> {
             //Input
-            this.addSlot(new ModInputSlot(handler, 0, 19, 28));
-            this.addSlot(new ModInputSlot(handler, 1, 44, 10));
+            this.addSlot(new ModInputSlot(handler, 0, 19, 10));
+            this.addSlot(new ModInputSlot(handler, 1, 19, 46));
             //OutPut
-            this.addSlot(new ModResultSlot(handler, 2, 62, 10));
+            this.addSlot(new ModResultSlot(handler, 2, 44, 10));
+            this.addSlot(new ModResultSlot(handler, 3, 44, 48));
+            //Speed
+            this.addSlot(new ModSpeedSlot(handler, 4, 106, 10));
+            this.addSlot(new ModSpeedSlot(handler, 5, 134, 10));
+            //Strength
+            this.addSlot(new ModStrengthSlot(handler, 6, 106, 46));
+            this.addSlot(new ModStrengthSlot(handler, 7, 134, 46));
         });
 
         addDataSlots(data);
@@ -75,7 +84,7 @@ public class FoundryMenu extends AbstractContainerMenu {
     private static final int TE_INVENTORY_FIRST_SLOT_INDEX = VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT;
 
     // THIS YOU HAVE TO DEFINE!
-    private static final int TE_INVENTORY_SLOT_COUNT = 3;  // must be the number of slots you have!
+    private static final int TE_INVENTORY_SLOT_COUNT = 8;  // must be the number of slots you have!
 
     @Override
     public ItemStack quickMoveStack(Player playerIn, int index) {

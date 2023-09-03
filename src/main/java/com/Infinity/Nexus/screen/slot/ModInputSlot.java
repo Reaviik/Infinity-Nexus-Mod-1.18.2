@@ -1,5 +1,8 @@
 package com.Infinity.Nexus.screen.slot;
 
+import com.Infinity.Nexus.item.ModItems;
+import com.Infinity.Nexus.utils.ModTags;
+import com.Infinity.Nexus.utils.TagsProvider;
 import net.minecraft.world.item.ItemStack;
         import net.minecraftforge.items.IItemHandler;
         import net.minecraftforge.items.SlotItemHandler;
@@ -11,12 +14,12 @@ public class ModInputSlot extends SlotItemHandler {
 
     @Override
     public boolean mayPlace(ItemStack stack) {
-        return true;
-                //ModItems.SPEED_UPGRADE_LENS.get().asItem() == stack.getItem();
+        return stack != ModItems.STRENGTH_UPGRADE.get().getDefaultInstance() || stack !== ModItems.SPEED_UPGRADE.get().getDefaultInstance();
     }
+
 
     @Override
     public int getMaxStackSize() {
-        return 1;
+        return 64;
     }
 }

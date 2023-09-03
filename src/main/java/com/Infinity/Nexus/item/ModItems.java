@@ -14,7 +14,10 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, InfinityNexus.MOD_ID);
 
     //Custom
-
+    public static final RegistryObject<Item> SPEED_UPGRADE = ITEMS.register("speed_upgrade",
+            () -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS).rarity(Rarity.COMMON)));
+    public static final RegistryObject<Item> STRENGTH_UPGRADE = ITEMS.register("strength_upgrade",
+            () -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS).rarity(Rarity.COMMON)));
     //Wires
     public static final RegistryObject<Item> COPPER_WIRE = ITEMS.register("copper_wire",
             () -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS).rarity(Rarity.COMMON)));

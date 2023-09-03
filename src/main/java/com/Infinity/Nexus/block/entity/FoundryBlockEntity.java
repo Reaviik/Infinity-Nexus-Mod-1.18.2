@@ -43,7 +43,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 
 public class FoundryBlockEntity extends BlockEntity implements MenuProvider{
-    private final ItemStackHandler itemHandler = new ItemStackHandler(3) {
+    private final ItemStackHandler itemHandler = new ItemStackHandler(8) {
         @Override
         protected void onContentsChanged(int slot) {
             setChanged();
@@ -155,20 +155,20 @@ public class FoundryBlockEntity extends BlockEntity implements MenuProvider{
     public void hasSpeedUP(FoundryBlockEntity entity) {
         //TODO recipe
         int speed = InfinityNexusServerConfigs.FOUNDRY_PROCESS_SPEED.get();
-        if (entity.itemHandler.getStackInSlot(1).getItem() == ModItems.ALUMINUM_ROD.get()) {
-            speed = speed - InfinityNexusServerConfigs.FOUNDRY_SPEED_LENS.get();
+        if (entity.itemHandler.getStackInSlot(4).getItem() == ModItems.SPEED_UPGRADE.get()) {
+            speed = speed - InfinityNexusServerConfigs.FOUNDRY_SPEED_UPGRADE.get();
         }
-        if(entity.itemHandler.getStackInSlot(1).getItem() == ModItems.ALUMINUM_ROD.get()) {
-            speed = speed - InfinityNexusServerConfigs.FOUNDRY_SPEED_LENS.get();
+        if(entity.itemHandler.getStackInSlot(5).getItem() == ModItems.SPEED_UPGRADE.get()) {
+            speed = speed - InfinityNexusServerConfigs.FOUNDRY_SPEED_UPGRADE.get();
         }
         this.maxProgress = speed;
     }
     public void hasStrengthUP(FoundryBlockEntity entity) {
         //todo display
         int strength_lens = 0;
-        for (int i = 1; i <= 2; i++) {
+        for (int i = 6; i <= 7; i++) {
             //TODO
-            if (entity.itemHandler.getStackInSlot(i).getItem() == ModItems.ALUMINUM_ROD.get()) {
+            if (entity.itemHandler.getStackInSlot(i).getItem() == ModItems.STRENGTH_UPGRADE.get()) {
                 strength_lens = strength_lens + 1;
             }
         }
@@ -177,9 +177,7 @@ public class FoundryBlockEntity extends BlockEntity implements MenuProvider{
     public static void craft(FoundryBlockEntity entity){
         int FirstChance = InfinityNexusServerConfigs.FOUNDRY_FIRST_OUTPUT_CHANCE.get();
         int SecondChance = InfinityNexusServerConfigs.FOUNDRY_SECONDARY_OUTPUT_CHANCE.get();
-        int StrengthDropChance = InfinityNexusServerConfigs.FOUNDRY_STRENGTH_LENS_DROP_CHANCE.get();
-        float SecondaryDropSubtraction = InfinityNexusServerConfigs.FOUNDRY_SECONDARY_OUTPUT_CHANCE_SUBTRACTION.get();
-        float StrengthDropSubtraction = InfinityNexusServerConfigs.FOUNDRY_STRENGTH_LENS_DROP_CHANCE_SUBTRACTION.get();
+        int StrengthDropChance = InfinityNexusServerConfigs.FOUNDRY_STRENGTH_UPGRADE.get();
 
         Level level = entity.level;
         SimpleContainer inventory = new SimpleContainer(entity.itemHandler.getSlots());
@@ -206,12 +204,10 @@ public class FoundryBlockEntity extends BlockEntity implements MenuProvider{
                 if(random < SecondChance){
                     slot = getFreeSlot(entity,match.get().getSecondary().get(i));
                     entity.itemHandler.insertItem(slot, new ItemStack(match.get().getSecondary().get(i).getItem().asItem()), false);
-                    SecondChance /= SecondaryDropSubtraction;
                     for(int s = 0; s < entity.strength; s++) {
                         if (random < StrengthChance) {
                             slot = getFreeSlot(entity, match.get().getSecondary().get(i));
                             entity.itemHandler.insertItem(slot, new ItemStack(match.get().getSecondary().get(i).getItem().asItem()), false);
-                            StrengthChance /= StrengthDropSubtraction;
                         }
                     }
                 }

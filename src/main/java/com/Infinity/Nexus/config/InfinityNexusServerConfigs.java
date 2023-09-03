@@ -6,24 +6,18 @@ public class InfinityNexusServerConfigs {
 
     public static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
     public static final ForgeConfigSpec SPEC;
-    public static final ForgeConfigSpec.ConfigValue<Integer> FOUNDRY_DROP_CHANCE;
     public static final ForgeConfigSpec.ConfigValue<Integer> FOUNDRY_ENERGY_REQUIRED;
     public static final ForgeConfigSpec.ConfigValue<Integer> FOUNDRY_ENERGY_STORAGE;
     public static final ForgeConfigSpec.ConfigValue<Integer> FOUNDRY_ENERGY_TRANSFER;
     public static final ForgeConfigSpec.ConfigValue<Integer> FOUNDRY_PROCESS_SPEED;
-    public static final ForgeConfigSpec.ConfigValue<Integer> FOUNDRY_SPEED_LENS;
+    public static final ForgeConfigSpec.ConfigValue<Integer> FOUNDRY_SPEED_UPGRADE;
     public static final ForgeConfigSpec.ConfigValue<Integer> FOUNDRY_FIRST_OUTPUT_CHANCE;
     public static final ForgeConfigSpec.ConfigValue<Integer> FOUNDRY_SECONDARY_OUTPUT_CHANCE;
-    public static final ForgeConfigSpec.ConfigValue<Float> FOUNDRY_SECONDARY_OUTPUT_CHANCE_SUBTRACTION;
-    public static final ForgeConfigSpec.ConfigValue<Integer> FOUNDRY_STRENGTH_LENS_DROP_CHANCE;
-    public static final ForgeConfigSpec.ConfigValue<Float> FOUNDRY_STRENGTH_LENS_DROP_CHANCE_SUBTRACTION;
+    public static final ForgeConfigSpec.ConfigValue<Integer> FOUNDRY_STRENGTH_UPGRADE;
 
     static {
         BUILDER.push("Foundry Config");
 
-        FOUNDRY_DROP_CHANCE = BUILDER
-                .comment("Chance de drop")
-                .define("drops", 10);
         FOUNDRY_ENERGY_REQUIRED = BUILDER
                 .comment("Consumo de energia por operação\nPadrão 100")
                 .define("radioestabilizer_energy_required", 100);
@@ -40,7 +34,7 @@ public class InfinityNexusServerConfigs {
                 .comment("Velocidade de processamento\nPadrão 180")
                 .define("radioestabilizer_process_speed", 180);
 
-        FOUNDRY_SPEED_LENS = BUILDER
+        FOUNDRY_SPEED_UPGRADE = BUILDER
                 .comment("Velocidade agregada por cada lente de speed\nNão pode ser maior que 80\nPadrão 45")
                 .define("radioestabilizer_speed_lens_process_speed_subtraction", 45);
 
@@ -52,17 +46,9 @@ public class InfinityNexusServerConfigs {
                 .comment("Chance de Obter saidas secundarias\nPadrão 50%")
                 .define("radioestabilizer_secondary_output", 50);
 
-        FOUNDRY_SECONDARY_OUTPUT_CHANCE_SUBTRACTION = BUILDER
-                .comment("secondary_drop / second_drop_chance_subtraction, quanto menor o valor maior o drop\nPadrão 1.5f")
-                .define("radioestabilizer_secondary_output_subtract", 1.5f);
-
-        FOUNDRY_STRENGTH_LENS_DROP_CHANCE = BUILDER
+        FOUNDRY_STRENGTH_UPGRADE = BUILDER
                 .comment("Chance de obter mais uma vez o recurso para cada lente de força\nPadrão 50%")
                 .define("radioestabilizer_strength_lens_output_chance", 50);
-
-        FOUNDRY_STRENGTH_LENS_DROP_CHANCE_SUBTRACTION = BUILDER
-                .comment("Para cada lente divide strength_lens_drop_chance por este valor para obter a proxima chance\nstrength_lens_drop_chance / strength_lens_chance_subtraction  = 25%\nPadrão 1.5f")
-                .define("radioestabilizer_strength_lens_chance_subtraction", 1.5f);
 
 
         BUILDER.pop();
