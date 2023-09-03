@@ -1,11 +1,23 @@
 package com.Infinity.Nexus;
 
+import com.Infinity.Nexus.networking.ModMessages;
+import com.Infinity.Nexus.screen.ModMenuTypes;
 import com.Infinity.Nexus.blocks.ModBlocks;
+import com.Infinity.Nexus.blocks.custom.ModBlockEntities;
+import com.Infinity.Nexus.config.InfinityNexusClientConfigs;
+import com.Infinity.Nexus.config.InfinityNexusCommonConfigs;
+import com.Infinity.Nexus.config.InfinityNexusServerConfigs;
 import com.Infinity.Nexus.item.ModItems;
+import com.Infinity.Nexus.recipes.ModRecipes;
+import com.Infinity.Nexus.screen.foundry.FoundryScreen;
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
@@ -28,11 +40,33 @@ public class InfinityNexus
 
         eventBus.addListener(this::setup);
 
+        ModBlockEntities.register(eventBus);
+        ModMenuTypes.register(eventBus);
+
+        ModRecipes.register(eventBus);
+
+        eventBus.addListener(this::setup);
+        eventBus.addListener(this::clientSetup);
+        eventBus.addListener(this::commonSetup);
+
+
+        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, InfinityNexusClientConfigs.SPEC,"infinitynexus-client.toml");
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, InfinityNexusCommonConfigs.SPEC,"infinitynexus-common.toml");
+        ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, InfinityNexusServerConfigs.SPEC,"infinitynexus-server.toml");
+
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
     }
+    private void commonSetup(final FMLCommonSetupEvent event) {
+        event.enqueueWork(() -> {
+            ModMessages.register();
+        });
+    }
+    public void clientSetup(final FMLClientSetupEvent event){
+        MenuScreens.register(ModMenuTypes.FOUNDRY_MENU.get(), FoundryScreen::new);
 
+    }
     private void setup(final FMLCommonSetupEvent event)
     {
         // some preinit code
