@@ -41,7 +41,7 @@ public class FoundryMenu extends AbstractContainerMenu {
             this.addSlot(new ModInputSlot(handler, 1, 19, 46));
             //OutPut
             this.addSlot(new ModResultSlot(handler, 2, 44, 10));
-            this.addSlot(new ModResultSlot(handler, 3, 44, 48));
+            this.addSlot(new ModResultSlot(handler, 3, 44, 46));
             //Speed
             this.addSlot(new ModSpeedSlot(handler, 4, 106, 10));
             this.addSlot(new ModSpeedSlot(handler, 5, 134, 10));

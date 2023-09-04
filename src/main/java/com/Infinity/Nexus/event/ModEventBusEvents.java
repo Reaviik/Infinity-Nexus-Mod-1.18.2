@@ -1,7 +1,7 @@
 package com.Infinity.Nexus.event;
 
 import com.Infinity.Nexus.InfinityNexus;
-import com.Infinity.Nexus.recipes.Foundry.FoundryRecipes;
+import com.Infinity.Nexus.recipes.Foundry.FoundryRecipe;
 import net.minecraft.core.Registry;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraftforge.common.loot.GlobalLootModifierSerializer;
@@ -18,6 +18,6 @@ public class ModEventBusEvents {
     }
     @SubscribeEvent
     public static void registerRecipeTypes(final RegistryEvent.Register<RecipeSerializer<?>> event) {
-        Registry.register(Registry.RECIPE_TYPE, FoundryRecipes.Type.ID, FoundryRecipes.Type.INSTANCE);
+        Registry.register(Registry.RECIPE_TYPE, FoundryRecipe.Type.ID, FoundryRecipe.Type.INSTANCE);
     }
 }

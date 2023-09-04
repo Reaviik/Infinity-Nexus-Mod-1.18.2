@@ -11,17 +11,18 @@ import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.Level;
+
 import javax.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FoundryRecipes implements Recipe<SimpleContainer> {
+public class FoundryRecipe implements Recipe<SimpleContainer> {
     private final ResourceLocation id;
     private final ItemStack output;
     private final NonNullList<Ingredient> recipeItems;
     private final List<ItemStack> secondary;
 
-    public FoundryRecipes(ResourceLocation id, ItemStack output,
+    public FoundryRecipe(ResourceLocation id, ItemStack output,
                                    NonNullList<Ingredient> recipeItems, List<ItemStack> secondary) {
         this.id = id;
         this.output = output;
@@ -79,18 +80,18 @@ public class FoundryRecipes implements Recipe<SimpleContainer> {
         return outputs;
     }
 
-    public static class Type implements RecipeType<FoundryRecipes> {
+    public static class Type implements RecipeType<FoundryRecipe> {
         private Type() { }
         public static final Type INSTANCE = new Type();
         public static final String ID = "foundry_recipe";
     }
 
-    public static class Serializer implements RecipeSerializer<FoundryRecipes> {
+    public static class Serializer implements RecipeSerializer<FoundryRecipe> {
         public static final Serializer INSTANCE = new Serializer();
-        public static final ResourceLocation ID = new ResourceLocation(InfinityNexus.MOD_ID, "recipes");
+        public static final ResourceLocation ID = new ResourceLocation(InfinityNexus.MOD_ID, "foundry_recipe");
 
         @Override
-        public FoundryRecipes fromJson(ResourceLocation id, JsonObject json) {
+        public FoundryRecipe fromJson(ResourceLocation id, JsonObject json) {
             ItemStack output = ShapedRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(json, "output"));
 
             JsonArray ingredients = GsonHelper.getAsJsonArray(json, "ingredients");
@@ -109,11 +110,11 @@ public class FoundryRecipes implements Recipe<SimpleContainer> {
                 }
             }
 
-            return new FoundryRecipes(id, output, inputs, secondary);
+            return new FoundryRecipe(id, output, inputs, secondary);
         }
 
         @Override
-        public FoundryRecipes fromNetwork(ResourceLocation id, FriendlyByteBuf buf) {
+        public FoundryRecipe fromNetwork(ResourceLocation id, FriendlyByteBuf buf) {
             NonNullList<Ingredient> inputs = NonNullList.withSize(buf.readInt(), Ingredient.EMPTY);
 
             for (int i = 0; i < inputs.size(); i++) {
@@ -127,11 +128,11 @@ public class FoundryRecipes implements Recipe<SimpleContainer> {
             for (int i = 0; i < secondarySize; i++) {
                 secondary.add(buf.readItem());
             }
-            return new FoundryRecipes(id, output, inputs, secondary);
+            return new FoundryRecipe(id, output, inputs, secondary);
         }
 
         @Override
-        public void toNetwork(FriendlyByteBuf buf, FoundryRecipes recipe) {
+        public void toNetwork(FriendlyByteBuf buf, FoundryRecipe recipe) {
             buf.writeInt(recipe.getIngredients().size());
             for (Ingredient ing : recipe.getIngredients()) {
                 ing.toNetwork(buf);

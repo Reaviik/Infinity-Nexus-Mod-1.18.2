@@ -5,7 +5,7 @@ import com.Infinity.Nexus.config.InfinityNexusServerConfigs;
 import com.Infinity.Nexus.item.ModItems;
 import com.Infinity.Nexus.networking.ModMessages;
 import com.Infinity.Nexus.networking.packet.EnergySyncS2CPacket;
-import com.Infinity.Nexus.recipes.Foundry.FoundryRecipes;
+import com.Infinity.Nexus.recipes.Foundry.FoundryRecipe;
 import com.Infinity.Nexus.screen.foundry.FoundryMenu;
 import com.Infinity.Nexus.screen.foundry.FoundryScreen;
 import com.Infinity.Nexus.utils.ModEnergyStorage;
@@ -186,8 +186,8 @@ public class FoundryBlockEntity extends BlockEntity implements MenuProvider{
         for(int i = 0; i < entity.itemHandler.getSlots(); i++){
             inventory.setItem(i, entity.itemHandler.getStackInSlot(i));
         }
-        Optional<FoundryRecipes> match = level.getRecipeManager()
-                .getRecipeFor(FoundryRecipes.Type.INSTANCE, inventory, level);
+        Optional<FoundryRecipe> match = level.getRecipeManager()
+                .getRecipeFor(FoundryRecipe.Type.INSTANCE, inventory, level);
 
         if(match.isPresent()) {
             FoundryScreen.energy = "§aOk§r";
@@ -227,7 +227,7 @@ public class FoundryBlockEntity extends BlockEntity implements MenuProvider{
 
         inv.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
             if (capability instanceof IItemHandlerModifiable) {
-                for (int i = 1; i <= 2; i++) {
+                for (int i = 2; i <= 3; i++) {
                     ItemStack item = capability.getStackInSlot(i);
                     if (item.isEmpty() || ((item.getItem() == output.getItem()) && (item.getCount() < item.getMaxStackSize()))) {
                         slot.set(i);
@@ -254,7 +254,7 @@ public class FoundryBlockEntity extends BlockEntity implements MenuProvider{
             }else{
             }
         }else{
-            if(isCapsule(pBlockEntity) && hasRecipe(pBlockEntity)) {
+            if(hasRecipe(pBlockEntity)) {
                 pBlockEntity.progress++;
                 extractEnergy(pBlockEntity);
                 setChanged(pLevel, pPos, pState);
@@ -267,8 +267,8 @@ public class FoundryBlockEntity extends BlockEntity implements MenuProvider{
         for (int i = 0; i < entity.itemHandler.getSlots(); i++) {
             inventory.setItem(i, entity.itemHandler.getStackInSlot(i));
         }
-        Optional<FoundryRecipes> recipe = level.getRecipeManager().getRecipeFor(FoundryRecipes.Type.INSTANCE, inventory, level);
-        return recipe.isPresent() && isCapsule(entity) && hasEnergy(entity) &&
+        Optional<FoundryRecipe> recipe = level.getRecipeManager().getRecipeFor(FoundryRecipe.Type.INSTANCE, inventory, level);
+        return recipe.isPresent()  && hasEnergy(entity) &&
                 canInsertItemIntoOutputSlot(inventory, entity);
     }
     private static boolean hasEnergy(FoundryBlockEntity entity) {
@@ -277,22 +277,13 @@ public class FoundryBlockEntity extends BlockEntity implements MenuProvider{
     private static void extractEnergy(FoundryBlockEntity entity) {
         entity.FOUNDRY_ENERGY_STORAGE.extractEnergy(ENERGY_REQUIRED, false);
     }
-    public static boolean isCapsule(FoundryBlockEntity entity) {
-        Item item = entity.itemHandler.getStackInSlot(0).getItem();
-        //todo
-        boolean isCapsule = true;
-                //TODO
-                //Registry.ITEM.getHolderOrThrow(Registry.ITEM.getResourceKey(item).get()).is(ModTags.Items.CAPSULE);
-
-        return isCapsule;
-    }
     private static boolean canInsertItemIntoOutputSlot(SimpleContainer inventory,BlockEntity entity) {
         BlockPos pPos = entity.getBlockPos();
         Level level = entity.getLevel();
         BlockEntity inv = level.getBlockEntity(pPos);
 
-        Optional<FoundryRecipes> match = level.getRecipeManager()
-                .getRecipeFor(FoundryRecipes.Type.INSTANCE, inventory, level);
+        Optional<FoundryRecipe> match = level.getRecipeManager()
+                .getRecipeFor(FoundryRecipe.Type.INSTANCE, inventory, level);
 
         AtomicBoolean canInsert = new AtomicBoolean(false);
 
