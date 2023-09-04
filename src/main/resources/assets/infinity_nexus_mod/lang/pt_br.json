@@ -1,10 +1,21 @@
 {
   "itemGroup.infinity_nexus_mod": "§x§9§0§0§0§9§dInfinity Nexus",
+  "tooltip.infinity_nexus.pressShift": "§7Pressione §eShift §7para ver mais",
 
-  "item.infinity_nexus_mod.speed_upgrade": "Augument de Velocidade",
+  "item.infinity_nexus_mod.speed_upgrade": "Ampliador de Velocidade",
   "tooltip.infinity_nexus_mod.speed_upgrade": "x%",
-  "item.infinity_nexus_mod.strength_upgrade": "Augument de Força",
+  "item.infinity_nexus_mod.strength_upgrade": "Ampliador de Força",
   "tooltip.infinity_nexus_mod.strength_upgrade": "x%",
+
+  "item.infinity_nexus_mod.gold_wire_cast": "Molde de Ffio de Ouro",
+  "item.infinity_nexus_mod.gold_screw_cast": "Molde de Parafuso de Ouro",
+  "item.infinity_nexus_mod.gold_rod_cast": "Molde de Barra de Ouro",
+  "item.infinity_nexus_mod.gold_sheet_cast": "Molde de Chapa de Ouro",
+
+  "item.infinity_nexus_mod.wire_stone_model": "Modelo de Fio de Pedra",
+  "item.infinity_nexus_mod.screw_stone_model": "Modelo de Parafuso de Pedra",
+  "item.infinity_nexus_mod.rod_stone_model": "Modelo de Barra de Pedra",
+  "item.infinity_nexus_mod.sheet_stone_model": "Modelo de Chapa de Pedra",
 
   "item.infinity_nexus_mod.copper_wire": "Fio de Cobre",
   "item.infinity_nexus_mod.aluminum_wire": "Fio de Alumínio",
@@ -46,5 +57,6 @@
   "block.infinity_nexus_mod.steel_machine_casing": "Chassi de Máquina de Aço",
   "block.infinity_nexus_mod.industrial_machine_casing": "Chassi de Máquina Industrial",
 
-  "block.infinity_nexus_mod.foundry": "Forja"
+  "block.infinity_nexus_mod.foundry": "Forja",
+  "tooltip.infinity_nexus_mod.foundry": ""
 }

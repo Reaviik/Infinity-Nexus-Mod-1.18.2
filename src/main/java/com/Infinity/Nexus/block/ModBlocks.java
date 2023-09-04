@@ -71,7 +71,7 @@ public class ModBlocks {
         return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(),  new Item.Properties().tab(tab)){
             @Override
             public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltip, TooltipFlag pFlag) {
-                pTooltip.add(new TranslatableComponent("tooltip.mechanica.pressShift"));
+                pTooltip.add(new TranslatableComponent("tooltip.infinity_nexus.pressShift"));
                 if(Screen.hasShiftDown()) {
                     pTooltip.remove(1);
                     pTooltip.add(new TranslatableComponent(tooltipKey));

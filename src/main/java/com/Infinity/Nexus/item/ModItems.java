@@ -18,6 +18,28 @@ public class ModItems {
             () -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS).rarity(Rarity.COMMON)));
     public static final RegistryObject<Item> STRENGTH_UPGRADE = ITEMS.register("strength_upgrade",
             () -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS).rarity(Rarity.COMMON)));
+
+    //Casts
+    public static final RegistryObject<Item> GOLD_WIRE_CAST = ITEMS.register("gold_wire_cast",
+            () -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS).rarity(Rarity.COMMON)));
+    public static final RegistryObject<Item> GOLD_SCREW_CAST = ITEMS.register("gold_screw_cast",
+            () -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS).rarity(Rarity.COMMON)));
+    public static final RegistryObject<Item> GOLD_SHEET_CAST = ITEMS.register("gold_sheet_cast",
+            () -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS).rarity(Rarity.COMMON)));
+    public static final RegistryObject<Item> GOLD_ROD_CAST = ITEMS.register("gold_rod_cast",
+            () -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS).rarity(Rarity.COMMON)));
+
+    //Models
+    public static final RegistryObject<Item> WIRE_STONE_MODEL = ITEMS.register("wire_stone_model",
+            () -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS).rarity(Rarity.COMMON)));
+    public static final RegistryObject<Item> SCREW_STONE_MODEL = ITEMS.register("screw_stone_model",
+            () -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS).rarity(Rarity.COMMON)));
+    public static final RegistryObject<Item> SHEET_STONE_MODEL = ITEMS.register("sheet_stone_model",
+            () -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS).rarity(Rarity.COMMON)));
+    public static final RegistryObject<Item> ROD_STONE_MODEL = ITEMS.register("rod_stone_model",
+            () -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS).rarity(Rarity.COMMON)));
+
+
     //Wires
     public static final RegistryObject<Item> COPPER_WIRE = ITEMS.register("copper_wire",
             () -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS).rarity(Rarity.COMMON)));
@@ -48,7 +70,7 @@ public class ModItems {
     public static final RegistryObject<Item> INDUSTRIAL_SCREW = ITEMS.register("industrial_screw",
             () -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS).rarity(Rarity.EPIC)));
 
-    //Bars
+    //Rods
     public static final RegistryObject<Item> COPPER_ROD = ITEMS.register("copper_rod",
             () -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS).rarity(Rarity.COMMON)));
     public static final RegistryObject<Item> ALUMINUM_ROD = ITEMS.register("aluminum_rod",

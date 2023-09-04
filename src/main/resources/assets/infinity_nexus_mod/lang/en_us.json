@@ -1,10 +1,21 @@
 {
   "itemGroup.infinity_nexus_mod": "§x§9§0§0§0§9§dInfinity Nexus",
+  "tooltip.infinity_nexus.pressShift": "§7Press §eShift §7to see more",
 
   "item.infinity_nexus_mod.speed_upgrade": "Speed Upgrade",
   "tooltip.infinity_nexus_mod.speed_upgrade": "x%",
   "item.infinity_nexus_mod.strength_upgrade": "Strength Upgrade",
   "tooltip.infinity_nexus_mod.strength_upgrade": "x%",
+
+  "item.infinity_nexus_mod.gold_wire_cast": "Gold Wire Cast",
+  "item.infinity_nexus_mod.gold_screw_cast": "Gold Screw Cast",
+  "item.infinity_nexus_mod.gold_rod_cast": "Gold Rod Cast",
+  "item.infinity_nexus_mod.gold_sheet_cast": "Gold Sheet Cast",
+
+  "item.infinity_nexus_mod.wire_stone_model": "Wire Stone Model",
+  "item.infinity_nexus_mod.screw_stone_model": "Screw Stone Model",
+  "item.infinity_nexus_mod.rod_stone_model": "Rod Stone Model",
+  "item.infinity_nexus_mod.sheet_stone_model": "Sheet Stone Model",
 
   "item.infinity_nexus_mod.copper_wire": "Copper Wire",
   "item.infinity_nexus_mod.aluminum_wire": "Aluminum Wire",
@@ -46,5 +57,6 @@
   "block.infinity_nexus_mod.steel_machine_casing": "Steel Machine Casing",
   "block.infinity_nexus_mod.industrial_machine_casing": "Industrial Machine Casing",
 
-  "block.infinity_nexus_mod.foundry": "Foundry"
+  "block.infinity_nexus_mod.foundry": "Foundry",
+  "tooltip.infinity_nexus_mod.foundry": ""
 }
