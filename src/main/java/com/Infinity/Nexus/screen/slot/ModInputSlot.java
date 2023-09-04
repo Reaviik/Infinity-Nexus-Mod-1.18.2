@@ -14,7 +14,11 @@ public class ModInputSlot extends SlotItemHandler {
 
     @Override
     public boolean mayPlace(ItemStack stack) {
-        return stack != ModItems.STRENGTH_UPGRADE.get().getDefaultInstance() || stack !== ModItems.SPEED_UPGRADE.get().getDefaultInstance();
+        if(stack.getItem() == ModItems.STRENGTH_UPGRADE.get() || stack.getItem() == ModItems.SPEED_UPGRADE.get()){
+            return false;
+        }else {
+            return true;
+        }
     }
 
 

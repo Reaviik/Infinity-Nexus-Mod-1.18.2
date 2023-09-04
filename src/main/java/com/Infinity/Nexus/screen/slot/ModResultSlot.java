@@ -1,5 +1,6 @@
 package com.Infinity.Nexus.screen.slot;
 
+import com.Infinity.Nexus.item.ModItems;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.SlotItemHandler;
@@ -12,7 +13,11 @@ public class ModResultSlot extends SlotItemHandler {
 
     @Override
     public boolean mayPlace(@NotNull ItemStack stack) {
-        return false;
+        if (stack.getItem() == ModItems.STRENGTH_UPGRADE.get() || stack.getItem() == ModItems.SPEED_UPGRADE.get()) {
+            return false;
+        } else {
+            return true;
+        }
     }
 
     @Override

@@ -87,7 +87,7 @@ public class FoundryRecipes implements Recipe<SimpleContainer> {
 
     public static class Serializer implements RecipeSerializer<FoundryRecipes> {
         public static final Serializer INSTANCE = new Serializer();
-        public static final ResourceLocation ID = new ResourceLocation(InfinityNexus.MOD_ID, "foundry_recipe");
+        public static final ResourceLocation ID = new ResourceLocation(InfinityNexus.MOD_ID, "recipes");
 
         @Override
         public FoundryRecipes fromJson(ResourceLocation id, JsonObject json) {

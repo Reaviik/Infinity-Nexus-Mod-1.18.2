@@ -70,6 +70,12 @@ public class InfinityNexus
     private void setup(final FMLCommonSetupEvent event)
     {
         // some preinit code
-        LOGGER.info("§x§9§0§0§0§9§dI§x§8§6§0§0§9§3n§x§7§d§0§0§8§8f§x§7§3§0§0§7§ei§x§6§a§0§0§7§3n§x§6§0§0§0§6§9i§x§5§6§0§0§5§et§x§4§d§0§0§5§4y §x§4§3§0§0§4§9N§x§3§a§0§0§3§fe§x§3§0§0§0§3§4x§x§2§6§0§0§2§au§x§1§d§0§0§1§fs §x§1§3§0§0§1§5M§x§0§a§0§0§0§ao§x§0§0§0§0§0§0d: §fMod carregado.");
+
+               LOGGER.info("§b      __ ");
+               LOGGER.info("§b   /\\ \\ \\_____  ___   _ ___ ");
+               LOGGER.info("§b  /  \\/ / _ \\ \\/ / | | / __|");
+               LOGGER.info("§b / /\\  /  __/>  <| |_| \\__ \\");
+               LOGGER.info("§b \\_\\ \\/ \\___/_/\\_\\__,_|___/");
+               LOGGER.info("§b       Infinity Nexus Mod");
     }
 }

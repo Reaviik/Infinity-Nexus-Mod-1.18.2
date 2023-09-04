@@ -1,7 +1,10 @@
 {
   "itemGroup.infinity_nexus_mod": "§x§9§0§0§0§9§dInfinity Nexus",
 
-  "block.infinity_nexus_mod.flat_light": "Luz Plana",
+  "item.infinity_nexus_mod.speed_upgrade": "Augument de Velocidade",
+  "tooltip.infinity_nexus_mod.speed_upgrade": "x%",
+  "item.infinity_nexus_mod.strength_upgrade": "Augument de Força",
+  "tooltip.infinity_nexus_mod.strength_upgrade": "x%",
 
   "item.infinity_nexus_mod.copper_wire": "Fio de Cobre",
   "item.infinity_nexus_mod.aluminum_wire": "Fio de Alumínio",
@@ -41,5 +44,7 @@
   "block.infinity_nexus_mod.gold_machine_casing": "Chassi de Máquina de Ouro",
   "block.infinity_nexus_mod.magic_machine_casing": "Chassi de Máquina Mágica",
   "block.infinity_nexus_mod.steel_machine_casing": "Chassi de Máquina de Aço",
-  "block.infinity_nexus_mod.industrial_machine_casing": "Chassi de Máquina Industrial"
+  "block.infinity_nexus_mod.industrial_machine_casing": "Chassi de Máquina Industrial",
+
+  "block.infinity_nexus_mod.foundry": "Forja"
 }

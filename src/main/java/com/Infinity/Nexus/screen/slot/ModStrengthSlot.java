@@ -12,7 +12,7 @@ public class ModStrengthSlot extends SlotItemHandler {
 
     @Override
     public boolean mayPlace(ItemStack stack) {
-        return ModItems.STRENGTH_UPGRADE.get() == stack.getItem();
+        return ModItems.STRENGTH_UPGRADE.get() == stack.getItem() && stack.getCount() == 1;
     }
 
     @Override

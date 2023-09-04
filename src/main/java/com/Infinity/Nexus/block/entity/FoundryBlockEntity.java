@@ -15,6 +15,7 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TextComponent;
 import net.minecraft.world.Containers;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.entity.player.Inventory;
@@ -152,6 +153,7 @@ public class FoundryBlockEntity extends BlockEntity implements MenuProvider{
 
         Containers.dropContents(this.level, this.worldPosition, inventory);
     }
+
     public void hasSpeedUP(FoundryBlockEntity entity) {
         //TODO recipe
         int speed = InfinityNexusServerConfigs.FOUNDRY_PROCESS_SPEED.get();

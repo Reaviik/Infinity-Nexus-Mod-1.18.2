@@ -1,7 +1,10 @@
 {
   "itemGroup.infinity_nexus_mod": "§x§9§0§0§0§9§dInfinity Nexus",
 
-  "block.infinity_nexus_mod.flat_light": "Flat Light",
+  "item.infinity_nexus_mod.speed_upgrade": "Speed Upgrade",
+  "tooltip.infinity_nexus_mod.speed_upgrade": "x%",
+  "item.infinity_nexus_mod.strength_upgrade": "Strength Upgrade",
+  "tooltip.infinity_nexus_mod.strength_upgrade": "x%",
 
   "item.infinity_nexus_mod.copper_wire": "Copper Wire",
   "item.infinity_nexus_mod.aluminum_wire": "Aluminum Wire",
@@ -41,5 +44,7 @@
   "block.infinity_nexus_mod.gold_machine_casing": "Gold Machine Casing",
   "block.infinity_nexus_mod.magic_machine_casing": "Magic Machine Casing",
   "block.infinity_nexus_mod.steel_machine_casing": "Steel Machine Casing",
-  "block.infinity_nexus_mod.industrial_machine_casing": "Industrial Machine Casing"
+  "block.infinity_nexus_mod.industrial_machine_casing": "Industrial Machine Casing",
+
+  "block.infinity_nexus_mod.foundry": "Foundry"
 }
