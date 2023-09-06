@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Infinity-Nexus.iml" filepath="$PROJECT_DIR$/.idea/Infinity-Nexus.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Infinity-Nexus.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Infinity-Nexus.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Infinity-Nexus.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Infinity-Nexus.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Infinity-Nexus_-_Copia.iml" filepath="$PROJECT_DIR$/.idea/modules/Infinity-Nexus_-_Copia.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Infinity-Nexus_-_Copia.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Infinity-Nexus_-_Copia.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Infinity-Nexus_-_Copia.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Infinity-Nexus_-_Copia.test.iml" />
     </modules>
   </component>
 </project>

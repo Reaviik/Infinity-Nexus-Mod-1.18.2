@@ -13,12 +13,6 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, InfinityNexus.MOD_ID);
 
-    //Custom
-    public static final RegistryObject<Item> SPEED_UPGRADE = ITEMS.register("speed_upgrade",
-            () -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS).rarity(Rarity.COMMON)));
-    public static final RegistryObject<Item> STRENGTH_UPGRADE = ITEMS.register("strength_upgrade",
-            () -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS).rarity(Rarity.COMMON)));
-
     //Casts
     public static final RegistryObject<Item> GOLD_WIRE_CAST = ITEMS.register("gold_wire_cast",
             () -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS).rarity(Rarity.COMMON)));
@@ -30,13 +24,22 @@ public class ModItems {
             () -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS).rarity(Rarity.COMMON)));
 
     //Models
-    public static final RegistryObject<Item> WIRE_STONE_MODEL = ITEMS.register("wire_stone_model",
+    public static final RegistryObject<Item> RAW_WIRE_CLAY_MODEL = ITEMS.register("raw_wire_clay_model",
             () -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS).rarity(Rarity.COMMON)));
-    public static final RegistryObject<Item> SCREW_STONE_MODEL = ITEMS.register("screw_stone_model",
+    public static final RegistryObject<Item> RAW_SCREW_CLAY_MODEL = ITEMS.register("raw_screw_clay_model",
             () -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS).rarity(Rarity.COMMON)));
-    public static final RegistryObject<Item> SHEET_STONE_MODEL = ITEMS.register("sheet_stone_model",
+    public static final RegistryObject<Item> RAW_SHEET_CLAY_MODEL = ITEMS.register("raw_sheet_clay_model",
             () -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS).rarity(Rarity.COMMON)));
-    public static final RegistryObject<Item> ROD_STONE_MODEL = ITEMS.register("rod_stone_model",
+    public static final RegistryObject<Item> RAW_ROD_CLAY_MODEL = ITEMS.register("raw_rod_clay_model",
+            () -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS).rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> WIRE_CLAY_MODEL = ITEMS.register("wire_clay_model",
+            () -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS).rarity(Rarity.COMMON)));
+    public static final RegistryObject<Item> SCREW_CLAY_MODEL = ITEMS.register("screw_clay_model",
+            () -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS).rarity(Rarity.COMMON)));
+    public static final RegistryObject<Item> SHEET_CLAY_MODEL = ITEMS.register("sheet_clay_model",
+            () -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS).rarity(Rarity.COMMON)));
+    public static final RegistryObject<Item> ROD_CLAY_MODEL = ITEMS.register("rod_clay_model",
             () -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS).rarity(Rarity.COMMON)));
 
 

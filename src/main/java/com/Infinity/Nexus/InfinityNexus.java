@@ -1,22 +1,13 @@
 package com.Infinity.Nexus;
 
-import com.Infinity.Nexus.networking.ModMessages;
-import com.Infinity.Nexus.screen.ModMenuTypes;
 import com.Infinity.Nexus.block.ModBlocks;
-import com.Infinity.Nexus.block.custom.ModBlockEntities;
-import com.Infinity.Nexus.config.InfinityNexusClientConfigs;
-import com.Infinity.Nexus.config.InfinityNexusCommonConfigs;
-import com.Infinity.Nexus.config.InfinityNexusServerConfigs;
 import com.Infinity.Nexus.item.ModItems;
-import com.Infinity.Nexus.recipes.ModRecipes;
-import com.Infinity.Nexus.screen.foundry.FoundryScreen;
 import com.mojang.logging.LogUtils;
-import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -38,39 +29,28 @@ public class InfinityNexus
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
 
-        eventBus.addListener(this::setup);
-
-        ModBlockEntities.register(eventBus);
-        ModMenuTypes.register(eventBus);
-
-        ModRecipes.register(eventBus);
-
-        eventBus.addListener(this::setup);
         eventBus.addListener(this::clientSetup);
-        eventBus.addListener(this::commonSetup);
-
-
-        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, InfinityNexusClientConfigs.SPEC,"infinitynexus-client.toml");
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, InfinityNexusCommonConfigs.SPEC,"infinitynexus-common.toml");
-        ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, InfinityNexusServerConfigs.SPEC,"infinitynexus-server.toml");
+        eventBus.addListener(this::setup);
 
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
     }
-    private void commonSetup(final FMLCommonSetupEvent event) {
-        event.enqueueWork(() -> {
-            ModMessages.register();
-        });
-    }
     public void clientSetup(final FMLClientSetupEvent event){
-        MenuScreens.register(ModMenuTypes.FOUNDRY_MENU.get(), FoundryScreen::new);
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.FULL_BASIC_MIXED_METAL_BOX.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.EMPTY_BASIC_MIXED_METAL_BOX.get(), RenderType.translucent());
 
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.COPPER_MACHINE_CASING.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.ALUMINUM_MACHINE_CASING.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.GOLD_MACHINE_CASING.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.IRON_MACHINE_CASING.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.LEAD_MACHINE_CASING.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.ENERGIZED_MACHINE_CASING.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.STEEL_MACHINE_CASING.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.INDUSTRIAL_MACHINE_CASING.get(), RenderType.translucent());
     }
     private void setup(final FMLCommonSetupEvent event)
     {
-        // some preinit code
-
                LOGGER.info("§b      __ ");
                LOGGER.info("§b   /\\ \\ \\_____  ___   _ ___ ");
                LOGGER.info("§b  /  \\/ / _ \\ \\/ / | | / __|");
