@@ -62,8 +62,10 @@
   "block.infinity_nexus_mod.steel_machine_casing": "Steel Machine Casing",
   "block.infinity_nexus_mod.industrial_machine_casing": "Industrial Machine Casing",
 
-  "block.infinity_nexus_mod.empty_basic_mixed_metal_box": "Empty Basic Mixed Metal Box",
-  "block.infinity_nexus_mod.full_basic_mixed_metal_box": "Full Basic Mixed Metal Box"
+  "block.infinity_nexus_mod.empty_basic_box": "Empty Basic Mixed Metal Box",
+  "block.infinity_nexus_mod.full_basic_mixed_metal_box": "Full Basic Mixed Metal Box",
+  "block.infinity_nexus_mod.full_basic_mixed_gem_basket": "Full Basic Mixed Gem Basket",
+  "block.infinity_nexus_mod.empty_gem_basket": "Empty Basic Mixed Gem Basket"
 }
 /*
 Basic

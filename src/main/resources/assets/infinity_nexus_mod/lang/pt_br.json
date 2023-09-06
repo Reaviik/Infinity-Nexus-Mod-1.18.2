@@ -64,8 +64,10 @@
   "block.infinity_nexus_mod.industrial_machine_casing": "Chassi de Máquina Industrial",
 
 
-  "block.infinity_nexus_mod.empty_basic_mixed_metal_box": "Caixa de Materiais Metalicos Variados Básica",
-  "block.infinity_nexus_mod.full_basic_mixed_metal_box": "Caixa de Materiais Metalicos Variados Básica Cheia"
+  "block.infinity_nexus_mod.empty_basic_box": "Caixa de Materiais Metalicos Variados Básica",
+  "block.infinity_nexus_mod.full_basic_mixed_metal_box": "Caixa de Materiais Metalicos Variados Básica Cheia",
+  "block.infinity_nexus_mod.full_basic_mixed_gem_basket": "Cesta de Gemas Variadas Cheia",
+  "block.infinity_nexus_mod.empty_gem_basket": "Cesta de Gemas Variadas Vazia"
   }
 /*
 Básico

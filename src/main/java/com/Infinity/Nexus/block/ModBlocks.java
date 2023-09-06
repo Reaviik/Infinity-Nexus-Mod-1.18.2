@@ -1,7 +1,8 @@
 package com.Infinity.Nexus.block;
 
 import com.Infinity.Nexus.InfinityNexus;
-import com.Infinity.Nexus.block.custom.FullBasicMixedMetalBox;
+import com.Infinity.Nexus.block.custom.BaseMixedGemStorage;
+import com.Infinity.Nexus.block.custom.BaseMixedMetalStorage;
 import com.Infinity.Nexus.item.ModItems;
 import com.Infinity.Nexus.tab.ModTabs;
 import net.minecraft.client.gui.screens.Screen;
@@ -56,12 +57,20 @@ public class ModBlocks {
                     .strength(6f).lightLevel(LUZ -> {return 2;}).requiresCorrectToolForDrops()), ModTabs.INFINITY_NEXUS, Rarity.EPIC, "tooltip.infinity_nexus_mod.industrial_machine_casing");
 
     //Caixas
-    public static final RegistryObject<Block> EMPTY_BASIC_MIXED_METAL_BOX = registerBlock("empty_basic_mixed_metal_box",
-            () -> new FullBasicMixedMetalBox(BlockBehaviour.Properties.of(Material.METAL).noOcclusion().requiresCorrectToolForDrops()
+    public static final RegistryObject<Block> EMPTY_BASIC_METAL_BOX = registerBlock("empty_basic_metal_box",
+            () -> new BaseMixedMetalStorage(BlockBehaviour.Properties.of(Material.METAL).noOcclusion().requiresCorrectToolForDrops()
+                    .strength(10f).lightLevel(LUZ -> {return 1;})),ModTabs.INFINITY_NEXUS, Rarity.COMMON,
+            "tooltip.infinity_nexus_mod:empty_basic_metal_box");
+    public static final RegistryObject<Block> FULL_BASIC_MIXED_METAL_BOX = registerBlock("full_basic_mixed_metal_box",
+            () -> new BaseMixedMetalStorage(BlockBehaviour.Properties.of(Material.METAL).noOcclusion().requiresCorrectToolForDrops()
+                    .strength(10f).lightLevel(LUZ -> {return 1;})),ModTabs.INFINITY_NEXUS, Rarity.COMMON,
+            "tooltip.infinity_nexus_mod:full_basic_mixed_metal_box");
+    public static final RegistryObject<Block> EMPTY_BASIC_GEM_BASKET = registerBlock("empty_basic_gem_basket",
+            () -> new BaseMixedGemStorage(BlockBehaviour.Properties.of(Material.METAL).noOcclusion().requiresCorrectToolForDrops()
                     .strength(10f).lightLevel(LUZ -> {return 1;})),ModTabs.INFINITY_NEXUS, Rarity.COMMON,
             "tooltip.infinity_nexus_mod:empty_basic_mixed_metal_box");
-    public static final RegistryObject<Block> FULL_BASIC_MIXED_METAL_BOX = registerBlock("full_basic_mixed_metal_box",
-            () -> new FullBasicMixedMetalBox(BlockBehaviour.Properties.of(Material.METAL).noOcclusion().requiresCorrectToolForDrops()
+    public static final RegistryObject<Block> FULL_BASIC_MIXED_GEM_BASKET = registerBlock("full_basic_mixed_gem_basket",
+            () -> new BaseMixedGemStorage(BlockBehaviour.Properties.of(Material.METAL).noOcclusion().requiresCorrectToolForDrops()
                     .strength(10f).lightLevel(LUZ -> {return 1;})),ModTabs.INFINITY_NEXUS, Rarity.COMMON,
             "tooltip.infinity_nexus_mod:full_basic_mixed_metal_box");
 

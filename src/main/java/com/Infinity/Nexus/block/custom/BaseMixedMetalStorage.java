@@ -14,9 +14,9 @@ import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public class FullBasicMixedMetalBox extends Block {
+public class BaseMixedMetalStorage extends Block {
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
-    public FullBasicMixedMetalBox(Properties pProperties) {
+    public BaseMixedMetalStorage(Properties pProperties) {
         super(pProperties);
     }
 
