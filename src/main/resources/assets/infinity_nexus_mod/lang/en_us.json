@@ -1,6 +1,6 @@
 {
-  "itemGroup.infinity_nexus_mod": "§x§9§0§0§0§9§dInfinity Nexus",
-  "tooltip.infinity_nexus.pressShift": "§7Press §eShift §7to see more",
+  "itemGroup.infinity_nexus_mod":"§x§9§0§0§0§9§dInfinity Nexus",
+  "tooltip.infinity_nexus.pressShift":"§7Press §eShift §7to see more",
 
   "item.infinity_nexus_mod.speed_upgrade": "Speed Upgrade",
   "tooltip.infinity_nexus_mod.speed_upgrade": "x%",
@@ -56,26 +56,28 @@
 
   "block.infinity_nexus_mod.copper_machine_casing": "Copper Machine Casing",
   "block.infinity_nexus_mod.aluminum_machine_casing": "Aluminum Machine Casing",
+  "block.infinity_nexus_mod.lead_machine_casing": "Lead Machine Casing",
   "block.infinity_nexus_mod.iron_machine_casing": "Iron Machine Casing",
   "block.infinity_nexus_mod.gold_machine_casing": "Gold Machine Casing",
   "block.infinity_nexus_mod.magic_machine_casing": "Magic Machine Casing",
   "block.infinity_nexus_mod.steel_machine_casing": "Steel Machine Casing",
+  "block.infinity_nexus_mod.energized_machine_casing": "Energized Machine Casing",
   "block.infinity_nexus_mod.industrial_machine_casing": "Industrial Machine Casing",
 
-  "block.infinity_nexus_mod.empty_basic_box": "Empty Basic Mixed Metal Box",
-  "block.infinity_nexus_mod.full_basic_mixed_metal_box": "Full Basic Mixed Metal Box",
+  "block.infinity_nexus_mod.empty_basic_metal_box": "Empty Basic Mixed Metal Box",
+  "block.infinity_nexus_mod.empty_basic_gem_basket": "Empty Basic Mixed Gem Basket",
+
+  "block.infinity_nexus_mod.empty_advanced_metal_box": "Empty Advanced Mixed Metal Materials Box  Tier 1",
+  "block.infinity_nexus_mod.empty_advanced_gem_basket": "Empty Advanced Mixed Gem Basket  Tier 1",
+
+  "block.infinity_nexus_mod.full_basic_mixed_metal_box": "Full Basic Mixed Metal Materials Box",
+  "block.infinity_nexus_mod.full_basic_mixed_metal_box_1": "Full Basic Mixed Metal Materials Box Tier 1",
+
   "block.infinity_nexus_mod.full_basic_mixed_gem_basket": "Full Basic Mixed Gem Basket",
-  "block.infinity_nexus_mod.empty_gem_basket": "Empty Basic Mixed Gem Basket"
+  "block.infinity_nexus_mod.full_basic_mixed_gem_basket_1": "Full Basic Mixed Gem Basket Tier 1",
+
+  "block.infinity_nexus_mod.full_advanced_mixed_gem_basket": "Full Advanced Mixed Gem Basket",
+  "block.infinity_nexus_mod.full_advanced_mixed_gem_basket_1": "Full Advanced Mixed Gem Basket Tier 1",
+
+  "block.infinity_nexus_mod.full_advanced_mixed_metal_box": "Full Advanced Mixed Metal Materials Box"
 }
-/*
-Basic
-Starter
-Standard
-Advanced
-Expert
-Professional
-Premium
-Elite
-Master
-Ultimate
-*/

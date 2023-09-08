@@ -57,27 +57,29 @@
 
   "block.infinity_nexus_mod.copper_machine_casing": "Chassi de Máquina de Cobre",
   "block.infinity_nexus_mod.aluminum_machine_casing": "Chassi de Máquina de Alumínio",
+  "block.infinity_nexus_mod.lead_machine_casing": "Chassi de Máquina de Chumbo",
   "block.infinity_nexus_mod.iron_machine_casing": "Chassi de Máquina de Ferro",
   "block.infinity_nexus_mod.gold_machine_casing": "Chassi de Máquina de Ouro",
   "block.infinity_nexus_mod.magic_machine_casing": "Chassi de Máquina Mágica",
   "block.infinity_nexus_mod.steel_machine_casing": "Chassi de Máquina de Aço",
+  "block.infinity_nexus_mod.energized_machine_casing": "Chassi de Máquina Energizado",
   "block.infinity_nexus_mod.industrial_machine_casing": "Chassi de Máquina Industrial",
 
 
-  "block.infinity_nexus_mod.empty_basic_box": "Caixa de Materiais Metalicos Variados Básica",
+  "block.infinity_nexus_mod.empty_basic_metal_box": "Caixa de Materiais Metalicos Variados Básica",
+  "block.infinity_nexus_mod.empty_basic_gem_basket": "Cesta de Gemas Variadas Vazia Básica",
+
+  "block.infinity_nexus_mod.empty_advanced_metal_box": "Caixa de Materiais Metalicos Variados Avançada Tier 1",
+  "block.infinity_nexus_mod.empty_advanced_gem_basket": "Cesta de Gemas Variadas Vazia Avançada Tier 1",
+
   "block.infinity_nexus_mod.full_basic_mixed_metal_box": "Caixa de Materiais Metalicos Variados Básica Cheia",
+  "block.infinity_nexus_mod.full_basic_mixed_metal_box_1": "Caixa de Materiais Metalicos Variados Básica Cheia Tier 1",
+
   "block.infinity_nexus_mod.full_basic_mixed_gem_basket": "Cesta de Gemas Variadas Cheia",
-  "block.infinity_nexus_mod.empty_gem_basket": "Cesta de Gemas Variadas Vazia"
+  "block.infinity_nexus_mod.full_basic_mixed_gem_basket_1": "Cesta de Gemas Variadas Cheia Tier 1",
+
+  "block.infinity_nexus_mod.full_advanced_mixed_gem_basket": "Cesta de Gemas Variadas Cheia",
+  "block.infinity_nexus_mod.full_advanced_mixed_gem_basket_1": "Cesta de Gemas Variadas Cheia Tier 1",
+
+  "block.infinity_nexus_mod.full_advanced_mixed_metal_box": "Caixa de Materiais Metalicos Variados Avançada Cheia"
   }
-/*
-Básico
-Iniciante
-Padrão
-Avançado
-Especialista
-Profissional
-Premium
-Elite
-Mestre
-Máximo
-*/

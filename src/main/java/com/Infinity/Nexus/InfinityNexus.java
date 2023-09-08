@@ -37,12 +37,22 @@ public class InfinityNexus
         MinecraftForge.EVENT_BUS.register(this);
     }
     public void clientSetup(final FMLClientSetupEvent event){
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.FULL_BASIC_MIXED_METAL_BOX.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.EMPTY_BASIC_METAL_BOX.get(), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.FULL_BASIC_MIXED_GEM_BASKET.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.EMPTY_BASIC_GEM_BASKET.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.EMPTY_ADVANCED_METAL_BOX.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.EMPTY_ADVANCED_GEM_BASKET.get(), RenderType.translucent());
+
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.FULL_BASIC_MIXED_METAL_BOX.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.FULL_BASIC_MIXED_GEM_BASKET.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.FULL_BASIC_MIXED_METAL_BOX_1.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.FULL_BASIC_MIXED_GEM_BASKET_1.get(), RenderType.cutout());
+
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.FULL_ADVANCED_MIXED_METAL_BOX.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.FULL_ADVANCED_MIXED_GEM_BASKET.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.FULL_ADVANCED_MIXED_GEM_BASKET_1.get(), RenderType.cutout());
 
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.COPPER_MACHINE_CASING.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.ALZHEIMER.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.ALUMINUM_MACHINE_CASING.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.GOLD_MACHINE_CASING.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.IRON_MACHINE_CASING.get(), RenderType.translucent());
