@@ -5,6 +5,8 @@ import com.Infinity.Nexus.item.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -37,22 +39,40 @@ public class InfinityNexus
         MinecraftForge.EVENT_BUS.register(this);
     }
     public void clientSetup(final FMLClientSetupEvent event){
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.EMPTY_BASIC_METAL_BOX.get(), RenderType.translucent());
+
+        //Empty Basket's
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.EMPTY_BASIC_GEM_BASKET.get(), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.EMPTY_ADVANCED_METAL_BOX.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.EMPTY_ADVANCED_GEM_BASKET.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.EMPTY_ELITE_GEM_BASKET.get(), RenderType.translucent());
 
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.FULL_BASIC_MIXED_METAL_BOX.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.FULL_BASIC_MIXED_GEM_BASKET.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.FULL_BASIC_MIXED_METAL_BOX_1.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.FULL_BASIC_MIXED_GEM_BASKET_1.get(), RenderType.cutout());
+        //Full Basket's
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.FULL_BASIC_MIXED_GEM_BASKET.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.FULL_BASIC_MIXED_GEM_BASKET_1.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.FULL_ADVANCED_MIXED_GEM_BASKET.get(), RenderType.tripwire());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.FULL_ADVANCED_MIXED_GEM_BASKET_1.get(), RenderType.tripwire());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.FULL_ELITE_MIXED_GEM_BASKET.get(), RenderType.tripwire());
 
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.FULL_ADVANCED_MIXED_METAL_BOX.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.FULL_ADVANCED_MIXED_GEM_BASKET.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.FULL_ADVANCED_MIXED_GEM_BASKET_1.get(), RenderType.cutout());
+        //Empty Box's
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.EMPTY_BASIC_METAL_BOX.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.EMPTY_ADVANCED_METAL_BOX.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.EMPTY_ELITE_METAL_BOX.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.EMPTY_ULTIMATE_METAL_BOX.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.EMPTY_LEGENDARY_METAL_BOX.get(), RenderType.tripwire());
 
+
+        //Full Box's
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.FULL_BASIC_MIXED_METAL_BOX.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.FULL_BASIC_MIXED_METAL_BOX_1.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.FULL_ADVANCED_MIXED_METAL_BOX.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.FULL_ELITE_MIXED_METAL_BOX.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.FULL_ELITE_MIXED_METAL_BOX_1.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.FULL_ELITE_MIXED_METAL_BOX_2.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.FULL_ULTIMATE_MIXED_METAL_BOX.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.FULL_ULTIMATE_MIXED_METAL_BOX_1.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.FULL_LEGENDARY_MIXED_METAL_BOX.get(), RenderType.translucent());
+
+        //Casing's
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.COPPER_MACHINE_CASING.get(), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.ALZHEIMER.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.ALUMINUM_MACHINE_CASING.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.GOLD_MACHINE_CASING.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.IRON_MACHINE_CASING.get(), RenderType.translucent());
@@ -63,11 +83,12 @@ public class InfinityNexus
     }
     private void setup(final FMLCommonSetupEvent event)
     {
-               LOGGER.info("§b      __ ");
-               LOGGER.info("§b   /\\ \\ \\_____  ___   _ ___ ");
-               LOGGER.info("§b  /  \\/ / _ \\ \\/ / | | / __|");
-               LOGGER.info("§b / /\\  /  __/>  <| |_| \\__ \\");
-               LOGGER.info("§b \\_\\ \\/ \\___/_/\\_\\__,_|___/");
-               LOGGER.info("§b       Infinity Nexus Mod");
+        LOGGER.info("   §4_____§5_   __§9__________§3_   ______§b_______  __");
+        LOGGER.info("  §4/_  _§5/ | / §9/ ____/  _§3/ | / /  _§b/_  __| \\/ /");
+        LOGGER.info("   §4/ /§5/  |/ §9/ /_   / /§3/  |/ // /  §b/ /   \\  / ");
+        LOGGER.info(" §4_/ /§5/ /|  §9/ __/ _/ /§3/ /|  // /  §b/ /    / /  ");
+        LOGGER.info("§4/___§5/_/ |_§9/_/   /___§3/_/ |_/___/ §b/_/    /_/   ");
+        LOGGER.info("§b          Infinity Nexus Mod");
+
     }
 }

@@ -18,7 +18,7 @@ plugins {
 apply plugin: 'net.minecraftforge.gradle'
 
 
-version = '0.1.1-1.18.2'
+version = '2.0.0-1.18.2'
 group = 'com.infinity.nexus' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'Infinity-Nexus-Mod'
 
@@ -56,6 +56,8 @@ minecraft {
             // "REGISTRIES": For firing of registry events.
             // "REGISTRYDUMP": For getting the contents of all registries.
             property 'forge.logging.markers', 'REGISTRIES'
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${buildDir}/createSrgToMcp/output.srg"
 
             // Recommended logging level for the console
             // You can set various levels here.
@@ -81,7 +83,8 @@ minecraft {
 
             // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
             property 'forge.enabledGameTestNamespaces', 'infinity_nexus_mod'
-
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${buildDir}/createSrgToMcp/output.srg"
             mods {
                 infinity_nexus_mod {
                     source sourceSets.main
@@ -157,7 +160,11 @@ repositories {
         name = "ModMaven"
         url = "https://modmaven.dev"
     }
-}
+    maven {
+        url = "https://maven.theillusivec4.top/"
+    }
+    }
+
 
 dependencies {
     // Specify the version of Minecraft to use. If this is any group other than 'net.minecraft', it is assumed
@@ -172,6 +179,11 @@ dependencies {
 
     compileOnly "mekanism:Mekanism:${mekanism_version}:api"
     runtimeOnly fg.deobf("mekanism:Mekanism:${mekanism_version}")
+
+    runtimeOnly fg.deobf("top.theillusivec4.curios:curios-forge:${curio_version}")
+    compileOnly fg.deobf("top.theillusivec4.curios:curios-forge:${curio_version}:api")
+
+
     // Real mod deobf dependency examples - these get remapped to your current mappings
     // compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api") // Adds JEI API as a compile dependency
     // runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}") // Adds the full JEI mod as a runtime dependency

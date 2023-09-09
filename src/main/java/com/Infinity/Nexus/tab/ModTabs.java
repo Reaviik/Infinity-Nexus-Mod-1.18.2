@@ -9,7 +9,7 @@ public class ModTabs {
     public static final CreativeModeTab INFINITY_NEXUS = new CreativeModeTab("infinity_nexus_mod") {
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(ModBlocks.FULL_BASIC_MIXED_METAL_BOX.get());
+            return new ItemStack(ModItems.WING.get());
         }
     };
 }
