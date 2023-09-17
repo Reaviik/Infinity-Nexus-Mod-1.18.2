@@ -1,9 +1,11 @@
 {
   "itemGroup.infinity_nexus_mod":"§x§9§0§0§0§9§dInfinity Nexus",
-  "tooltip.infinity_nexus.pressShift":"§7Press §eShift §7to see more",
+  "tooltip.infinity_nexus.pressShift":"§bPress §eShift §bto see more",
 
   "item.infinity_nexus_mod.wing": "Wing",
-  "item.infinity_nexus_mod.measmir_sword": "Measmir Sword",
+  "item.infinity_nexus_mod.imperialinfinity_sword": "Measmir Sword",
+  "tooltip.infinity_nexus_mod.imperialinfinity_sword":  "§eInflict effects §7Weakness §eand §9Wither §eon hit",
+
 
   "item.infinity_nexus_mod.gold_wire_cast": "Gold Wire Cast",
   "item.infinity_nexus_mod.gold_screw_cast": "Gold Screw Cast",
@@ -52,10 +54,10 @@
   "item.infinity_nexus_mod.steel_sheet": "Steel Sheet",
   "item.infinity_nexus_mod.industrial_sheet": "Industrial Sheet",
 
-  "item.infinity_nexus_mod.infinity_helmet": "Infinity Helmet",
-  "item.infinity_nexus_mod.infinity_chestplate": "Infinity Chestplate",
-  "item.infinity_nexus_mod.infinity_leggings": "Infinity Leggings",
-  "item.infinity_nexus_mod.infinity_boots": "Infinity Boots",
+  "item.infinity_nexus_mod.imperialinfinity_helmet": "Imperial Infinity Helmet",
+  "item.infinity_nexus_mod.imperialinfinity_chestplate": "Imperial Infinity Chestplate",
+  "item.infinity_nexus_mod.imperialinfinity_leggings": "Imperial Infinity Leggings",
+  "item.infinity_nexus_mod.imperialinfinity_boots": "Imperial Infinity Boots",
 
   "item.infinity_nexus_mod.raw_infinity": "Raw Infinity",
   "item.infinity_nexus_mod.infinity_ingot": "Infinity Ingot",

@@ -14,9 +14,13 @@ import java.util.function.Supplier;
 public enum ModArmorMaterials  implements ArmorMaterial {
 
 
-    INFINITY("infinity", -1, new int[]{12, 15, 18, 12}, 80, SoundEvents.ARMOR_EQUIP_NETHERITE, 15.0F, 24.0F, () -> {
+    IMPERIAL("imperialinfinity", -1, new int[]{12, 15, 18, 12}, 80, SoundEvents.ARMOR_EQUIP_NETHERITE, 15.0F, 24.0F, () -> {
+        return Ingredient.of(ModItems.INFINITY_INGOT.get());
+    }),
+    LEGENDARY("legendaryinfinity", 1000, new int[] {1, 1, 1, 1},80, SoundEvents.ARMOR_EQUIP_DIAMOND, 15.0F, 24.0F, () ->{
         return Ingredient.of(ModItems.INFINITY_INGOT.get());
     });
+
     //Boots, Leggings, Chestplate, Helmet
     private static final int[] HEALTH_PER_SLOT = new int[]{13, 15, 16, 11};
     private final String name;
@@ -28,16 +32,16 @@ public enum ModArmorMaterials  implements ArmorMaterial {
     private final float knockbackResistance;
     private final LazyLoadedValue<Ingredient> repairIngredient;
 
-    ModArmorMaterials(String p_40474_, int p_40475_, int[] p_40476_, int p_40477_,
-                      SoundEvent p_40478_, float p_40479_, float p_40480_, Supplier<Ingredient> p_40481_) {
-        this.name = p_40474_;
-        this.durabilityMultiplier = p_40475_;
-        this.slotProtections = p_40476_;
-        this.enchantmentValue = p_40477_;
-        this.sound = p_40478_;
-        this.toughness = p_40479_;
-        this.knockbackResistance = p_40480_;
-        this.repairIngredient = new LazyLoadedValue<>(p_40481_);
+    ModArmorMaterials(String name, int durabilityMultiplier, int[] slotProtections, int enchantmentValue,
+                      SoundEvent sound, float toughness, float knockbackResistance, Supplier<Ingredient> ingredientSupplier) {
+        this.name = name;
+        this.durabilityMultiplier = durabilityMultiplier;
+        this.slotProtections = slotProtections;
+        this.enchantmentValue = enchantmentValue;
+        this.sound = sound;
+        this.toughness = toughness;
+        this.knockbackResistance = knockbackResistance;
+        this.repairIngredient = new LazyLoadedValue<>(ingredientSupplier);
     }
 
     public int getDurabilityForSlot(EquipmentSlot pSlot) {

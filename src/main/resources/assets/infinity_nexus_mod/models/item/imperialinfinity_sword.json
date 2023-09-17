@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "infinity_nexus_mod:item/measmir_sword",
-		"particle": "infinity_nexus_mod:item/measmir_sword"
+		"0": "infinity_nexus_mod:item/imperialinfinity_sword",
+		"particle": "infinity_nexus_mod:item/imperialinfinity_sword"
 	},
 	"elements": [
 		{

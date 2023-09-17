@@ -3,7 +3,8 @@
   "tooltip.infinity_nexus.pressShift": "§7Pressione §eShift §7para ver mais",
 
   "item.infinity_nexus_mod.wing": "Asa",
-  "item.infinity_nexus_mod.measmir_sword": "Espada de Measmir",
+  "item.infinity_nexus_mod.imperialinfinity_sword": "Espada de Measmir",
+  "tooltip.infinity_nexus_mod.imperialinfinity_sword":  "§eAplicas efeitos de §7Weakness §ee §9Wither §e ao atacar",
 
   "item.infinity_nexus_mod.gold_wire_cast": "Molde de Ffio de Ouro",
   "item.infinity_nexus_mod.gold_screw_cast": "Molde de Parafuso de Ouro",
@@ -52,10 +53,10 @@
   "item.infinity_nexus_mod.steel_sheet": "Chapa de Aço",
   "item.infinity_nexus_mod.industrial_sheet": "Chapa Industrial",
 
-  "item.infinity_nexus_mod.infinity_helmet": "Capacete de Infinity",
-  "item.infinity_nexus_mod.infinity_chestplate": "Peitoral de Infinity",
-  "item.infinity_nexus_mod.infinity_leggings": "Calças de Infinity",
-  "item.infinity_nexus_mod.infinity_boots": "Botas de Infinity",
+  "item.infinity_nexus_mod.imperialInfinity_helmet": "Capacete Imperial de Infinity",
+  "item.infinity_nexus_mod.imperialInfinity_chestplate": "Peitoral Imperial de Infinity",
+  "item.infinity_nexus_mod.imperialInfinity_leggings": "Calças Imperial de Infinity",
+  "item.infinity_nexus_mod.imperialInfinity_boots": "Botas Imperial de Infinity",
 
   "item.infinity_nexus_mod.raw_infinity": "Infinity Bruto",
   "item.infinity_nexus_mod.infinity_ingot": "Barra de Infinity",
