@@ -1,6 +1,7 @@
 package com.Infinity.Nexus.item;
 
 import com.Infinity.Nexus.InfinityNexus;
+import net.minecraft.client.gui.screens.Overlay;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.LazyLoadedValue;
@@ -12,7 +13,8 @@ import net.minecraft.world.item.crafting.Ingredient;
 import java.util.function.Supplier;
 public enum ModArmorMaterials  implements ArmorMaterial {
 
-    INFINITY("infinity", -1, new int[]{2, 5, 6, 2}, 80, SoundEvents.ARMOR_EQUIP_NETHERITE, 15.0F, 24.0F, () -> {
+
+    INFINITY("infinity", -1, new int[]{12, 15, 18, 12}, 80, SoundEvents.ARMOR_EQUIP_NETHERITE, 15.0F, 24.0F, () -> {
         return Ingredient.of(ModItems.INFINITY_INGOT.get());
     });
     //Boots, Leggings, Chestplate, Helmet

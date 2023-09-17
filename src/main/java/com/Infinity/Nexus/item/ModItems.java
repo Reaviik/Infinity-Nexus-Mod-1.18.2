@@ -123,16 +123,16 @@ public class ModItems {
     //Armor
     public static final RegistryObject<Item> INFINITY_HELMET = ITEMS.register("infinity_helmet",
             () -> new ArmorItem(ModArmorMaterials.INFINITY, EquipmentSlot.HEAD,
-                    new Item.Properties().tab(ModTabs.INFINITY_NEXUS).stacksTo(1)));
+                    new Item.Properties().tab(ModTabs.INFINITY_NEXUS).stacksTo(1).rarity(Rarity.EPIC)));
     public static final RegistryObject<Item> INFINITY_CHESTPLATE = ITEMS.register("infinity_chestplate",
             () -> new ArmorItem(ModArmorMaterials.INFINITY, EquipmentSlot.CHEST,
-                    new Item.Properties().tab(ModTabs.INFINITY_NEXUS).stacksTo(1)));
+                    new Item.Properties().tab(ModTabs.INFINITY_NEXUS).stacksTo(1).rarity(Rarity.EPIC)));
     public static final RegistryObject<Item> INFINITY_LEGGINGS = ITEMS.register("infinity_leggings",
             () -> new ArmorItem(ModArmorMaterials.INFINITY, EquipmentSlot.LEGS,
-                    new Item.Properties().tab(ModTabs.INFINITY_NEXUS).stacksTo(1)));
+                    new Item.Properties().tab(ModTabs.INFINITY_NEXUS).stacksTo(1).rarity(Rarity.EPIC)));
     public static final RegistryObject<Item> INFINITY_BOOTS = ITEMS.register("infinity_boots",
             () -> new ArmorItem(ModArmorMaterials.INFINITY, EquipmentSlot.FEET,
-                    new Item.Properties().tab(ModTabs.INFINITY_NEXUS).stacksTo(1)));
+                    new Item.Properties().tab(ModTabs.INFINITY_NEXUS).stacksTo(1).rarity(Rarity.EPIC)));
 
     //Misc
         //Catalyst

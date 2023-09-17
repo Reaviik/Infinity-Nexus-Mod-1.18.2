@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "item": "minfinity_nexus_mod:raw_infinity"
+    "item": "infinity_nexus_mod:raw_infinity"
   },
   "result": "infinity_nexus_mod:infinity_ingot",
   "experience": 0.7,
