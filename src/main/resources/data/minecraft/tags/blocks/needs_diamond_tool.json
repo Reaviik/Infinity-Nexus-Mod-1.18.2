@@ -1,6 +1,11 @@
 {
   "replace": false,
-  "values": [
-    "infinity_nexus_mod:industrial_machine_casing"
+  "values":
+  [
+    "infinity_nexus_mod:steel_machine_casing",
+    "infinity_nexus_mod:industrial_machine_casing",
+    "infinity_nexus_mod:infinity_ore",
+    "infinity_nexus_mod:deepslate_infinity_ore",
+    "infinity_nexus_mod:infinity_block"
   ]
 }

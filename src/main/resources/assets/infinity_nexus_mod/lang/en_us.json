@@ -3,6 +3,7 @@
   "tooltip.infinity_nexus.pressShift":"§7Press §eShift §7to see more",
 
   "item.infinity_nexus_mod.wing": "Wing",
+  "item.infinity_nexus_mod.measmir_sword": "Measmir Sword",
 
   "item.infinity_nexus_mod.gold_wire_cast": "Gold Wire Cast",
   "item.infinity_nexus_mod.gold_screw_cast": "Gold Screw Cast",
@@ -51,6 +52,14 @@
   "item.infinity_nexus_mod.steel_sheet": "Steel Sheet",
   "item.infinity_nexus_mod.industrial_sheet": "Industrial Sheet",
 
+  "item.infinity_nexus_mod.infinity_helmet": "Infinity Helmet",
+  "item.infinity_nexus_mod.infinity_chestplate": "Infinity Chestplate",
+  "item.infinity_nexus_mod.infinity_leggings": "Infinity Leggings",
+  "item.infinity_nexus_mod.infinity_boots": "Infinity Boots",
+
+  "item.infinity_nexus_mod.raw_infinity": "Raw Infinity",
+  "item.infinity_nexus_mod.infinity_ingot": "Infinity Ingot",
+
   "block.infinity_nexus_mod.copper_machine_casing": "Copper Machine Casing",
   "block.infinity_nexus_mod.aluminum_machine_casing": "Aluminum Machine Casing",
   "block.infinity_nexus_mod.lead_machine_casing": "Lead Machine Casing",
@@ -60,6 +69,12 @@
   "block.infinity_nexus_mod.steel_machine_casing": "Steel Machine Casing",
   "block.infinity_nexus_mod.energized_machine_casing": "Energized Machine Casing",
   "block.infinity_nexus_mod.industrial_machine_casing": "Industrial Machine Casing",
+
+  "block.infinity_nexus_mod.explorar_portal_frame": "Portal Block",
+
+  "block.infinity_nexus_mod.infinity_block": "Infinity Block",
+  "block.infinity_nexus_mod.infinity_ore": "Infinity Ore",
+  "block.infinity_nexus_mod.deepslate_infinity_ore": "Deepslate Infinity Ore",
 
   "block.infinity_nexus_mod.empty_basic_metal_box": "Empty Basic Metal Box",
 

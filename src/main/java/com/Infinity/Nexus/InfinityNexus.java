@@ -2,6 +2,8 @@ package com.Infinity.Nexus;
 
 import com.Infinity.Nexus.block.ModBlocks;
 import com.Infinity.Nexus.item.ModItems;
+import com.Infinity.Nexus.villager.ModPOIs;
+import com.Infinity.Nexus.world.dimension.ModDimensions;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -30,6 +32,9 @@ public class InfinityNexus
 
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
+
+        ModDimensions.registry();
+        ModPOIs.register(eventBus);
 
         eventBus.addListener(this::clientSetup);
         eventBus.addListener(this::setup);
@@ -80,6 +85,8 @@ public class InfinityNexus
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.ENERGIZED_MACHINE_CASING.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.STEEL_MACHINE_CASING.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.INDUSTRIAL_MACHINE_CASING.get(), RenderType.translucent());
+
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.EXPLORAR_PORTAL.get(), RenderType.translucent());
     }
     private void setup(final FMLCommonSetupEvent event)
     {

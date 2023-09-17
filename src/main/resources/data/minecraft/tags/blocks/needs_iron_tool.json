@@ -4,8 +4,9 @@
     "infinity_nexus_mod:copper_machine_casing",
     "infinity_nexus_mod:iron_machine_casing",
     "infinity_nexus_mod:aluminum_machine_casing",
+    "infinity_nexus_mod:lead_machine_casing",
     "infinity_nexus_mod:gold_machine_casing",
-    "infinity_nexus_mod:steel_machine_casing",
+    "infinity_nexus_mod:energized_machine_casing",
     "infinity_nexus_mod:magic_machine_casing"
   ]
 }

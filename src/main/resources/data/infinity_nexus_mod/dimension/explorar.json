@@ -1,0 +1,12 @@
+{
+  "type": "infinity_nexus_mod:explorar",
+  "generator": {
+    "type": "minecraft:noise",
+    "seed": -18218927419822,
+    "settings": "minecraft:overworld",
+    "biome_source": {
+      "type": "minecraft:fixed",
+      "biome": "minecraft:plains"
+    }
+  }
+}

@@ -55,6 +55,16 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL).noOcclusion()
                     .strength(6f).lightLevel(LUZ -> {return 2;}).requiresCorrectToolForDrops()), ModTabs.INFINITY_NEXUS, Rarity.EPIC, "tooltip.infinity_nexus_mod.industrial_machine_casing");
 
+    public static final RegistryObject<Block> INFINITY_BLOCK = registerBlock("infinity_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL).noOcclusion()
+                    .strength(2f).requiresCorrectToolForDrops()), ModTabs.INFINITY_NEXUS, Rarity.EPIC, "tooltip.infinity_nexus_mod.infinity_block");
+    public static final RegistryObject<Block> INFINITY_ORE = registerBlock("infinity_ore",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).noOcclusion()
+                    .strength(1f).requiresCorrectToolForDrops()), ModTabs.INFINITY_NEXUS, Rarity.EPIC, "tooltip.infinity_nexus_mod.infinity_ore");
+    public static final RegistryObject<Block> DEEPSLATE_INFINITY_ORE = registerBlock("deepslate_infinity_ore",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).noOcclusion()
+                    .strength(1f).requiresCorrectToolForDrops()), ModTabs.INFINITY_NEXUS, Rarity.EPIC, "tooltip.infinity_nexus_mod.deepslate_infinity_ore");
+
     //Empty Cases
             //Metal
                     //Basic
@@ -170,7 +180,18 @@ public class ModBlocks {
             "tooltip.infinity_nexus_mod:full_elite_mixed_gem_basket");
                     //Legendary
     //Misc
+        //Portal
+    public static final RegistryObject<Block> EXPLORAR_PORTAL = registerBlockWithoutBlockItem("explorar_portal",
+     ExplorarPortal::new);
+    public static final RegistryObject<Block> EXPLORAR_PORTAL_FRAME = registerBlock("explorar_portal_frame",
+            () -> new Block(BlockBehaviour.Properties.of(Material.ICE_SOLID).noOcclusion().requiresCorrectToolForDrops()
+                    .strength(15f)),ModTabs.INFINITY_NEXUS, Rarity.UNCOMMON,
+            "tooltip.infinity_nexus_mod:explorar_portal_frame");
 
+
+    private static <T extends Block> RegistryObject<T> registerBlockWithoutBlockItem(String name, Supplier<T> block){
+        return BLOCKS.register(name, block);
+    }
      private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab,Rarity rarity,String tooltip) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn, tab, rarity,tooltip);

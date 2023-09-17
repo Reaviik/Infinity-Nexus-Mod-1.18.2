@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: net.minecraftforge:forge:1.18.2-40.2.0_mapped_parchment_2022.08.07-1.18.2_at_da39a3ee5e6b4b0d3255bfef95601890afd80709" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="net.minecraftforge" artifactId="forge" version="1.18.2-40.2.0_mapped_parchment_2022.08.07-1.18.2_at_da39a3ee5e6b4b0d3255bfef95601890afd80709" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/build/fg_cache/net/minecraftforge/forge/1.18.2-40.2.0_mapped_parchment_2022.08.07-1.18.2/forge-1.18.2-40.2.0_mapped_parchment_2022.08.07-1.18.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/build/fg_cache/net/minecraftforge/forge/1.18.2-40.2.0_mapped_parchment_2022.08.07-1.18.2/forge-1.18.2-40.2.0_mapped_parchment_2022.08.07-1.18.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

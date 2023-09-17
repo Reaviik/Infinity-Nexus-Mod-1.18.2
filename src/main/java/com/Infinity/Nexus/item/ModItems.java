@@ -1,9 +1,13 @@
 package com.Infinity.Nexus.item;
 
 import com.Infinity.Nexus.InfinityNexus;
+import com.Infinity.Nexus.item.custom.CatalystItem;
 import com.Infinity.Nexus.tab.ModTabs;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.SwordItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -104,9 +108,35 @@ public class ModItems {
             () -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS).rarity(Rarity.UNCOMMON)));
     public static final RegistryObject<Item> INDUSTRIAL_SHEET = ITEMS.register("industrial_sheet",
             () -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS).rarity(Rarity.EPIC)));
+    public static final RegistryObject<Item> RAW_INGOT = ITEMS.register("raw_infinity",
+            () -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS).rarity(Rarity.COMMON)));
+    public static final RegistryObject<Item> INFINITY_INGOT = ITEMS.register("infinity_ingot",
+            () -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS).rarity(Rarity.COMMON)));
     public static final RegistryObject<Item> WING = ITEMS.register("wing",
             () -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS).rarity(Rarity.EPIC)));
 
+    //Tools
+    public static final RegistryObject<Item> MEASMIR_SWORD = ITEMS.register("measmir_sword",
+            () -> new SwordItem(ModTiers.INFINITY, 35,9f,
+                    new Item.Properties().tab(ModTabs.INFINITY_NEXUS).stacksTo(1)));
+
+    //Armor
+    public static final RegistryObject<Item> INFINITY_HELMET = ITEMS.register("infinity_helmet",
+            () -> new ArmorItem(ModArmorMaterials.INFINITY, EquipmentSlot.HEAD,
+                    new Item.Properties().tab(ModTabs.INFINITY_NEXUS).stacksTo(1)));
+    public static final RegistryObject<Item> INFINITY_CHESTPLATE = ITEMS.register("infinity_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.INFINITY, EquipmentSlot.CHEST,
+                    new Item.Properties().tab(ModTabs.INFINITY_NEXUS).stacksTo(1)));
+    public static final RegistryObject<Item> INFINITY_LEGGINGS = ITEMS.register("infinity_leggings",
+            () -> new ArmorItem(ModArmorMaterials.INFINITY, EquipmentSlot.LEGS,
+                    new Item.Properties().tab(ModTabs.INFINITY_NEXUS).stacksTo(1)));
+    public static final RegistryObject<Item> INFINITY_BOOTS = ITEMS.register("infinity_boots",
+            () -> new ArmorItem(ModArmorMaterials.INFINITY, EquipmentSlot.FEET,
+                    new Item.Properties().tab(ModTabs.INFINITY_NEXUS).stacksTo(1)));
+
+    //Misc
+        //Catalyst
+    public static final RegistryObject<Item> CATALIST = ITEMS.register("catalyst", CatalystItem::new);
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
     }
