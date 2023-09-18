@@ -2,9 +2,15 @@
   "itemGroup.infinity_nexus_mod":"§x§9§0§0§0§9§dInfinity Nexus",
   "tooltip.infinity_nexus.pressShift":"§bPress §eShift §bto see more",
 
+  "item.infinity_nexus_mod.catalyst": "Portal Activator",
+
   "item.infinity_nexus_mod.wing": "Wing",
-  "item.infinity_nexus_mod.imperialinfinity_sword": "Measmir Sword",
-  "tooltip.infinity_nexus_mod.imperialinfinity_sword":  "§eInflict effects §7Weakness §eand §9Wither §eon hit",
+
+  "item.infinity_nexus_mod.imperial_infinity_sword": "Imperial Infinity Sword",
+  "tooltip.infinity_nexus_mod.imperial_infinity_sword":  "§eInflict effects §7Weakness §eand §9Wither §eon hit",
+
+  "item.infinity_nexus_mod.infinity_sword": "Infinity Sword",
+  "tooltip.infinity_nexus_mod.infinity_sword":  "§eInflict effects §7Weakness §eand §9Wither §eon hit",
 
 
   "item.infinity_nexus_mod.gold_wire_cast": "Gold Wire Cast",
@@ -53,11 +59,6 @@
   "item.infinity_nexus_mod.magic_sheet": "Magic Sheet",
   "item.infinity_nexus_mod.steel_sheet": "Steel Sheet",
   "item.infinity_nexus_mod.industrial_sheet": "Industrial Sheet",
-
-  "item.infinity_nexus_mod.imperialinfinity_helmet": "Imperial Infinity Helmet",
-  "item.infinity_nexus_mod.imperialinfinity_chestplate": "Imperial Infinity Chestplate",
-  "item.infinity_nexus_mod.imperialinfinity_leggings": "Imperial Infinity Leggings",
-  "item.infinity_nexus_mod.imperialinfinity_boots": "Imperial Infinity Boots",
 
   "item.infinity_nexus_mod.raw_infinity": "Raw Infinity",
   "item.infinity_nexus_mod.infinity_ingot": "Infinity Ingot",
@@ -114,5 +115,56 @@
   "block.infinity_nexus_mod.full_ultimate_mixed_metal_box": "Full Ultimate Metal Box",
   "block.infinity_nexus_mod.full_ultimate_mixed_metal_box_1": "Full Ultimate Metal Box",
 
-  "block.infinity_nexus_mod.full_legendary_mixed_metal_box": "Full Infinity Metal Box"
+  "block.infinity_nexus_mod.full_legendary_mixed_metal_box": "Full Infinity Metal Box",
+
+
+  "item.infinity_nexus_mod.imperial_infinity_helmet": "Imperial Infinity Helmet",
+  "item.infinity_nexus_mod.imperial_infinity_chestplate": "Imperial Infinity Chestplate",
+  "item.infinity_nexus_mod.imperial_infinity_leggings": "Imperial Infinity Leggings",
+  "item.infinity_nexus_mod.imperial_infinity_boots": "Imperial Infinity Boots",
+
+  "item.infinity_nexus_mod.infinity_helmet": "Infinity Helmet",
+  "item.infinity_nexus_mod.infinity_chestplate": "Infinity Chestplate",
+  "item.infinity_nexus_mod.infinity_leggings": "Infinity Leggings",
+  "item.infinity_nexus_mod.infinity_boots": "Infinity Boots",
+
+  "item.infinity_nexus_mod.blue_infinity_helmet": "Blue Infinity Helmet",
+  "item.infinity_nexus_mod.blue_infinity_chestplate": "Blue Infinity Chestplate",
+  "item.infinity_nexus_mod.blue_infinity_leggings": "Blue Infinity Leggings",
+  "item.infinity_nexus_mod.blue_infinity_boots": "Blue Infinity Boots",
+
+  "item.infinity_nexus_mod.gold_infinity_helmet": "Gold Infinity Helmet",
+  "item.infinity_nexus_mod.gold_infinity_chestplate": "Gold Infinity Chestplate",
+  "item.infinity_nexus_mod.gold_infinity_leggings": "Gold Infinity Leggings",
+  "item.infinity_nexus_mod.gold_infinity_boots": "Gold Infinity Boots",
+
+  "item.infinity_nexus_mod.green_infinity_helmet": "Green Infinity Helmet",
+  "item.infinity_nexus_mod.green_infinity_chestplate": "Green Infinity Chestplate",
+  "item.infinity_nexus_mod.green_infinity_leggings": "Green Infinity Leggings",
+  "item.infinity_nexus_mod.green_infinity_boots": "Green Infinity Boots",
+
+  "item.infinity_nexus_mod.pink_infinity_helmet": "Pink Infinity Helmet",
+  "item.infinity_nexus_mod.pink_infinity_chestplate": "Pink Infinity Chestplate",
+  "item.infinity_nexus_mod.pink_infinity_leggings": "Pink Infinity Leggings",
+  "item.infinity_nexus_mod.pink_infinity_boots": "Pink Infinity Boots",
+
+  "item.infinity_nexus_mod.purple_infinity_helmet": "Purple Infinity Helmet",
+  "item.infinity_nexus_mod.purple_infinity_chestplate": "Purple Infinity Chestplate",
+  "item.infinity_nexus_mod.purple_infinity_leggings": "Purple Infinity Leggings",
+  "item.infinity_nexus_mod.purple_infinity_boots": "Purple Infinity Boots",
+
+  "item.infinity_nexus_mod.red_infinity_helmet": "Red Infinity Helmet",
+  "item.infinity_nexus_mod.red_infinity_chestplate": "Red Infinity Chestplate",
+  "item.infinity_nexus_mod.red_infinity_leggings": "Red Infinity Leggings",
+  "item.infinity_nexus_mod.red_infinity_boots": "Red Infinity Boots",
+
+  "item.infinity_nexus_mod.silver_infinity_helmet": "Silver Infinity Helmet",
+  "item.infinity_nexus_mod.silver_infinity_chestplate": "Silver Infinity Chestplate",
+  "item.infinity_nexus_mod.silver_infinity_leggings": "Silver Infinity Leggings",
+  "item.infinity_nexus_mod.silver_infinity_boots": "Silver Infinity Boots",
+
+  "item.infinity_nexus_mod.yellow_infinity_helmet": "Yellow Infinity Helmet",
+  "item.infinity_nexus_mod.yellow_infinity_chestplate": "Yellow Infinity Chestplate",
+  "item.infinity_nexus_mod.yellow_infinity_leggings": "Yellow Infinity Leggings",
+  "item.infinity_nexus_mod.yellow_infinity_boots": "Yellow Infinity Boots"
 }

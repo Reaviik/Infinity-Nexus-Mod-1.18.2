@@ -1,4 +1,4 @@
-package com.Infinity.Nexus.item.custom;
+package com.Infinity.Nexus.item;
 
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.renderer.EffectInstance;

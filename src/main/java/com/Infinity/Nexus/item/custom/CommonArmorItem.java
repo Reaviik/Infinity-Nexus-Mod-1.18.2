@@ -13,27 +13,24 @@ import net.minecraft.world.level.Level;
 
 import java.util.Map;
 
-public class LegendaryArmorItem extends ArmorItem {
+public class CommonArmorItem extends ArmorItem {
     private static final Map<ArmorMaterial, MobEffectInstance> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, MobEffectInstance>())
-                    .put(ModArmorMaterials.LEGENDARY, new MobEffectInstance(MobEffects.LUCK, 100, 2, false, true))
+                    .put(ModArmorMaterials.INFINITY, new MobEffectInstance(MobEffects.LUCK, 100, 2, false, true))
                     .build();
 
-    public LegendaryArmorItem(ArmorMaterial material, EquipmentSlot slot, Properties settings) {
+    public CommonArmorItem(ArmorMaterial material, EquipmentSlot slot, Properties settings) {
         super(material, slot, settings);
     }
 
     @Override
     public void onArmorTick(ItemStack stack, Level world, Player player) {
         if(!world.isClientSide()) {
+            //TODO
             if (hasFullSuitOfArmorOn(player)) {
                 evaluateArmorEffects(player);
-                player.getAbilities().mayfly = true;
-                player.addEffect(new MobEffectInstance(MobEffects.ABSORPTION,100,5,false,false));
                 player.onUpdateAbilities();
             }else{
-                player.getAbilities().flying = false;
-                player.getAbilities().mayfly = false;
                 player.onUpdateAbilities();
             }
         }

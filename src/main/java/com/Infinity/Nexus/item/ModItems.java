@@ -1,9 +1,7 @@
 package com.Infinity.Nexus.item;
 
 import com.Infinity.Nexus.InfinityNexus;
-import com.Infinity.Nexus.item.custom.CatalystItem;
-import com.Infinity.Nexus.item.custom.ImperialArmorItem;
-import com.Infinity.Nexus.item.custom.ModSword;
+import com.Infinity.Nexus.item.custom.*;
 import com.Infinity.Nexus.tab.ModTabs;
 import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -118,68 +116,169 @@ public class ModItems {
             () -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS).rarity(Rarity.EPIC)));
 
     //Tools
-    public static final RegistryObject<Item> IMPERIAL_INFINITY_SWORD = ITEMS.register("imperialinfinity_sword",
-            () -> new ModSword(ModTiers.INFINITY, 50,10f,//+4
+    public static final RegistryObject<Item> IMPERIAL_INFINITY_SWORD = ITEMS.register("imperial_infinity_sword",
+            () -> new ModSword(ModTiers.IMPERIAL, 50,10f,//+4
                     new Item.Properties().tab(ModTabs.INFINITY_NEXUS).stacksTo(1),
-                    new TranslatableComponent("tooltip.infinity_nexus_mod.imperialinfinity_sword"),
+                    new TranslatableComponent("tooltip.infinity_nexus_mod.imperial_infinity_sword"),
                     new MobEffectInstance[]{
                     new MobEffectInstance(MobEffects.WEAKNESS, 200,3),
                     new MobEffectInstance(MobEffects.WITHER, 200,3)
             }));
-    public static final RegistryObject<Item> LEGENDARY_INFINITY_SWORD = ITEMS.register("legendaryinfinity_sword",
-            () -> new ModSword(ModTiers.LEGENDARY, 40,10f,//+4
+    public static final RegistryObject<Item> INFINITY_SWORD = ITEMS.register("infinity_sword",
+            () -> new ModSword(ModTiers.INFINITY, 40,10f,//+4
                     new Item.Properties().tab(ModTabs.INFINITY_NEXUS).stacksTo(1),
-                    new TranslatableComponent("tooltip.infinity_nexus_mod.legendaryinfinity_sword"),
+                    new TranslatableComponent("tooltip.infinity_nexus_mod.infinity_sword"),
                     new MobEffectInstance[]{
                             //TODO
                     new MobEffectInstance(MobEffects.WEAKNESS, 200,2),
                     new MobEffectInstance(MobEffects.WITHER, 200,2)
             }));
-    public static final RegistryObject<Item> EPIC_INFINITY_SWORD = ITEMS.register("epicinfinity_sword",
-            () -> new ModSword(ModTiers.EPIC, 40,10f,//+4
-                    new Item.Properties().tab(ModTabs.INFINITY_NEXUS).stacksTo(1),
-                    new TranslatableComponent("tooltip.infinity_nexus_mod.epicinfinity_sword"),
+
+    public static final RegistryObject<Item> PURPLE_INFINITY_SWORD = ITEMS.register("purple_infinity_sword",
+            () -> new ModSword(ModTiers.INFINITY, 40,10f,//+4
+                    new Item.Properties().stacksTo(1),
+                    new TranslatableComponent("tooltip.infinity_nexus_mod.purple_infinity_sword"),
                     new MobEffectInstance[]{
                             //TODO
-                    new MobEffectInstance(MobEffects.WEAKNESS, 200,1),
-                    new MobEffectInstance(MobEffects.WITHER, 200,1)
-                    }));
-    public static final RegistryObject<Item> RARE_INFINITY_SWORD = ITEMS.register("rareinfinity_sword",
-            () -> new ModSword(ModTiers.RARE, 40,10f,//+4
-                    new Item.Properties().tab(ModTabs.INFINITY_NEXUS).stacksTo(1),
-                    new TranslatableComponent("tooltip.infinity_nexus_mod.rareinfinity_sword"),
-                    new MobEffectInstance[]{
-                            //TODO
-                    new MobEffectInstance(MobEffects.WEAKNESS, 200,0),
-                    new MobEffectInstance(MobEffects.WITHER, 200,0)
-                    }));
+                    new MobEffectInstance(MobEffects.WEAKNESS, 200,2),
+                    new MobEffectInstance(MobEffects.WITHER, 200,2)
+
+            }));
+
 
     //Armor
-        //Legendary
-    public static final RegistryObject<Item> GREEN_INFINITY_HELMET = ITEMS.register("greeninfinity_helmet",
-            () -> new ImperialArmorItem(ModArmorMaterials.LEGENDARY, EquipmentSlot.HEAD,
-                    new Item.Properties().tab(ModTabs.INFINITY_NEXUS).stacksTo(1).rarity(Rarity.RARE)));
-    public static final RegistryObject<Item> GREEN_INFINITY_CHESTPLATE = ITEMS.register("greeninfinity_chestplate",
-            () -> new ImperialArmorItem(ModArmorMaterials.LEGENDARY, EquipmentSlot.CHEST,
-                    new Item.Properties().tab(ModTabs.INFINITY_NEXUS).stacksTo(1).rarity(Rarity.RARE)));
-    public static final RegistryObject<Item> GREEN_INFINITY_LEGGINGS = ITEMS.register("greeninfinity_leggings",
-            () -> new ImperialArmorItem(ModArmorMaterials.LEGENDARY, EquipmentSlot.LEGS,
-                    new Item.Properties().tab(ModTabs.INFINITY_NEXUS).stacksTo(1).rarity(Rarity.RARE)));
-    public static final RegistryObject<Item> GREEN_INFINITY_BOOTS = ITEMS.register("greeninfinity_boots",
-            () -> new ImperialArmorItem(ModArmorMaterials.LEGENDARY, EquipmentSlot.FEET,
-                    new Item.Properties().tab(ModTabs.INFINITY_NEXUS).stacksTo(1).rarity(Rarity.RARE)));
 
+    public static final RegistryObject<Item> BLUE_INFINITY_HELMET = ITEMS.register("blue_infinity_helmet",
+            () -> new CommonArmorItem(ModArmorMaterials.BLUE, EquipmentSlot.HEAD,
+                    new Item.Properties().stacksTo(1).rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> BLUE_INFINITY_CHESTPLATE = ITEMS.register("blue_infinity_chestplate",
+            () -> new CommonArmorItem(ModArmorMaterials.BLUE, EquipmentSlot.CHEST,
+                    new Item.Properties().stacksTo(1).rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> BLUE_INFINITY_LEGGINGS = ITEMS.register("blue_infinity_leggings",
+            () -> new CommonArmorItem(ModArmorMaterials.BLUE, EquipmentSlot.LEGS,
+                    new Item.Properties().stacksTo(1).rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> BLUE_INFINITY_BOOTS = ITEMS.register("blue_infinity_boots",
+            () -> new CommonArmorItem(ModArmorMaterials.BLUE, EquipmentSlot.FEET,
+                    new Item.Properties().stacksTo(1).rarity(Rarity.RARE)));
+
+    public static final RegistryObject<Item> GOLD_INFINITY_HELMET = ITEMS.register("gold_infinity_helmet",
+            () -> new CommonArmorItem(ModArmorMaterials.GOLD, EquipmentSlot.HEAD,
+                    new Item.Properties().stacksTo(1).rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> GOLD_INFINITY_CHESTPLATE = ITEMS.register("gold_infinity_chestplate",
+            () -> new CommonArmorItem(ModArmorMaterials.GOLD, EquipmentSlot.CHEST,
+                    new Item.Properties().stacksTo(1).rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> GOLD_INFINITY_LEGGINGS = ITEMS.register("gold_infinity_leggings",
+            () -> new CommonArmorItem(ModArmorMaterials.GOLD, EquipmentSlot.LEGS,
+                    new Item.Properties().stacksTo(1).rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> GOLD_INFINITY_BOOTS = ITEMS.register("gold_infinity_boots",
+            () -> new CommonArmorItem(ModArmorMaterials.GOLD, EquipmentSlot.FEET,
+                    new Item.Properties().stacksTo(1).rarity(Rarity.RARE)));
+
+    public static final RegistryObject<Item> GREEN_INFINITY_HELMET = ITEMS.register("green_infinity_helmet",
+            () -> new CommonArmorItem(ModArmorMaterials.GREEN, EquipmentSlot.HEAD,
+                    new Item.Properties().stacksTo(1).rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> GREEN_INFINITY_CHESTPLATE = ITEMS.register("green_infinity_chestplate",
+            () -> new CommonArmorItem(ModArmorMaterials.GREEN, EquipmentSlot.CHEST,
+                    new Item.Properties().stacksTo(1).rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> GREEN_INFINITY_LEGGINGS = ITEMS.register("green_infinity_leggings",
+            () -> new CommonArmorItem(ModArmorMaterials.GREEN, EquipmentSlot.LEGS,
+                    new Item.Properties().stacksTo(1).rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> GREEN_INFINITY_BOOTS = ITEMS.register("green_infinity_boots",
+            () -> new CommonArmorItem(ModArmorMaterials.GREEN, EquipmentSlot.FEET,
+                    new Item.Properties().stacksTo(1).rarity(Rarity.RARE)));
+
+    public static final RegistryObject<Item> PINK_INFINITY_HELMET = ITEMS.register("pink_infinity_helmet",
+            () -> new CommonArmorItem(ModArmorMaterials.PINK, EquipmentSlot.HEAD,
+                    new Item.Properties().stacksTo(1).rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> PINK_INFINITY_CHESTPLATE = ITEMS.register("pink_infinity_chestplate",
+            () -> new CommonArmorItem(ModArmorMaterials.PINK, EquipmentSlot.CHEST,
+                    new Item.Properties().stacksTo(1).rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> PINK_INFINITY_LEGGINGS = ITEMS.register("pink_infinity_leggings",
+            () -> new CommonArmorItem(ModArmorMaterials.PINK, EquipmentSlot.LEGS,
+                    new Item.Properties().stacksTo(1).rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> PINK_INFINITY_BOOTS = ITEMS.register("pink_infinity_boots",
+            () -> new CommonArmorItem(ModArmorMaterials.PINK, EquipmentSlot.FEET,
+                    new Item.Properties().stacksTo(1).rarity(Rarity.RARE)));
+
+    public static final RegistryObject<Item> PURPLE_INFINITY_HELMET = ITEMS.register("purple_infinity_helmet",
+            () -> new CommonArmorItem(ModArmorMaterials.PURPLE, EquipmentSlot.HEAD,
+                    new Item.Properties().stacksTo(1).rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> PURPLE_INFINITY_CHESTPLATE = ITEMS.register("purple_infinity_chestplate",
+            () -> new CommonArmorItem(ModArmorMaterials.PURPLE, EquipmentSlot.CHEST,
+                    new Item.Properties().stacksTo(1).rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> PURPLE_INFINITY_LEGGINGS = ITEMS.register("purple_infinity_leggings",
+            () -> new CommonArmorItem(ModArmorMaterials.PURPLE, EquipmentSlot.LEGS,
+                    new Item.Properties().stacksTo(1).rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> PURPLE_INFINITY_BOOTS = ITEMS.register("purple_infinity_boots",
+            () -> new CommonArmorItem(ModArmorMaterials.PURPLE, EquipmentSlot.FEET,
+                    new Item.Properties().stacksTo(1).rarity(Rarity.RARE)));
+
+    public static final RegistryObject<Item> RED_INFINITY_HELMET = ITEMS.register("red_infinity_helmet",
+            () -> new CommonArmorItem(ModArmorMaterials.RED, EquipmentSlot.HEAD,
+                    new Item.Properties().stacksTo(1).rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> RED_INFINITY_CHESTPLATE = ITEMS.register("red_infinity_chestplate",
+            () -> new CommonArmorItem(ModArmorMaterials.RED, EquipmentSlot.CHEST,
+                    new Item.Properties().stacksTo(1).rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> RED_INFINITY_LEGGINGS = ITEMS.register("red_infinity_leggings",
+            () -> new CommonArmorItem(ModArmorMaterials.RED, EquipmentSlot.LEGS,
+                    new Item.Properties().stacksTo(1).rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> RED_INFINITY_BOOTS = ITEMS.register("red_infinity_boots",
+            () -> new CommonArmorItem(ModArmorMaterials.RED, EquipmentSlot.FEET,
+                    new Item.Properties().stacksTo(1).rarity(Rarity.RARE)));
+
+
+    public static final RegistryObject<Item> SILVER_INFINITY_HELMET = ITEMS.register("silver_infinity_helmet",
+            () -> new CommonArmorItem(ModArmorMaterials.SILVER, EquipmentSlot.HEAD,
+                    new Item.Properties().stacksTo(1).rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> SILVER_INFINITY_CHESTPLATE = ITEMS.register("silver_infinity_chestplate",
+            () -> new CommonArmorItem(ModArmorMaterials.SILVER, EquipmentSlot.CHEST,
+                    new Item.Properties().stacksTo(1).rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> SILVER_INFINITY_LEGGINGS = ITEMS.register("silver_infinity_leggings",
+            () -> new CommonArmorItem(ModArmorMaterials.SILVER, EquipmentSlot.LEGS,
+                    new Item.Properties().stacksTo(1).rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> SILVER_INFINITY_BOOTS = ITEMS.register("silver_infinity_boots",
+            () -> new CommonArmorItem(ModArmorMaterials.SILVER, EquipmentSlot.FEET,
+                    new Item.Properties().stacksTo(1).rarity(Rarity.RARE)));
+
+
+    public static final RegistryObject<Item> YELLOW_INFINITY_HELMET = ITEMS.register("yellow_infinity_helmet",
+            () -> new CommonArmorItem(ModArmorMaterials.YELLOW, EquipmentSlot.HEAD,
+                    new Item.Properties().stacksTo(1).rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> YELLOW_INFINITY_CHESTPLATE = ITEMS.register("yellow_infinity_chestplate",
+            () -> new CommonArmorItem(ModArmorMaterials.YELLOW, EquipmentSlot.CHEST,
+                    new Item.Properties().stacksTo(1).rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> YELLOW_INFINITY_LEGGINGS = ITEMS.register("yellow_infinity_leggings",
+            () -> new CommonArmorItem(ModArmorMaterials.YELLOW, EquipmentSlot.LEGS,
+                    new Item.Properties().stacksTo(1).rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> YELLOW_INFINITY_BOOTS = ITEMS.register("yellow_infinity_boots",
+            () -> new CommonArmorItem(ModArmorMaterials.YELLOW, EquipmentSlot.FEET,
+                    new Item.Properties().stacksTo(1).rarity(Rarity.RARE)));
+            //Infinity
+
+
+    public static final RegistryObject<Item> INFINITY_INFINITY_HELMET = ITEMS.register("infinity_helmet",
+            () -> new InfinityArmorItem(ModArmorMaterials.INFINITY, EquipmentSlot.HEAD,
+                    new Item.Properties().tab(ModTabs.INFINITY_NEXUS).stacksTo(1).rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> INFINITY_INFINITY_CHESTPLATE = ITEMS.register("infinity_chestplate",
+            () -> new InfinityArmorItem(ModArmorMaterials.INFINITY, EquipmentSlot.CHEST,
+                    new Item.Properties().tab(ModTabs.INFINITY_NEXUS).stacksTo(1).rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> INFINITY_INFINITY_LEGGINGS = ITEMS.register("infinity_leggings",
+            () -> new InfinityArmorItem(ModArmorMaterials.INFINITY, EquipmentSlot.LEGS,
+                    new Item.Properties().tab(ModTabs.INFINITY_NEXUS).stacksTo(1).rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> INFINITY_INFINITY_BOOTS = ITEMS.register("infinity_boots",
+            () -> new InfinityArmorItem(ModArmorMaterials.INFINITY, EquipmentSlot.FEET,
+                    new Item.Properties().tab(ModTabs.INFINITY_NEXUS).stacksTo(1).rarity(Rarity.RARE)));
             //Imperial
-    public static final RegistryObject<Item> IMPERIAL_INFINITY_HELMET = ITEMS.register("imperialinfinity_helmet",
+    public static final RegistryObject<Item> IMPERIAL_INFINITY_HELMET = ITEMS.register("imperial_infinity_helmet",
             () -> new ImperialArmorItem(ModArmorMaterials.IMPERIAL, EquipmentSlot.HEAD,
                     new Item.Properties().tab(ModTabs.INFINITY_NEXUS).stacksTo(1).rarity(Rarity.EPIC)));
-    public static final RegistryObject<Item> IMPERIAL_INFINITY_CHESTPLATE = ITEMS.register("imperialinfinity_chestplate",
+    public static final RegistryObject<Item> IMPERIAL_INFINITY_CHESTPLATE = ITEMS.register("imperial_infinity_chestplate",
             () -> new ImperialArmorItem(ModArmorMaterials.IMPERIAL, EquipmentSlot.CHEST,
                     new Item.Properties().tab(ModTabs.INFINITY_NEXUS).stacksTo(1).rarity(Rarity.EPIC)));
-    public static final RegistryObject<Item> IMPERIAL_INFINITY_LEGGINGS = ITEMS.register("imperialinfinity_leggings",
+    public static final RegistryObject<Item> IMPERIAL_INFINITY_LEGGINGS = ITEMS.register("imperial_infinity_leggings",
             () -> new ImperialArmorItem(ModArmorMaterials.IMPERIAL, EquipmentSlot.LEGS,
                     new Item.Properties().tab(ModTabs.INFINITY_NEXUS).stacksTo(1).rarity(Rarity.EPIC)));
-    public static final RegistryObject<Item> IMPERIAL_INFINITY_BOOTS = ITEMS.register("imperialinfinity_boots",
+    public static final RegistryObject<Item> IMPERIAL_INFINITY_BOOTS = ITEMS.register("imperial_infinity_boots",
             () -> new ImperialArmorItem(ModArmorMaterials.IMPERIAL, EquipmentSlot.FEET,
                     new Item.Properties().tab(ModTabs.INFINITY_NEXUS).stacksTo(1).rarity(Rarity.EPIC)));
 
