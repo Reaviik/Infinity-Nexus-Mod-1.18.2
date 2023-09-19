@@ -1,8 +1,10 @@
 package com.Infinity.Nexus.item.custom;
 
+import com.Infinity.Nexus.config.ModCommonConfigs;
 import com.Infinity.Nexus.item.ModArmorMaterials;
 import com.Infinity.Nexus.utils.ModTags;
 import com.google.common.collect.ImmutableMap;
+import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffect;
@@ -18,8 +20,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.AABB;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -31,38 +31,7 @@ public class ImperialArmorItem extends ArmorItem {
     public ImperialArmorItem(ArmorMaterial material, EquipmentSlot slot, Properties settings) {
         super(material, slot, settings);
     }
-    public static List<Map<String, Object>> parseEffectsList(List<String> effectsList) {
-        List<Map<String, Object>> parsedEffects = new ArrayList<>();
 
-        for (String effectString : effectsList) {
-            Map<String, Object> effectData = parseEffectString(effectString);
-            if (effectData != null) {
-                parsedEffects.add(effectData);
-            }
-        }
-
-        return parsedEffects;
-    }
-
-    public static Map<String, Object> parseEffectString(String effectString) {
-        Map<String, Object> effectData = new HashMap<>();
-        String[] parts = effectString.split(",");
-
-        // Obtendo os valores do mapa
-        int duration = (int) effectData.get("duration");
-        String effectName = (String) effectData.get("effect");
-        boolean showParticles = (boolean) effectData.get("showParticles");
-        int amplifier = (int) effectData.get("amplifier");
-        boolean ambient = (boolean) effectData.get("ambient");
-
-// Obtendo a instância do efeito com base nos valores do mapa
-        MobEffect effect = MobEffect.byId(MobEffect.);
-        if (effect != null) {
-            MobEffectInstance effectInstance = new MobEffectInstance(effect, duration, amplifier, ambient, showParticles);
-        }
-
-            return effectData;
-    }
     @Override
     public void onArmorTick(ItemStack stack, Level world, Player player) {
         if(!world.isClientSide()) {
@@ -70,24 +39,22 @@ public class ImperialArmorItem extends ArmorItem {
                 player.getAbilities().mayfly = true;
                 player.getAbilities().invulnerable = true;
                 player.getFoodData().setFoodLevel(20);
-                                                                                                //9 = 2 barras de absorption
                 MobEffectInstance effectInstance = new MobEffectInstance(MobEffects.NIGHT_VISION, Integer.MAX_VALUE, 1, false, false);
                 effectInstance.setNoCounter(true);
                 player.addEffect(effectInstance);
                 player.setHealth(player.getMaxHealth());
-
                 player.onUpdateAbilities();
-
-
                //Magnetism TODO /mag
-               //int range = 5;
-               //BlockPos pos = new BlockPos(player.getX(), player.getY(), player.getZ());
-               //List<ItemEntity> entities = player.level.getEntitiesOfClass(ItemEntity.class, new AABB(pos.getX() + range, pos.getY() + range, pos.getZ() + range, pos.getX() - range, pos.getY() - range, pos.getZ() - range));
-               //for(ItemEntity item : entities) {
-               //    if(item.isAlive() && !item.hasPickUpDelay() && (item.getItem().is(ModTags.Items.PICKUP))) {
-               //        item.playerTouch((Player)player);
-               //    }
-               //}
+                if(!Screen.hasShiftDown() && ModCommonConfigs.I_I_T_E_MAGNETISM.get()) {
+                    int range = 5;
+                    BlockPos pos = new BlockPos(player.getX(), player.getY(), player.getZ());
+                    List<ItemEntity> entities = player.level.getEntitiesOfClass(ItemEntity.class, new AABB(pos.getX() + range, pos.getY() + range, pos.getZ() + range, pos.getX() - range, pos.getY() - range, pos.getZ() - range));
+                    for (ItemEntity item : entities) {
+                        if (item.isAlive() && !item.hasPickUpDelay() && (item.getItem().is(ModTags.Items.PICKUP))) {
+                            item.playerTouch((Player) player);
+                        }
+                    }
+                }
             }else{
                 player.getAbilities().flying = false;
                 player.getAbilities().mayfly = false;
@@ -96,7 +63,6 @@ public class ImperialArmorItem extends ArmorItem {
             }
         }
     }
-
     private boolean hasFullSuitOfArmorOn(Player player) {
         ItemStack boots = player.getInventory().getArmor(0);
         ItemStack leggings = player.getInventory().getArmor(1);

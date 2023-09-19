@@ -25,14 +25,8 @@ public class ModCommonConfigs {
     public static final ForgeConfigSpec.ConfigValue<Float> I_I_S_SPEED;
 
 
-    public static final ForgeConfigSpec.ConfigValue<List<String>> I_I_A_EFFECTS;
-
+    public static final ForgeConfigSpec.ConfigValue<Boolean> I_I_T_E_MAGNETISM;
     static {
-
-        List<String> defaultEffects = new ArrayList<>();
-        defaultEffects.add("{duration=600, effect=minecraft:night_vision, showParticles=false, amplifier=1, ambient=false}");
-        defaultEffects.add("{duration=600, effect=minecraft:night_vision, showParticles=false, amplifier=1, ambient=false}");
-        defaultEffects.add("{duration=600, effect=minecraft:night_vision, showParticles=false, amplifier=1, ambient=false}");
 
         BUILDER.push("Infinity Nexus Common Configs");
 
@@ -62,8 +56,9 @@ public class ModCommonConfigs {
         I_I_S_SPEED = BUILDER.comment("Harvest speed for Imperial Infinity Sword")
                 .define("Imperial Infinity Sword Attack Speed, Default 10", 10f);
 
-        I_I_A_EFFECTS = BUILDER.comment("Imperial Armor Effects")
-                        .define("Imperial Armor Effects", defaultEffects);
+
+        I_I_T_E_MAGNETISM = BUILDER.comment("Imperial Infinity Armor Can Magnetize Items")
+                        .define("Atract Items", true);
         BUILDER.pop();
         SPEC = BUILDER.build();
     }
