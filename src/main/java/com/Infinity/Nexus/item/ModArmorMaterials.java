@@ -14,10 +14,34 @@ import java.util.function.Supplier;
 public enum ModArmorMaterials  implements ArmorMaterial {
 
 
-    IMPERIAL("imperialinfinity", -1, new int[]{12, 15, 18, 12}, 80, SoundEvents.ARMOR_EQUIP_NETHERITE, 15.0F, 24.0F, () -> {
+    IMPERIAL("imperial_infinity", -1, new int[]{22,25,28,22}, 80, SoundEvents.ARMOR_EQUIP_NETHERITE, 15.0F, 24.0F, () -> {
         return Ingredient.of(ModItems.INFINITY_INGOT.get());
     }),
-    LEGENDARY("legendaryinfinity", 1000, new int[] {1, 1, 1, 1},80, SoundEvents.ARMOR_EQUIP_DIAMOND, 15.0F, 24.0F, () ->{
+    INFINITY("infinity", 1000, new int[] {12,15,18,12},80, SoundEvents.ARMOR_EQUIP_DIAMOND, 15.0F, 24.0F, () ->{
+        return Ingredient.of(ModItems.INFINITY_INGOT.get());
+    }),
+    BLUE("blue_infinity", 1000, new int[] {12,15,18,12},80, SoundEvents.ARMOR_EQUIP_DIAMOND, 15.0F, 24.0F, () ->{
+        return Ingredient.of(ModItems.INFINITY_INGOT.get());
+    }),
+    GOLD("gold_infinity", 1000, new int[] {12,15,18,12},80, SoundEvents.ARMOR_EQUIP_DIAMOND, 15.0F, 24.0F, () ->{
+        return Ingredient.of(ModItems.INFINITY_INGOT.get());
+    }),
+    GREEN("green_infinity", 1000, new int[] {12,15,18,12},80, SoundEvents.ARMOR_EQUIP_DIAMOND, 15.0F, 24.0F, () ->{
+        return Ingredient.of(ModItems.INFINITY_INGOT.get());
+    }),
+    PINK("pink_infinity", 1000, new int[] {12,15,18,12},80, SoundEvents.ARMOR_EQUIP_DIAMOND, 15.0F, 24.0F, () ->{
+        return Ingredient.of(ModItems.INFINITY_INGOT.get());
+    }),
+    PURPLE("purple_infinity", 1000, new int[] {12,15,18,12},80, SoundEvents.ARMOR_EQUIP_DIAMOND, 15.0F, 24.0F, () ->{
+        return Ingredient.of(ModItems.INFINITY_INGOT.get());
+    }),
+    RED("red_infinity", 1000, new int[] {12,15,18,12},80, SoundEvents.ARMOR_EQUIP_DIAMOND, 15.0F, 24.0F, () ->{
+        return Ingredient.of(ModItems.INFINITY_INGOT.get());
+    }),
+    SILVER("silver_infinity", 1000, new int[] {12,15,18,12},80, SoundEvents.ARMOR_EQUIP_DIAMOND, 15.0F, 24.0F, () ->{
+        return Ingredient.of(ModItems.INFINITY_INGOT.get());
+    }),
+    YELLOW("yellow_infinity", 1000, new int[] {12,15,18,12},80, SoundEvents.ARMOR_EQUIP_DIAMOND, 15.0F, 24.0F, () ->{
         return Ingredient.of(ModItems.INFINITY_INGOT.get());
     });
 

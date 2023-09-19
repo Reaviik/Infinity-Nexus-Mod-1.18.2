@@ -2,7 +2,7 @@
   "type": "infinity_nexus_mod:explorar",
   "generator": {
     "type": "minecraft:noise",
-    "seed": -18218927419822,
+    "seed": 0,
     "settings": "minecraft:overworld",
     "biome_source": {
       "type": "minecraft:fixed",

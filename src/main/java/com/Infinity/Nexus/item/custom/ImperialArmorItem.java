@@ -34,8 +34,6 @@ public class ImperialArmorItem extends ArmorItem {
     public void onArmorTick(ItemStack stack, Level world, Player player) {
         if(!world.isClientSide()) {
             if (hasFullSuitOfArmorOn(player)) {
-
-                Multimap<Attribute, AttributeModifier> modifiers = HashMultimap.create();
                 evaluateArmorEffects(player);
                 player.getAbilities().mayfly = true;
                 player.getAbilities().invulnerable = true;

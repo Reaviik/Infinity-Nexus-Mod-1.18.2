@@ -3,7 +3,7 @@ package com.Infinity.Nexus.block.custom;
 import com.Infinity.Nexus.block.ModBlocks;
 import com.Infinity.Nexus.utils.ModTags;
 import com.Infinity.Nexus.world.dimension.ModDimensions;
-import com.Infinity.Nexus.world.dimension.portal.ModTeleporter;
+import com.Infinity.Nexus.world.dimension.portal.ExplorarTeleporter;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceKey;
@@ -62,7 +62,7 @@ public class ExplorarPortal extends Block {
     }
 
     public boolean trySpawnPortal(LevelAccessor worldIn, BlockPos pos) {
-        ExplorarPortal.Size KJPortalBlock$size = this.isPortal(worldIn, pos);
+        Size KJPortalBlock$size = this.isPortal(worldIn, pos);
         if (KJPortalBlock$size != null && !onTrySpawnPortal(worldIn, pos, KJPortalBlock$size)) {
             KJPortalBlock$size.placePortalBlocks();
             return true;
@@ -71,32 +71,32 @@ public class ExplorarPortal extends Block {
         }
     }
 
-    public static boolean onTrySpawnPortal(LevelAccessor world, BlockPos pos, ExplorarPortal.Size size) {
+    public static boolean onTrySpawnPortal(LevelAccessor world, BlockPos pos, Size size) {
         return MinecraftForge.EVENT_BUS.post(new PortalSpawnEvent(world, pos, world.getBlockState(pos), size));
     }
 
     @Cancelable
     public static class PortalSpawnEvent extends BlockEvent {
-        private final ExplorarPortal.Size size;
+        private final Size size;
 
-        public PortalSpawnEvent(LevelAccessor world, BlockPos pos, BlockState state, ExplorarPortal.Size size) {
+        public PortalSpawnEvent(LevelAccessor world, BlockPos pos, BlockState state, Size size) {
             super(world, pos, state);
             this.size = size;
         }
 
-        public ExplorarPortal.Size getPortalSize()
+        public Size getPortalSize()
         {
             return size;
         }
     }
 
     @Nullable
-    public ExplorarPortal.Size isPortal(LevelAccessor worldIn, BlockPos pos) {
-        ExplorarPortal.Size KJPortalBlock$size = new Size(worldIn, pos, Direction.Axis.X);
+    public Size isPortal(LevelAccessor worldIn, BlockPos pos) {
+        Size KJPortalBlock$size = new Size(worldIn, pos, Direction.Axis.X);
         if (KJPortalBlock$size.isValid() && KJPortalBlock$size.portalBlockCount == 0) {
             return KJPortalBlock$size;
         } else {
-            ExplorarPortal.Size KaupenPortalBlock$size1 = new Size(worldIn, pos, Direction.Axis.Z);
+            Size KaupenPortalBlock$size1 = new Size(worldIn, pos, Direction.Axis.Z);
             return KaupenPortalBlock$size1.isValid() && KaupenPortalBlock$size1.portalBlockCount == 0 ? KaupenPortalBlock$size1 : null;
         }
     }
@@ -130,7 +130,7 @@ public class ExplorarPortal extends Block {
                         if(destinationWorld != null && minecraftserver.isNetherEnabled() && !entity.isPassenger()) {
                             entity.level.getProfiler().push("explorar_portal");
                             entity.setPortalCooldown();
-                            entity.changeDimension(destinationWorld, new ModTeleporter(destinationWorld));
+                            entity.changeDimension(destinationWorld, new ExplorarTeleporter(destinationWorld));
                             entity.level.getProfiler().pop();
                         }
                     }
@@ -243,13 +243,13 @@ public class ExplorarPortal extends Block {
             for(i = 0; i < 22; ++i) {
                 BlockPos blockpos = pos.relative(directionIn, i);
                 if(!this.canConnect(this.level.getBlockState(blockpos)) ||
-                        !(this.level.getBlockState(blockpos.below()).is(ModTags.EXPLORAR_PORTAL_FRAME))) {
+                        !(this.level.getBlockState(blockpos.below()).is(ModTags.Blocks.EXPLORAR_PORTAL_FRAME))) {
                     break;
                 }
             }
 
             BlockPos framePos = pos.relative(directionIn, i);
-            return this.level.getBlockState(framePos).is(ModTags.EXPLORAR_PORTAL_FRAME) ? i : 0;
+            return this.level.getBlockState(framePos).is(ModTags.Blocks.EXPLORAR_PORTAL_FRAME) ? i : 0;
         }
 
         public int getHeight() {
@@ -277,12 +277,12 @@ public class ExplorarPortal extends Block {
 
                     if (i == 0) {
                         BlockPos framePos = blockpos.relative(this.leftDir);
-                        if (!(this.level.getBlockState(framePos).is(ModTags.EXPLORAR_PORTAL_FRAME))) {
+                        if (!(this.level.getBlockState(framePos).is(ModTags.Blocks.EXPLORAR_PORTAL_FRAME))) {
                             break label56;
                         }
                     } else if (i == this.width - 1) {
                         BlockPos framePos = blockpos.relative(this.rightDir);
-                        if (!(this.level.getBlockState(framePos).is(ModTags.EXPLORAR_PORTAL_FRAME))) {
+                        if (!(this.level.getBlockState(framePos).is(ModTags.Blocks.EXPLORAR_PORTAL_FRAME))) {
                             break label56;
                         }
                     }
@@ -291,7 +291,7 @@ public class ExplorarPortal extends Block {
 
             for(int j = 0; j < this.width; ++j) {
                 BlockPos framePos = this.bottomLeft.relative(this.rightDir, j).above(this.height);
-                if (!(this.level.getBlockState(framePos).is(ModTags.EXPLORAR_PORTAL_FRAME))) {
+                if (!(this.level.getBlockState(framePos).is(ModTags.Blocks.EXPLORAR_PORTAL_FRAME))) {
                     this.height = 0;
                     break;
                 }

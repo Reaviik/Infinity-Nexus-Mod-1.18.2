@@ -29,7 +29,7 @@ public class InfinityNexus
     public InfinityNexus()
     {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
-
+        //teste
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
 

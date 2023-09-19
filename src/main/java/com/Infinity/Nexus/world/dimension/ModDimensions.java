@@ -15,6 +15,7 @@ public class ModDimensions {
     public static final ResourceKey<DimensionType> EXPLORAR_TYPE =
             ResourceKey.create(Registry.DIMENSION_TYPE_REGISTRY, EXPLORAR_KEY.getRegistryName());
 
+
     public static void registry() {
         System.out.println("Registrando ModDimensions For " + InfinityNexus.MOD_ID);
     }

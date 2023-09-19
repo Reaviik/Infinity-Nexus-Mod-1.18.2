@@ -182,7 +182,7 @@ public class ModBlocks {
     //Misc
         //Portal
     public static final RegistryObject<Block> EXPLORAR_PORTAL = registerBlockWithoutBlockItem("explorar_portal",
-     ExplorarPortal::new);
+            ExplorarPortal::new);
     public static final RegistryObject<Block> EXPLORAR_PORTAL_FRAME = registerBlock("explorar_portal_frame",
             () -> new Block(BlockBehaviour.Properties.of(Material.ICE_SOLID).noOcclusion().requiresCorrectToolForDrops()
                     .strength(15f)),ModTabs.INFINITY_NEXUS, Rarity.UNCOMMON,

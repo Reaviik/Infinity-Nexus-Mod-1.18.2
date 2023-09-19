@@ -2,9 +2,17 @@
   "itemGroup.infinity_nexus_mod": "§x§9§0§0§0§9§dInfinity Nexus",
   "tooltip.infinity_nexus.pressShift": "§7Pressione §eShift §7para ver mais",
 
+  "item.infinity_nexus_mod.catalyst": "Ativador de Portal",
+
   "item.infinity_nexus_mod.wing": "Asa",
-  "item.infinity_nexus_mod.imperialinfinity_sword": "Espada de Measmir",
-  "tooltip.infinity_nexus_mod.imperialinfinity_sword":  "§eAplicas efeitos de §7Weakness §ee §9Wither §e ao atacar",
+  "item.infinity_nexus_mod.imperial_infinity_sword": "Espada de Infinity Imperial",
+  "tooltip.infinity_nexus_mod.imperial_infinity_sword":  "§eAplicas efeitos de §7Weakness §ee §9Wither §e ao atacar",
+
+  "item.infinity_nexus_mod.infinity_sword": "Espada de Infinity",
+  "tooltip.infinity_nexus_mod.infinity_sword":  "§eAplicas efeitos de §7Weakness §ee §9Wither §e ao atacar",
+
+  "item.infinity_nexus_mod.purple_infinity_sword": "Espada de Infinity Roxa",
+  "tooltip.infinity_nexus_mod.purple_infinity_sword":  "§eAplicas efeitos de §7Weakness §ee §9Wither §e ao atacar",
 
   "item.infinity_nexus_mod.gold_wire_cast": "Molde de Ffio de Ouro",
   "item.infinity_nexus_mod.gold_screw_cast": "Molde de Parafuso de Ouro",
@@ -52,11 +60,6 @@
   "item.infinity_nexus_mod.magic_sheet": "Chapa Mágica",
   "item.infinity_nexus_mod.steel_sheet": "Chapa de Aço",
   "item.infinity_nexus_mod.industrial_sheet": "Chapa Industrial",
-
-  "item.infinity_nexus_mod.imperialInfinity_helmet": "Capacete Imperial de Infinity",
-  "item.infinity_nexus_mod.imperialInfinity_chestplate": "Peitoral Imperial de Infinity",
-  "item.infinity_nexus_mod.imperialInfinity_leggings": "Calças Imperial de Infinity",
-  "item.infinity_nexus_mod.imperialInfinity_boots": "Botas Imperial de Infinity",
 
   "item.infinity_nexus_mod.raw_infinity": "Infinity Bruto",
   "item.infinity_nexus_mod.infinity_ingot": "Barra de Infinity",
@@ -113,5 +116,57 @@
   "block.infinity_nexus_mod.full_ultimate_mixed_metal_box": "Caixa de Metal Ultimate Cheia",
   "block.infinity_nexus_mod.full_ultimate_mixed_metal_box_1": "Caixa de Metal Ultimate Cheia",
 
-  "block.infinity_nexus_mod.full_legendary_mixed_metal_box": "Caixa de Metal Infinita Cheia"
+  "block.infinity_nexus_mod.full_legendary_mixed_metal_box": "Caixa de Metal Infinita Cheia",
+
+
+  "item.infinity_nexus_mod.imperial_Infinity_helmet": "Capacete Imperial de Infinity",
+  "item.infinity_nexus_mod.imperial_Infinity_chestplate": "Peitoral Imperial de Infinity",
+  "item.infinity_nexus_mod.imperial_Infinity_leggings": "Calças Imperial de Infinity",
+  "item.infinity_nexus_mod.imperial_Infinity_boots": "Botas Imperial de Infinity",
+
+  "item.infinity_nexus_mod.infinity_helmet": "Elmo de de Infinity",
+  "item.infinity_nexus_mod.infinity_chestplate": "Peitoral de de Infinity",
+  "item.infinity_nexus_mod.infinity_leggings": "Perneiras de Infinitas",
+  "item.infinity_nexus_mod.infinity_boots": "Botas de Infinitas",
+
+  "item.infinity_nexus_mod.blue_infinity_helmet": "Elmo de Infinity Azul",
+  "item.infinity_nexus_mod.blue_infinity_chestplate": "Peitoral de Infinity Azul",
+  "item.infinity_nexus_mod.blue_infinity_leggings": "Perneiras Infinitas Azuis",
+  "item.infinity_nexus_mod.blue_infinity_boots": "Botas Infinitas Azuis",
+
+  "item.infinity_nexus_mod.gold_infinity_helmet": "Elmo de Infinity Dourado",
+  "item.infinity_nexus_mod.gold_infinity_chestplate": "Peitoral de Infinity Dourado",
+  "item.infinity_nexus_mod.gold_infinity_leggings": "Perneiras Infinitas Douradas",
+  "item.infinity_nexus_mod.gold_infinity_boots": "Botas Infinitas Douradas",
+
+  "item.infinity_nexus_mod.green_infinity_helmet": "Elmo de Infinity Verde",
+  "item.infinity_nexus_mod.green_infinity_chestplate": "Peitoral de Infinity Verde",
+  "item.infinity_nexus_mod.green_infinity_leggings": "Perneiras Infinitas Verdes",
+  "item.infinity_nexus_mod.green_infinity_boots": "Botas Infinitas Verdes",
+
+  "item.infinity_nexus_mod.pink_infinity_helmet": "Elmo de Infinity Rosa",
+  "item.infinity_nexus_mod.pink_infinity_chestplate": "Peitoral de Infinity Rosa",
+  "item.infinity_nexus_mod.pink_infinity_leggings": "Perneiras Infinitas Rosas",
+  "item.infinity_nexus_mod.pink_infinity_boots": "Botas Infinitas Rosas",
+
+  "item.infinity_nexus_mod.purple_infinity_helmet": "Elmo de Infinity Roxo",
+  "item.infinity_nexus_mod.purple_infinity_chestplate": "Peitoral de Infinity Roxo",
+  "item.infinity_nexus_mod.purple_infinity_leggings": "Perneiras Infinitas Roxas",
+  "item.infinity_nexus_mod.purple_infinity_boots": "Botas Infinitas Roxas",
+
+  "item.infinity_nexus_mod.red_infinity_helmet": "Elmo de Infinity Vermelho",
+  "item.infinity_nexus_mod.red_infinity_chestplate": "Peitoral de Infinity Vermelho",
+  "item.infinity_nexus_mod.red_infinity_leggings": "Perneiras Infinitas Vermelhas",
+  "item.infinity_nexus_mod.red_infinity_boots": "Botas Infinitas Vermelhas",
+
+  "item.infinity_nexus_mod.silver_infinity_helmet": "Elmo de Infinity Prateado",
+  "item.infinity_nexus_mod.silver_infinity_chestplate": "Peitoral de Infinity Prateado",
+  "item.infinity_nexus_mod.silver_infinity_leggings": "Perneiras Infinitas Prateadas",
+  "item.infinity_nexus_mod.silver_infinity_boots": "Botas Infinitas Prateadas",
+
+  "item.infinity_nexus_mod.yellow_infinity_helmet": "Elmo de Infinity Amarelo",
+  "item.infinity_nexus_mod.yellow_infinity_chestplate": "Peitoral de Infinity Amarelo",
+  "item.infinity_nexus_mod.yellow_infinity_leggings": "Perneiras Infinitas Amarelas",
+  "item.infinity_nexus_mod.yellow_infinity_boots": "Botas Infinitas Amarelas"
+
   }
