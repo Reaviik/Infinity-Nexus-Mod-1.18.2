@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "12"
+  ],
+  "key": {
+    "1": {
+      "tag": "infinity_nexus_mod:infinity_helmet"
+    },
+    "2": {
+      "item": "minecraft:white_dye"
+    }
+  },
+  "result": {
+    "item": "infinity_nexus_mod:silver_infinity_helmet"
+  }
+}

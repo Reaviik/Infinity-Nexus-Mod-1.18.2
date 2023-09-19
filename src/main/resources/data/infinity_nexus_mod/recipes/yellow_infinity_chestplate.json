@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "12"
+  ],
+  "key": {
+    "1": {
+      "tag": "infinity_nexus_mod:infinity_chestplate"
+    },
+    "2": {
+      "item": "minecraft:yellow_dye"
+    }
+  },
+  "result": {
+    "item": "infinity_nexus_mod:yellow_infinity_chestplate"
+  }
+}

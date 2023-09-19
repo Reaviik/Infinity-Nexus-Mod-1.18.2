@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "12"
+  ],
+  "key": {
+    "1": {
+      "item": "infinity_nexus_mod:infinity_sword"
+    },
+    "2": {
+      "item": "minecraft:purple_dye"
+    }
+  },
+  "result": {
+    "item": "infinity_nexus_mod:purple_infinity_sword"
+  }
+}
