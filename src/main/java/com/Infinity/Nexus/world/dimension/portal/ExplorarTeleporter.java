@@ -71,9 +71,8 @@ public class ExplorarTeleporter implements ITeleporter {
                     blockpos$mutable1.setY(l);
                     if (this.level.isEmptyBlock(blockpos$mutable1)) {
                         int i1;
-                        //TODO Se der erro descomentar
-                        //for(i1 = l; l > 0 && this.level.isEmptyBlock(blockpos$mutable1.move(Direction.DOWN)); --l) {
-                        //}
+                        for(i1 = l; l > 0 && this.level.isEmptyBlock(blockpos$mutable1.move(Direction.DOWN)); --l) {
+                        }
 
                         if (l + 4 <= dimensionLogicalHeight) {
                             int j1 = i1 - l;

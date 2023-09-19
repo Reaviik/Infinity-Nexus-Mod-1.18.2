@@ -13,6 +13,8 @@ public class ModTags {
         public static final TagKey<Block> EXPLORAR_PORTAL_FRAME
                 = tag("explorar_portal_frame");
 
+        public static final TagKey<Block> MINEABLE_WITH_PAXEL = BlockTags.create(new ResourceLocation(InfinityNexus.MOD_ID, "mineable_paxel"));
+
         private static TagKey<Block> tag(String name) {
             return BlockTags.create(new ResourceLocation(InfinityNexus.MOD_ID, name));
         }
@@ -24,6 +26,7 @@ public class ModTags {
 
     public static class Items {
         public static final TagKey<Item> INFINITY_HELMET = tag("infinity_helmet");
+        public static final TagKey<Item> PICKUP = tag("pickup");
 
         private static TagKey<Item> tag(String name) {
             return ItemTags.create(new ResourceLocation(InfinityNexus.MOD_ID, name));

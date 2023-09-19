@@ -1,81 +1,99 @@
 package com.Infinity.Nexus.item.custom;
 
 import com.Infinity.Nexus.item.ModArmorMaterials;
-import com.google.common.collect.HashMultimap;
+import com.Infinity.Nexus.utils.ModTags;
 import com.google.common.collect.ImmutableMap;
-import com.google.common.collect.Multimap;
+import net.minecraft.core.BlockPos;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffectUtil;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.entity.ai.attributes.Attribute;
-import net.minecraft.world.entity.ai.attributes.AttributeModifier;
-import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.AABB;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
-import java.util.UUID;
 
 
 public class ImperialArmorItem extends ArmorItem {
     private static final Map<ArmorMaterial, MobEffectInstance> MATERIAL_TO_EFFECT_MAP =
-            (new ImmutableMap.Builder<ArmorMaterial, MobEffectInstance>())
-                    .put(ModArmorMaterials.IMPERIAL, new MobEffectInstance(MobEffects.LUCK, 100, 5, false, false))
-                    .build();
+            (new ImmutableMap.Builder<ArmorMaterial, MobEffectInstance>()).build();
 
     public ImperialArmorItem(ArmorMaterial material, EquipmentSlot slot, Properties settings) {
         super(material, slot, settings);
     }
+    public static List<Map<String, Object>> parseEffectsList(List<String> effectsList) {
+        List<Map<String, Object>> parsedEffects = new ArrayList<>();
 
+        for (String effectString : effectsList) {
+            Map<String, Object> effectData = parseEffectString(effectString);
+            if (effectData != null) {
+                parsedEffects.add(effectData);
+            }
+        }
+
+        return parsedEffects;
+    }
+
+    public static Map<String, Object> parseEffectString(String effectString) {
+        Map<String, Object> effectData = new HashMap<>();
+        String[] parts = effectString.split(",");
+
+        // Obtendo os valores do mapa
+        int duration = (int) effectData.get("duration");
+        String effectName = (String) effectData.get("effect");
+        boolean showParticles = (boolean) effectData.get("showParticles");
+        int amplifier = (int) effectData.get("amplifier");
+        boolean ambient = (boolean) effectData.get("ambient");
+
+// Obtendo a instância do efeito com base nos valores do mapa
+        MobEffect effect = MobEffect.byId(MobEffect.);
+        if (effect != null) {
+            MobEffectInstance effectInstance = new MobEffectInstance(effect, duration, amplifier, ambient, showParticles);
+        }
+
+            return effectData;
+    }
     @Override
     public void onArmorTick(ItemStack stack, Level world, Player player) {
         if(!world.isClientSide()) {
             if (hasFullSuitOfArmorOn(player)) {
-                evaluateArmorEffects(player);
                 player.getAbilities().mayfly = true;
                 player.getAbilities().invulnerable = true;
+                player.getFoodData().setFoodLevel(20);
                                                                                                 //9 = 2 barras de absorption
-                player.addEffect(new MobEffectInstance(MobEffects.ABSORPTION,100,9,false,false));
-                                                                                                //2 = speed 3
-                player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED,100,2,false,false));
-                                                                                                //4 = 20 de vida/10 corações
-                player.addEffect(new MobEffectInstance(MobEffects.HEALTH_BOOST,100,4,false,false));
-                player.addEffect(new MobEffectInstance(MobEffects.SATURATION,100,0,false,false));
-                player.setHealth(player.getMaxHealth()+20);
+                MobEffectInstance effectInstance = new MobEffectInstance(MobEffects.NIGHT_VISION, Integer.MAX_VALUE, 1, false, false);
+                effectInstance.setNoCounter(true);
+                player.addEffect(effectInstance);
+                player.setHealth(player.getMaxHealth());
+
                 player.onUpdateAbilities();
+
+
+               //Magnetism TODO /mag
+               //int range = 5;
+               //BlockPos pos = new BlockPos(player.getX(), player.getY(), player.getZ());
+               //List<ItemEntity> entities = player.level.getEntitiesOfClass(ItemEntity.class, new AABB(pos.getX() + range, pos.getY() + range, pos.getZ() + range, pos.getX() - range, pos.getY() - range, pos.getZ() - range));
+               //for(ItemEntity item : entities) {
+               //    if(item.isAlive() && !item.hasPickUpDelay() && (item.getItem().is(ModTags.Items.PICKUP))) {
+               //        item.playerTouch((Player)player);
+               //    }
+               //}
             }else{
                 player.getAbilities().flying = false;
                 player.getAbilities().mayfly = false;
                 player.getAbilities().invulnerable = false;
                 player.onUpdateAbilities();
             }
-        }
-    }
-    private void evaluateArmorEffects(Player player) {
-        for (Map.Entry<ArmorMaterial, MobEffectInstance> entry : MATERIAL_TO_EFFECT_MAP.entrySet()) {
-            ArmorMaterial mapArmorMaterial = entry.getKey();
-            MobEffectInstance mapStatusEffect = entry.getValue();
-
-            if(hasCorrectArmorOn(mapArmorMaterial, player)) {
-                addStatusEffectForMaterial(player, mapArmorMaterial, mapStatusEffect);
-            }
-        }
-    }
-
-    private void addStatusEffectForMaterial(Player player, ArmorMaterial mapArmorMaterial,
-                                            MobEffectInstance mapStatusEffect) {
-        boolean hasPlayerEffect = player.hasEffect(mapStatusEffect.getEffect());
-
-        if(hasCorrectArmorOn(mapArmorMaterial, player) && !hasPlayerEffect) {
-            player.addEffect(new MobEffectInstance(mapStatusEffect.getEffect(),
-                    mapStatusEffect.getDuration(), mapStatusEffect.getAmplifier()));
-
-            //if(new Random().nextFloat() > 0.6f) { // 40% of damaging the armor! Possibly!
-            //    player.getInventory().hurtArmor(DamageSource.MAGIC, 1f, new int[]{0, 1, 2, 3});
-            //}
         }
     }
 
@@ -89,20 +107,5 @@ public class ImperialArmorItem extends ArmorItem {
                 && !leggings.isEmpty() && !boots.isEmpty();
     }
 
-    private boolean hasCorrectArmorOn(ArmorMaterial material, Player player) {
-        for (ItemStack armorStack: player.getInventory().armor) {
-            if(!(armorStack.getItem() instanceof ArmorItem)) {
-                return false;
-            }
-        }
-
-        ArmorItem boots = ((ArmorItem)player.getInventory().getArmor(0).getItem());
-        ArmorItem leggings = ((ArmorItem)player.getInventory().getArmor(1).getItem());
-        ArmorItem breastplate = ((ArmorItem)player.getInventory().getArmor(2).getItem());
-        ArmorItem helmet = ((ArmorItem)player.getInventory().getArmor(3).getItem());
-
-        return helmet.getMaterial() == material && breastplate.getMaterial() == material &&
-                leggings.getMaterial() == material && boots.getMaterial() == material;
-    }
 
 }

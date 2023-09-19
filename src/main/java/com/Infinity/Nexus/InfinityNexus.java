@@ -1,17 +1,18 @@
 package com.Infinity.Nexus;
 
 import com.Infinity.Nexus.block.ModBlocks;
+import com.Infinity.Nexus.config.ModCommonConfigs;
 import com.Infinity.Nexus.item.ModItems;
 import com.Infinity.Nexus.villager.ModPOIs;
 import com.Infinity.Nexus.world.dimension.ModDimensions;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -38,6 +39,8 @@ public class InfinityNexus
 
         eventBus.addListener(this::clientSetup);
         eventBus.addListener(this::setup);
+
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, ModCommonConfigs.SPEC, "infinity_nexus_mod-common.toml");
 
 
         // Register ourselves for server and other game events we are interested in

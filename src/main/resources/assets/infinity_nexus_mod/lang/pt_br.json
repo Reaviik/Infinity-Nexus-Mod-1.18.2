@@ -7,12 +7,24 @@
   "item.infinity_nexus_mod.wing": "Asa",
   "item.infinity_nexus_mod.imperial_infinity_sword": "Espada de Infinity Imperial",
   "tooltip.infinity_nexus_mod.imperial_infinity_sword":  "§eAplicas efeitos de §7Weakness §ee §9Wither §e ao atacar",
+  "item.infinity_nexus_mod.imperial_infinity_pickaxe": "Picareta de Infinity Imperial",
+  "item.infinity_nexus_mod.imperial_infinity_shovel": "Pá de Infinity Imperial",
+  "item.infinity_nexus_mod.imperial_infinity_axe": "Machado de Infinity Imperial",
+  "item.infinity_nexus_mod.imperial_infinity_hoe": "Enxada de Infinity Imperial",
+  "item.infinity_nexus_mod.imperial_infinity_paxel": "Paxel de Infinity Imperial",
 
   "item.infinity_nexus_mod.infinity_sword": "Espada de Infinity",
   "tooltip.infinity_nexus_mod.infinity_sword":  "§eAplicas efeitos de §7Weakness §ee §9Wither §e ao atacar",
+  "item.infinity_nexus_mod.infinity_pickaxe": "Picareta de Infinity",
+  "item.infinity_nexus_mod.infinity_shovel": "Pá de Infinity",
+  "item.infinity_nexus_mod.infinity_axe": "Machado de Infinity",
+  "item.infinity_nexus_mod.infinity_hoe": "Enxada de Infinity",
+  "item.infinity_nexus_mod.infinity_paxel": "Paxel de Infinity",
 
   "item.infinity_nexus_mod.purple_infinity_sword": "Espada de Infinity Roxa",
   "tooltip.infinity_nexus_mod.purple_infinity_sword":  "§eAplicas efeitos de §7Weakness §ee §9Wither §e ao atacar",
+
+  "item.infinity_nexus_mod.infinity_singularity": "Singularidade de Infinity",
 
   "item.infinity_nexus_mod.gold_wire_cast": "Molde de Ffio de Ouro",
   "item.infinity_nexus_mod.gold_screw_cast": "Molde de Parafuso de Ouro",

@@ -1,6 +1,7 @@
 package com.Infinity.Nexus.item;
 
 import com.Infinity.Nexus.InfinityNexus;
+import com.Infinity.Nexus.config.ModCommonConfigs;
 import com.Infinity.Nexus.item.custom.*;
 import com.Infinity.Nexus.tab.ModTabs;
 import net.minecraft.network.chat.TranslatableComponent;
@@ -12,6 +13,11 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+
+import java.util.function.Function;
+import java.util.function.Supplier;
+
+import static net.minecraft.data.BuiltinRegistries.REGISTRY;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -45,7 +51,6 @@ public class ModItems {
             () -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS).rarity(Rarity.COMMON)));
     public static final RegistryObject<Item> ROD_CLAY_MODEL = ITEMS.register("rod_clay_model",
             () -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS).rarity(Rarity.COMMON)));
-
 
     //Wires
     public static final RegistryObject<Item> COPPER_WIRE = ITEMS.register("copper_wire",
@@ -111,42 +116,94 @@ public class ModItems {
     public static final RegistryObject<Item> RAW_INGOT = ITEMS.register("raw_infinity",
             () -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS).rarity(Rarity.COMMON)));
     public static final RegistryObject<Item> INFINITY_INGOT = ITEMS.register("infinity_ingot",
-            () -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS).rarity(Rarity.COMMON)));
+            () -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS).rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> INFINITY_NUGET = ITEMS.register("infinity_nuget",
+            () -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS).rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> INFINITY_SINGULARITY = ITEMS.register("infinity_singularity",
+            () -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS).rarity(Rarity.EPIC)));
     public static final RegistryObject<Item> WING = ITEMS.register("wing",
             () -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS).rarity(Rarity.EPIC)));
 
-    //Tools
+    //Imperial
     public static final RegistryObject<Item> IMPERIAL_INFINITY_SWORD = ITEMS.register("imperial_infinity_sword",
-            () -> new ModSword(ModTiers.IMPERIAL, 50,10f,//+4
+            () -> new ModSword(ModTiers.IMPERIAL, ModCommonConfigs.I_I_S_DAMAGE.get(), ModCommonConfigs.I_I_S_SPEED.get(),//+4
                     new Item.Properties().tab(ModTabs.INFINITY_NEXUS).stacksTo(1),
                     new TranslatableComponent("tooltip.infinity_nexus_mod.imperial_infinity_sword"),
                     new MobEffectInstance[]{
                             new MobEffectInstance(MobEffects.WEAKNESS, 200,3),
                             new MobEffectInstance(MobEffects.WITHER, 200,3)
                     }));
+    public static final RegistryObject<Item> IMPERIAL_INFINITY_PAXEL = ITEMS.register("imperial_infinity_paxel",
+            () -> new PaxelItem(ModTiers.IMPERIAL,55f, 55f,(properties) -> properties.tab(ModTabs.INFINITY_NEXUS),
+                    new TranslatableComponent("tooltip.infinity_nexus_mod.imperial_infinity_paxel"),true));
+    public static final RegistryObject<Item> IMPERIAL_INFINITY_PICKAXE = ITEMS.register("imperial_infinity_pickaxe",
+            () -> new PickaxeItem(ModTiers.IMPERIAL, ModCommonConfigs.I_I_T_DAMAGE.get(), ModCommonConfigs.I_I_T_SPEED.get(),
+                    new Item.Properties().tab(ModTabs.INFINITY_NEXUS)));
+    public static final RegistryObject<Item> IMPERIAL_INFINITY_SHOVEL = ITEMS.register("imperial_infinity_shovel",
+            () -> new ShovelItem(ModTiers.IMPERIAL, ModCommonConfigs.I_I_T_DAMAGE.get(), ModCommonConfigs.I_I_T_SPEED.get(),
+                    new Item.Properties().tab(ModTabs.INFINITY_NEXUS)));
+    public static final RegistryObject<Item> IMPERIAL_INFINITY_AXE = ITEMS.register("imperial_infinity_axe",
+            () -> new AxeItem(ModTiers.IMPERIAL, ModCommonConfigs.I_I_T_DAMAGE.get(), ModCommonConfigs.I_I_T_SPEED.get(),
+                    new Item.Properties().tab(ModTabs.INFINITY_NEXUS)));
+    public static final RegistryObject<Item> IMPERIAL_INFINITY_HOE = ITEMS.register("imperial_infinity_hoe",
+            () -> new HoeItem(ModTiers.IMPERIAL, ModCommonConfigs.I_I_T_DAMAGE.get(), ModCommonConfigs.I_I_T_SPEED.get(),
+                    new Item.Properties().tab(ModTabs.INFINITY_NEXUS)));
+
+    public static final RegistryObject<Item> INFINITY_HELMET = ITEMS.register("imperial_infinity_helmet",
+            () -> new ImperialArmorItem(ModArmorMaterials.IMPERIAL, EquipmentSlot.HEAD,
+                    new Item.Properties().tab(ModTabs.INFINITY_NEXUS).stacksTo(1).rarity(Rarity.EPIC)));
+    public static final RegistryObject<Item> INFINITY_CHESTPLATE = ITEMS.register("imperial_infinity_chestplate",
+            () -> new ImperialArmorItem(ModArmorMaterials.IMPERIAL, EquipmentSlot.CHEST,
+                    new Item.Properties().tab(ModTabs.INFINITY_NEXUS).stacksTo(1).rarity(Rarity.EPIC)));
+    public static final RegistryObject<Item> INFINITY_LEGGINGS = ITEMS.register("imperial_infinity_leggings",
+            () -> new ImperialArmorItem(ModArmorMaterials.IMPERIAL, EquipmentSlot.LEGS,
+                    new Item.Properties().tab(ModTabs.INFINITY_NEXUS).stacksTo(1).rarity(Rarity.EPIC)));
+    public static final RegistryObject<Item> INFINITY_BOOTS = ITEMS.register("imperial_infinity_boots",
+            () -> new ImperialArmorItem(ModArmorMaterials.IMPERIAL, EquipmentSlot.FEET,
+                    new Item.Properties().tab(ModTabs.INFINITY_NEXUS).stacksTo(1).rarity(Rarity.EPIC)));
+    //Infinity
     public static final RegistryObject<Item> INFINITY_SWORD = ITEMS.register("infinity_sword",
-            () -> new ModSword(ModTiers.INFINITY, 40,10f,//+4
+            () -> new ModSword(ModTiers.INFINITY, ModCommonConfigs.I_S_DAMAGE.get(), ModCommonConfigs.I_S_SPEED.get(),//+4
                     new Item.Properties().tab(ModTabs.INFINITY_NEXUS).stacksTo(1),
                     new TranslatableComponent("tooltip.infinity_nexus_mod.infinity_sword"),
                     new MobEffectInstance[]{
                             //TODO
                             new MobEffectInstance(MobEffects.WEAKNESS, 200,2),
                             new MobEffectInstance(MobEffects.WITHER, 200,2)
-                    }));
-
-    public static final RegistryObject<Item> PURPLE_INFINITY_SWORD = ITEMS.register("purple_infinity_sword",
-            () -> new ModSword(ModTiers.INFINITY, 40,10f,//+4
-                    new Item.Properties().stacksTo(1),
-                    new TranslatableComponent("tooltip.infinity_nexus_mod.purple_infinity_sword"),
-                    new MobEffectInstance[]{
-                            //TODO
-                            new MobEffectInstance(MobEffects.WEAKNESS, 200,1),
-                            new MobEffectInstance(MobEffects.WITHER, 200,1)
 
                     }));
 
+    //Misc
+    public static final RegistryObject<Item> INFINITY_PAXEL = ITEMS.register("infinity_paxel",
+            () -> new PaxelItem(ModTiers.INFINITY,45f, -2f,(properties) -> properties.tab(ModTabs.INFINITY_NEXUS),
+                    new TranslatableComponent("tooltip.infinity_nexus_mod.infinity_paxel"),false));
+    public static final RegistryObject<Item> INFINITY_PICKAXE = ITEMS.register("infinity_pickaxe",
+            () -> new PickaxeItem(ModTiers.INFINITY, ModCommonConfigs.I_T_DAMAGE.get(), ModCommonConfigs.I_T_SPEED.get(),
+                    new Item.Properties().tab(ModTabs.INFINITY_NEXUS)));
+    public static final RegistryObject<Item> INFINITY_SHOVEL = ITEMS.register("infinity_shovel",
+            () -> new ShovelItem(ModTiers.INFINITY, ModCommonConfigs.I_T_DAMAGE.get(), ModCommonConfigs.I_T_SPEED.get(),
+                    new Item.Properties().tab(ModTabs.INFINITY_NEXUS)));
+    public static final RegistryObject<Item> INFINITY_AXE = ITEMS.register("infinity_axe",
+            () -> new AxeItem(ModTiers.INFINITY, ModCommonConfigs.I_T_DAMAGE.get(), ModCommonConfigs.I_T_SPEED.get(),
+                    new Item.Properties().tab(ModTabs.INFINITY_NEXUS)));
+    public static final RegistryObject<Item> INFINITY_HOE = ITEMS.register("infinity_hoe",
+            () -> new HoeItem(ModTiers.INFINITY, ModCommonConfigs.I_T_DAMAGE.get(), ModCommonConfigs.I_T_SPEED.get(),
+                    new Item.Properties().tab(ModTabs.INFINITY_NEXUS)));
+    public static final RegistryObject<Item> INFINITY_INFINITY_HELMET = ITEMS.register("infinity_helmet",
+            () -> new InfinityArmorItem(ModArmorMaterials.INFINITY, EquipmentSlot.HEAD,
+                    new Item.Properties().tab(ModTabs.INFINITY_NEXUS).stacksTo(1).rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> INFINITY_INFINITY_CHESTPLATE = ITEMS.register("infinity_chestplate",
+            () -> new InfinityArmorItem(ModArmorMaterials.INFINITY, EquipmentSlot.CHEST,
+                    new Item.Properties().tab(ModTabs.INFINITY_NEXUS).stacksTo(1).rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> INFINITY_INFINITY_LEGGINGS = ITEMS.register("infinity_leggings",
+            () -> new InfinityArmorItem(ModArmorMaterials.INFINITY, EquipmentSlot.LEGS,
+                    new Item.Properties().tab(ModTabs.INFINITY_NEXUS).stacksTo(1).rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> INFINITY_INFINITY_BOOTS = ITEMS.register("infinity_boots",
+            () -> new InfinityArmorItem(ModArmorMaterials.INFINITY, EquipmentSlot.FEET,
+                    new Item.Properties().tab(ModTabs.INFINITY_NEXUS).stacksTo(1).rarity(Rarity.RARE)));
 
-    //Armor
+
+
     public static final RegistryObject<Item> BLUE_INFINITY_HELMET = ITEMS.register("blue_infinity_helmet",
             () -> new CommonArmorItem(ModArmorMaterials.BLUE, EquipmentSlot.HEAD,
                     new Item.Properties().stacksTo(1).rarity(Rarity.RARE)));
@@ -225,7 +282,6 @@ public class ModItems {
             () -> new CommonArmorItem(ModArmorMaterials.RED, EquipmentSlot.FEET,
                     new Item.Properties().stacksTo(1).rarity(Rarity.RARE)));
 
-
     public static final RegistryObject<Item> SILVER_INFINITY_HELMET = ITEMS.register("silver_infinity_helmet",
             () -> new CommonArmorItem(ModArmorMaterials.SILVER, EquipmentSlot.HEAD,
                     new Item.Properties().stacksTo(1).rarity(Rarity.RARE)));
@@ -239,7 +295,6 @@ public class ModItems {
             () -> new CommonArmorItem(ModArmorMaterials.SILVER, EquipmentSlot.FEET,
                     new Item.Properties().stacksTo(1).rarity(Rarity.RARE)));
 
-
     public static final RegistryObject<Item> YELLOW_INFINITY_HELMET = ITEMS.register("yellow_infinity_helmet",
             () -> new CommonArmorItem(ModArmorMaterials.YELLOW, EquipmentSlot.HEAD,
                     new Item.Properties().stacksTo(1).rarity(Rarity.RARE)));
@@ -252,38 +307,21 @@ public class ModItems {
     public static final RegistryObject<Item> YELLOW_INFINITY_BOOTS = ITEMS.register("yellow_infinity_boots",
             () -> new CommonArmorItem(ModArmorMaterials.YELLOW, EquipmentSlot.FEET,
                     new Item.Properties().stacksTo(1).rarity(Rarity.RARE)));
-    //Infinity
 
-    public static final RegistryObject<Item> INFINITY_INFINITY_HELMET = ITEMS.register("infinity_helmet",
-            () -> new InfinityArmorItem(ModArmorMaterials.INFINITY, EquipmentSlot.HEAD,
-                    new Item.Properties().tab(ModTabs.INFINITY_NEXUS).stacksTo(1).rarity(Rarity.RARE)));
-    public static final RegistryObject<Item> INFINITY_INFINITY_CHESTPLATE = ITEMS.register("infinity_chestplate",
-            () -> new InfinityArmorItem(ModArmorMaterials.INFINITY, EquipmentSlot.CHEST,
-                    new Item.Properties().tab(ModTabs.INFINITY_NEXUS).stacksTo(1).rarity(Rarity.RARE)));
-    public static final RegistryObject<Item> INFINITY_INFINITY_LEGGINGS = ITEMS.register("infinity_leggings",
-            () -> new InfinityArmorItem(ModArmorMaterials.INFINITY, EquipmentSlot.LEGS,
-                    new Item.Properties().tab(ModTabs.INFINITY_NEXUS).stacksTo(1).rarity(Rarity.RARE)));
-    public static final RegistryObject<Item> INFINITY_INFINITY_BOOTS = ITEMS.register("infinity_boots",
-            () -> new InfinityArmorItem(ModArmorMaterials.INFINITY, EquipmentSlot.FEET,
-                    new Item.Properties().tab(ModTabs.INFINITY_NEXUS).stacksTo(1).rarity(Rarity.RARE)));
-    //Imperial
-    public static final RegistryObject<Item> IMPERIAL_INFINITY_HELMET = ITEMS.register("imperial_infinity_helmet",
-            () -> new ImperialArmorItem(ModArmorMaterials.IMPERIAL, EquipmentSlot.HEAD,
-                    new Item.Properties().tab(ModTabs.INFINITY_NEXUS).stacksTo(1).rarity(Rarity.EPIC)));
-    public static final RegistryObject<Item> IMPERIAL_INFINITY_CHESTPLATE = ITEMS.register("imperial_infinity_chestplate",
-            () -> new ImperialArmorItem(ModArmorMaterials.IMPERIAL, EquipmentSlot.CHEST,
-                    new Item.Properties().tab(ModTabs.INFINITY_NEXUS).stacksTo(1).rarity(Rarity.EPIC)));
-    public static final RegistryObject<Item> IMPERIAL_INFINITY_LEGGINGS = ITEMS.register("imperial_infinity_leggings",
-            () -> new ImperialArmorItem(ModArmorMaterials.IMPERIAL, EquipmentSlot.LEGS,
-                    new Item.Properties().tab(ModTabs.INFINITY_NEXUS).stacksTo(1).rarity(Rarity.EPIC)));
-    public static final RegistryObject<Item> IMPERIAL_INFINITY_BOOTS = ITEMS.register("imperial_infinity_boots",
-            () -> new ImperialArmorItem(ModArmorMaterials.IMPERIAL, EquipmentSlot.FEET,
-                    new Item.Properties().tab(ModTabs.INFINITY_NEXUS).stacksTo(1).rarity(Rarity.EPIC)));
+    public static final RegistryObject<Item> PURPLE_INFINITY_SWORD = ITEMS.register("purple_infinity_sword",
+            () -> new ModSword(ModTiers.INFINITY, ModCommonConfigs.I_S_DAMAGE.get(), ModCommonConfigs.I_S_SPEED.get(),//+4
+                    new Item.Properties().stacksTo(1),
+                    new TranslatableComponent("tooltip.infinity_nexus_mod.purple_infinity_sword"),
+                    new MobEffectInstance[]{
+                            //TODO
+                            new MobEffectInstance(MobEffects.WEAKNESS, 200,1),
+                            new MobEffectInstance(MobEffects.WITHER, 200,1)
 
-    //Misc
+                    }));
         //Catalyst
     public static final RegistryObject<Item> CATALYST = ITEMS.register("catalyst", CatalystItem::new);
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
     }
+
 }

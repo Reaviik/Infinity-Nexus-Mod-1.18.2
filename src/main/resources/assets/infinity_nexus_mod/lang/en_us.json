@@ -8,13 +8,25 @@
 
   "item.infinity_nexus_mod.imperial_infinity_sword": "Imperial Infinity Sword",
   "tooltip.infinity_nexus_mod.imperial_infinity_sword":  "§eInflict effects §7Weakness §eand §9Wither §eon hit",
+  "item.infinity_nexus_mod.imperial_infinity_pickaxe": "Imperial Infinity Pickaxe",
+  "item.infinity_nexus_mod.imperial_infinity_shovel": "Imperial Infinity Shovel",
+  "item.infinity_nexus_mod.imperial_infinity_axe": "Imperial Infinity Axe",
+  "item.infinity_nexus_mod.imperial_infinity_hoe": "Imperial Infinity Hoe",
+  "item.infinity_nexus_mod.imperial_infinity_paxel": "Imperial Infinity Paxel",
 
   "item.infinity_nexus_mod.infinity_sword": "Infinity Sword",
   "tooltip.infinity_nexus_mod.infinity_sword":  "§eInflict effects §7Weakness §eand §9Wither §eon hit",
+  "item.infinity_nexus_mod.infinity_pickaxe": "Infinity Pickaxe",
+  "item.infinity_nexus_mod.infinity_shovel": "Infinity Shovel",
+  "item.infinity_nexus_mod.infinity_axe": "Infinity Axe",
+  "item.infinity_nexus_mod.infinity_hoe": "Infinity Hoe",
+  "item.infinity_nexus_mod.infinity_paxel": "Infinity Paxel",
 
   "item.infinity_nexus_mod.purple_infinity_sword": "Purple Infinity Sword",
   "tooltip.infinity_nexus_mod.purple_infinity_sword":  "§eInflict effects §7Weakness §eand §9Wither §eon hit",
 
+
+  "item.infinity_nexus_mod.infinity_singularity": "Infinity Singularity",
 
   "item.infinity_nexus_mod.gold_wire_cast": "Gold Wire Cast",
   "item.infinity_nexus_mod.gold_screw_cast": "Gold Screw Cast",
