@@ -24,6 +24,10 @@ public class ModCommonConfigs {
     public static final ForgeConfigSpec.ConfigValue<Integer> I_I_S_DAMAGE;
     public static final ForgeConfigSpec.ConfigValue<Float> I_I_S_SPEED;
 
+    public static final ForgeConfigSpec.ConfigValue<Integer> I_O_C_SIZE;
+    public static final ForgeConfigSpec.ConfigValue<Integer> I_O_P_CHUNK;
+    public static final ForgeConfigSpec.ConfigValue<Integer> I_O_P_MIMY;
+    public static final ForgeConfigSpec.ConfigValue<Integer> I_O_P_MAXY;
 
     public static final ForgeConfigSpec.ConfigValue<Boolean> I_I_T_E_MAGNETISM;
     static {
@@ -59,6 +63,15 @@ public class ModCommonConfigs {
 
         I_I_T_E_MAGNETISM = BUILDER.comment("Imperial Infinity Armor Can Magnetize Items")
                         .define("Atract Items", true);
+
+        I_O_C_SIZE = BUILDER.comment("Infinity Ore Chunk Size")
+                .define("Infinity ore chunk size, Default 9", 9);
+        I_O_P_CHUNK= BUILDER.comment("Infinity Ore Chunk, Per Chunk")
+                .define("Infinity Ore Placed Per Chunk Default 7", 7);
+        I_O_P_MAXY = BUILDER.comment("Infinity Ore Max Y Placement")
+                .define("Infinity Ore Placed Max Y, Default 22", 22);
+        I_O_P_MIMY = BUILDER.comment("Infinity Ore Min Y Placement")
+                .define("Infinity Ore Placed Min Y, Default -22", -22);
         BUILDER.pop();
         SPEC = BUILDER.build();
     }

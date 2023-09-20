@@ -6,12 +6,13 @@
 
   "item.infinity_nexus_mod.wing": "Asa",
   "item.infinity_nexus_mod.imperial_infinity_sword": "Espada de Infinity Imperial",
-  "tooltip.infinity_nexus_mod.imperial_infinity_sword":  "§eAplicas efeitos de §7Weakness §ee §9Wither §e ao atacar",
+  "tooltip.infinity_nexus_mod.imperial_infinity_sword":  "§eAplicas efeitos de §7Weakness §ee §9Wither §e ao atacar§r",
   "item.infinity_nexus_mod.imperial_infinity_pickaxe": "Picareta de Infinity Imperial",
   "item.infinity_nexus_mod.imperial_infinity_shovel": "Pá de Infinity Imperial",
   "item.infinity_nexus_mod.imperial_infinity_axe": "Machado de Infinity Imperial",
   "item.infinity_nexus_mod.imperial_infinity_hoe": "Enxada de Infinity Imperial",
   "item.infinity_nexus_mod.imperial_infinity_paxel": "Paxel de Infinity Imperial",
+  "tooltip.infinity_nexus_mod.imperial_infinity_paxel":  "§eAo Minerar §c0.01% §ede Chance de Dropar uma §bPepita de Infinity§r",
 
   "item.infinity_nexus_mod.infinity_sword": "Espada de Infinity",
   "tooltip.infinity_nexus_mod.infinity_sword":  "§eAplicas efeitos de §7Weakness §ee §9Wither §e ao atacar",
@@ -20,9 +21,10 @@
   "item.infinity_nexus_mod.infinity_axe": "Machado de Infinity",
   "item.infinity_nexus_mod.infinity_hoe": "Enxada de Infinity",
   "item.infinity_nexus_mod.infinity_paxel": "Paxel de Infinity",
+  "tooltip.infinity_nexus_mod.infinity_paxel":  "§kWEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE",
 
   "item.infinity_nexus_mod.purple_infinity_sword": "Espada de Infinity Roxa",
-  "tooltip.infinity_nexus_mod.purple_infinity_sword":  "§eAplicas efeitos de §7Weakness §ee §9Wither §e ao atacar",
+  "tooltip.infinity_nexus_mod.purple_infinity_sword":  "§eAplicas efeitos de §7Weakness §ee §9Wither §e ao atacar§r",
 
   "item.infinity_nexus_mod.infinity_singularity": "Singularidade de Infinity",
 
@@ -75,6 +77,7 @@
 
   "item.infinity_nexus_mod.raw_infinity": "Infinity Bruto",
   "item.infinity_nexus_mod.infinity_ingot": "Barra de Infinity",
+  "item.infinity_nexus_mod.infinity_nugget": "Pepita de Infinity",
 
   "block.infinity_nexus_mod.copper_machine_casing": "Chassi de Máquina de Cobre",
   "block.infinity_nexus_mod.aluminum_machine_casing": "Chassi de Máquina de Alumínio",

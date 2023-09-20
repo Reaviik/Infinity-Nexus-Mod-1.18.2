@@ -89,7 +89,6 @@ public class InfinityNexus
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.STEEL_MACHINE_CASING.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.INDUSTRIAL_MACHINE_CASING.get(), RenderType.translucent());
 
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.EXPLORAR_PORTAL.get(), RenderType.translucent());
     }
     private void setup(final FMLCommonSetupEvent event)
     {

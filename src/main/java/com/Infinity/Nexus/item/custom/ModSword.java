@@ -33,9 +33,6 @@ public class ModSword extends SwordItem{
     public boolean hurtEnemy(ItemStack pStack, LivingEntity pTarget, LivingEntity pAttacker) {
         for (MobEffectInstance effect : effects) {
             pTarget.addEffect(new MobEffectInstance(effect.getEffect(), effect.getDuration()), pAttacker);
-            //TODO explosion
-            pTarget.deathTime = 3000;
-
         }
         return super.hurtEnemy(pStack, pTarget, pAttacker);
     }

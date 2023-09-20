@@ -36,10 +36,10 @@ public class PaxelItem extends ModPaxelItem{
     public boolean onBlockStartBreak(ItemStack itemstack, BlockPos pos, Player player) {
         if(drop){
             Level level = player.level;
-            ItemEntity itemEntity = new ItemEntity(level, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, ModItems.INFINITY_INGOT.get().getDefaultInstance());
+            ItemEntity itemEntity = new ItemEntity(level, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, ModItems.INFINITY_NUGGET.get().getDefaultInstance());
             Random random = new Random();
             int numeroAleatorio = random.nextInt(10000) + 1;
-            if(numeroAleatorio <= 1000){
+            if(numeroAleatorio <= 1){
                 level.addFreshEntity(itemEntity);
             }
         }
@@ -51,9 +51,6 @@ public class PaxelItem extends ModPaxelItem{
     public boolean hurtEnemy(ItemStack pStack, LivingEntity pTarget, LivingEntity pAttacker) {
         for (MobEffectInstance effect : effects) {
             pTarget.addEffect(new MobEffectInstance(effect.getEffect(), effect.getDuration()), pAttacker);
-            //TODO explosion
-            pTarget.deathTime = 300;
-
         }
         return super.hurtEnemy(pStack, pTarget, pAttacker);
     }
