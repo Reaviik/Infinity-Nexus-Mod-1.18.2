@@ -6,6 +6,13 @@
 
   "item.infinity_nexus_mod.wing": "Wing",
 
+
+  "item.infinity_nexus_mod.imperial_3d_infinity_sword": "§fImperial Infinity Sword",
+  "tooltip.infinity_nexus_mod.imperial_3d_infinity_sword":  "§eInflict effects §7Weakness §eand §9Wither §eon hit",
+
+  "item.infinity_nexus_mod.infinity_3d_sword": "§fInfinity Sword",
+  "tooltip.infinity_nexus_mod.infinity_3d_sword":  "§eInflict effects §7Weakness §eand §9Wither §eon hit",
+
   "item.infinity_nexus_mod.imperial_infinity_sword": "Imperial Infinity Sword",
   "tooltip.infinity_nexus_mod.imperial_infinity_sword":  "§eInflict effects §7Weakness §eand §9Wither §eon hit",
   "item.infinity_nexus_mod.imperial_infinity_pickaxe": "Imperial Infinity Pickaxe",

@@ -5,6 +5,13 @@
   "item.infinity_nexus_mod.catalyst": "Ativador de Portal",
 
   "item.infinity_nexus_mod.wing": "Asa",
+
+  "item.infinity_nexus_mod.imperial_3d_infinity_sword": "§fEspada de Infinity Imperial",
+  "tooltip.infinity_nexus_mod.imperial_3d_infinity_sword":  "§eAplicas efeitos de §7Weakness §ee §9Wither §e ao atacar§r",
+
+  "item.infinity_nexus_mod.infinity_3d_sword": "§fEspada de Infinity",
+  "tooltip.infinity_nexus_mod.infinity_3d_sword":  "§eAplicas efeitos de §7Weakness §ee §9Wither §e ao atacar",
+
   "item.infinity_nexus_mod.imperial_infinity_sword": "Espada de Infinity Imperial",
   "tooltip.infinity_nexus_mod.imperial_infinity_sword":  "§eAplicas efeitos de §7Weakness §ee §9Wither §e ao atacar§r",
   "item.infinity_nexus_mod.imperial_infinity_pickaxe": "Picareta de Infinity Imperial",

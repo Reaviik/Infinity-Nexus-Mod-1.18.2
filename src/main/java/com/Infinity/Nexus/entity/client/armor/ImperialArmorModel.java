@@ -8,12 +8,12 @@ import software.bernie.geckolib3.model.AnimatedGeoModel;
 public class ImperialArmorModel extends AnimatedGeoModel<ImperialArmorItem> {
     @Override
     public ResourceLocation getModelLocation(ImperialArmorItem object) {
-        return new ResourceLocation(InfinityNexus.MOD_ID, "geo/imperial_armor.geo.json");
+        return new ResourceLocation(InfinityNexus.MOD_ID, "geo/3d_armor.geo.json");
     }
 
     @Override
     public ResourceLocation getTextureLocation(ImperialArmorItem object) {
-        return new ResourceLocation(InfinityNexus.MOD_ID, "textures/models/armor/imperial_3d.png");
+        return new ResourceLocation(InfinityNexus.MOD_ID, "textures/models/armor/infinity_3d_armor.png");
     }
 
     @Override
