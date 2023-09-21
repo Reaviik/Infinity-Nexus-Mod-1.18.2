@@ -2,8 +2,10 @@ package com.Infinity.Nexus.event;
 
 
 import com.Infinity.Nexus.InfinityNexus;
-import com.Infinity.Nexus.entity.client.armor.ImperialArmorRenderer;
-import com.Infinity.Nexus.item.custom.ImperialArmorItem;
+import com.Infinity.Nexus.entity.client.armor.Imperial3dArmorRenderer;
+import com.Infinity.Nexus.entity.client.armor.Infinity3dArmorRenderer;
+import com.Infinity.Nexus.item.custom.ImperialInfinity3dArmorItem;
+import com.Infinity.Nexus.item.custom.Infinity3dArmorItem;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -15,7 +17,8 @@ public class ModEventClientBusEvents {
 
     @SubscribeEvent
     public static void registerArmorRenderers(final EntityRenderersEvent.AddLayers event) {
-        GeoArmorRenderer.registerArmorRenderer(ImperialArmorItem.class, new ImperialArmorRenderer());
+        GeoArmorRenderer.registerArmorRenderer(ImperialInfinity3dArmorItem.class, new Imperial3dArmorRenderer());
+        GeoArmorRenderer.registerArmorRenderer(Infinity3dArmorItem.class, new Infinity3dArmorRenderer());
     }
 
 //    @SubscribeEvent

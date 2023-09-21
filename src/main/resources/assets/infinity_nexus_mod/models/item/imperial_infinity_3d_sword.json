@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "infinity_nexus_mod:item/imperial_3d_infinity_sword",
-		"particle": "infinity_nexus_mod:item/imperial_3d_infinity_sword"
+		"0": "infinity_nexus_mod:item/imperial_infinity_3d_sword",
+		"particle": "infinity_nexus_mod:item/imperial_infinity_3d_sword"
 	},
 	"elements": [
 		{

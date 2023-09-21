@@ -7,12 +7,24 @@
   "item.infinity_nexus_mod.wing": "Wing",
 
 
-  "item.infinity_nexus_mod.imperial_3d_infinity_sword": "§fImperial Infinity Sword",
-  "tooltip.infinity_nexus_mod.imperial_3d_infinity_sword":  "§eInflict effects §7Weakness §eand §9Wither §eon hit",
+  "item.infinity_nexus_mod.imperial_infinity_3d_sword": "§fImperial Infinity Sword",
+  "tooltip.infinity_nexus_mod.imperial_infinity_3d_sword":  "§eInflict effects §7Weakness §eand §9Wither §eon hit",
+  "item.infinity_nexus_mod.imperial_infinity_3d_helmet": "Imperial Infinity Helmet",
+  "item.infinity_nexus_mod.imperial_infinity_3d_chestplate": "Imperial Infinity Chestplate",
+  "item.infinity_nexus_mod.imperial_infinity_3d_leggings": "Imperial Infinity Leggings",
+  "item.infinity_nexus_mod.imperial_infinity_3d_boots": "Imperial Infinity Boots",
 
   "item.infinity_nexus_mod.infinity_3d_sword": "§fInfinity Sword",
   "tooltip.infinity_nexus_mod.infinity_3d_sword":  "§eInflict effects §7Weakness §eand §9Wither §eon hit",
+  "item.infinity_nexus_mod.infinity_3d_helmet": "Infinity Helmet",
+  "item.infinity_nexus_mod.infinity_3d_chestplate": "Infinity Chestplate",
+  "item.infinity_nexus_mod.infinity_3d_leggings": "Infinity Leggings",
+  "item.infinity_nexus_mod.infinity_3d_boots": "Infinity Boots",
 
+  "item.infinity_nexus_mod.imperial_infinity_helmet": "Imperial Infinity Helmet",
+  "item.infinity_nexus_mod.imperial_infinity_chestplate": "Imperial Infinity Chestplate",
+  "item.infinity_nexus_mod.imperial_infinity_leggings": "Imperial Infinity Leggings",
+  "item.infinity_nexus_mod.imperial_infinity_boots": "Imperial Infinity Boots",
   "item.infinity_nexus_mod.imperial_infinity_sword": "Imperial Infinity Sword",
   "tooltip.infinity_nexus_mod.imperial_infinity_sword":  "§eInflict effects §7Weakness §eand §9Wither §eon hit",
   "item.infinity_nexus_mod.imperial_infinity_pickaxe": "Imperial Infinity Pickaxe",
@@ -22,6 +34,11 @@
   "item.infinity_nexus_mod.imperial_infinity_paxel": "Imperial Infinity Paxel",
   "tooltip.infinity_nexus_mod.imperial_infinity_paxel":  "§eWhile Mining, there is a §c0.01% §echance to drop an §bInfinity Nugget§r.",
 
+
+  "item.infinity_nexus_mod.infinity_helmet": "Infinity Helmet",
+  "item.infinity_nexus_mod.infinity_chestplate": "Infinity Chestplate",
+  "item.infinity_nexus_mod.infinity_leggings": "Infinity Leggings",
+  "item.infinity_nexus_mod.infinity_boots": "Infinity Boots",
   "item.infinity_nexus_mod.infinity_sword": "Infinity Sword",
   "tooltip.infinity_nexus_mod.infinity_sword":  "§eInflict effects §7Weakness §eand §9Wither §eon hit",
   "item.infinity_nexus_mod.infinity_pickaxe": "Infinity Pickaxe",
@@ -33,7 +50,6 @@
 
   "item.infinity_nexus_mod.purple_infinity_sword": "Purple Infinity Sword",
   "tooltip.infinity_nexus_mod.purple_infinity_sword":  "§eInflict effects §7Weakness §eand §9Wither §eon hit",
-
 
   "item.infinity_nexus_mod.infinity_singularity": "Infinity Singularity",
 
@@ -142,16 +158,6 @@
 
   "block.infinity_nexus_mod.full_legendary_mixed_metal_box": "Full Infinity Metal Box",
 
-
-  "item.infinity_nexus_mod.imperial_infinity_helmet": "Imperial Infinity Helmet",
-  "item.infinity_nexus_mod.imperial_infinity_chestplate": "Imperial Infinity Chestplate",
-  "item.infinity_nexus_mod.imperial_infinity_leggings": "Imperial Infinity Leggings",
-  "item.infinity_nexus_mod.imperial_infinity_boots": "Imperial Infinity Boots",
-
-  "item.infinity_nexus_mod.infinity_helmet": "Infinity Helmet",
-  "item.infinity_nexus_mod.infinity_chestplate": "Infinity Chestplate",
-  "item.infinity_nexus_mod.infinity_leggings": "Infinity Leggings",
-  "item.infinity_nexus_mod.infinity_boots": "Infinity Boots",
 
   "item.infinity_nexus_mod.blue_infinity_helmet": "Blue Infinity Helmet",
   "item.infinity_nexus_mod.blue_infinity_chestplate": "Blue Infinity Chestplate",
