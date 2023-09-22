@@ -5,13 +5,13 @@
   ],
   "key": {
     "1": {
-      "item": "infinity_nexus_mod:infinity_sword"
+      "item": "infinity_nexus_mod:infinity_3d_sword"
     },
     "2": {
       "item": "minecraft:purple_dye"
     }
   },
   "result": {
-    "item": "infinity_nexus_mod:purple_infinity_sword"
+    "item": "infinity_nexus_mod:purple_infinity_3d_sword"
   }
 }
