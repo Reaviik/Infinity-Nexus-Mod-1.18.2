@@ -98,6 +98,8 @@ public class ModItems {
                     new Item.Properties().tab(ModTabs.INFINITY_NEXUS).fireResistant()));
     public static final RegistryObject<Item> IMPERIAL_INFINITY_HOE = ITEMS.register("imperial_infinity_hoe",() -> new HoeItem(ModTiers.IMPERIAL, ModCommonConfigs.I_I_T_DAMAGE.get(), ModCommonConfigs.I_I_T_SPEED.get(),
                     new Item.Properties().tab(ModTabs.INFINITY_NEXUS).fireResistant()));
+    public static final RegistryObject<Item> IMPERIAL_INFINITY_BOW = ITEMS.register("imperial_infinity_bow",() -> new ModBow(new Item.Properties().tab(ModTabs.INFINITY_NEXUS)
+            .durability(ModCommonConfigs.I_I_B_DURABILITY.get()).fireResistant(),ModCommonConfigs.I_I_B_DAMAGE.get()));
     //Tools
     public static final RegistryObject<Item> IMPERIAL_INFINITY_HELMET = ITEMS.register("imperial_infinity_helmet",() -> new ImperialArmorItem(ModArmorMaterials.IMPERIAL, EquipmentSlot.HEAD,
                     new Item.Properties().tab(ModTabs.INFINITY_NEXUS).stacksTo(1).rarity(Rarity.EPIC).fireResistant()));
@@ -149,6 +151,9 @@ public class ModItems {
                     new Item.Properties().tab(ModTabs.INFINITY_NEXUS).fireResistant()));
     public static final RegistryObject<Item> INFINITY_HOE = ITEMS.register("infinity_hoe",() -> new HoeItem(ModTiers.INFINITY, ModCommonConfigs.I_T_DAMAGE.get(), ModCommonConfigs.I_T_SPEED.get(),
                     new Item.Properties().tab(ModTabs.INFINITY_NEXUS).fireResistant()));
+    public static final RegistryObject<Item> INFINITY_BOW = ITEMS.register("infinity_bow",() -> new ModBow(new Item.Properties().tab(ModTabs.INFINITY_NEXUS)
+            .durability(ModCommonConfigs.I_B_DURABILITY.get()).fireResistant(), ModCommonConfigs.I_B_DAMAGE.get()));
+
     //Tools
     public static final RegistryObject<Item> INFINITY_HELMET = ITEMS.register("infinity_helmet",() -> new InfinityArmorItem(ModArmorMaterials.INFINITY, EquipmentSlot.HEAD,
                     new Item.Properties().tab(ModTabs.INFINITY_NEXUS).stacksTo(1).rarity(Rarity.RARE).fireResistant()));

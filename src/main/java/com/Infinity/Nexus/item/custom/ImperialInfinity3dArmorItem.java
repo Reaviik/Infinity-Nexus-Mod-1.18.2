@@ -137,4 +137,8 @@ public class ImperialInfinity3dArmorItem extends GeoArmorItem implements IAnimat
         return helmet.getMaterial() == material && breastplate.getMaterial() == material &&
                 leggings.getMaterial() == material && boots.getMaterial() == material;
     }
+    @Override
+    public boolean isEnchantable(ItemStack stack) {
+        return true;
+    }
 }

@@ -80,4 +80,8 @@ public class ImperialArmorItem extends  ArmorItem{
         return !helmet.isEmpty() && !breastplate.isEmpty()
                 && !leggings.isEmpty() && !boots.isEmpty();
     }
+    @Override
+    public boolean isEnchantable(ItemStack stack) {
+        return true;
+    }
 }

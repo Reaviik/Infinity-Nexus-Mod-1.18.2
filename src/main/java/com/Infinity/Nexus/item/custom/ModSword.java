@@ -47,4 +47,8 @@ public class ModSword extends SwordItem{
 
         super.appendHoverText(stack, level, components, flag);
     }
+    @Override
+    public boolean isEnchantable(ItemStack stack) {
+        return true;
+    }
 }

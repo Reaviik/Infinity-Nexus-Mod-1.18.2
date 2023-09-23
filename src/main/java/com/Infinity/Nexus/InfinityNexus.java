@@ -3,6 +3,7 @@ package com.Infinity.Nexus;
 import com.Infinity.Nexus.block.ModBlocks;
 import com.Infinity.Nexus.config.ModCommonConfigs;
 import com.Infinity.Nexus.item.ModItems;
+import com.Infinity.Nexus.utils.ModItemProperties;
 import com.Infinity.Nexus.villager.ModPOIs;
 import com.Infinity.Nexus.world.dimension.ModDimensions;
 import com.mojang.logging.LogUtils;
@@ -50,6 +51,9 @@ public class InfinityNexus
         MinecraftForge.EVENT_BUS.register(this);
     }
     public void clientSetup(final FMLClientSetupEvent event){
+
+        //Mod Properties
+        ModItemProperties.addCustomItemProperties();
 
         //Empty Basket's
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.EMPTY_BASIC_GEM_BASKET.get(), RenderType.translucent());

@@ -16,6 +16,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
@@ -56,7 +57,7 @@ public class PaxelItem extends ModPaxelItem{
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
+    public void appendHoverText(@NotNull ItemStack stack, @Nullable Level level, @NotNull List<Component> components, @NotNull TooltipFlag flag) {
         if (Screen.hasShiftDown()) {
             components.add(translation);
         } else {
@@ -64,5 +65,9 @@ public class PaxelItem extends ModPaxelItem{
         }
 
         super.appendHoverText(stack, level, components, flag);
+    }
+    @Override
+    public boolean isEnchantable(ItemStack stack) {
+        return true;
     }
 }
