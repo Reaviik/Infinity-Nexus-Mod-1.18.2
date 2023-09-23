@@ -3,7 +3,9 @@ package com.Infinity.Nexus.item.custom;
 import com.Infinity.Nexus.config.ModCommonConfigs;
 import com.Infinity.Nexus.item.ModArmorMaterials;
 import com.Infinity.Nexus.utils.ModTags;
+import com.google.common.collect.HashMultimap;
 import com.google.common.collect.ImmutableMap;
+import com.google.common.collect.Multimap;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;
@@ -12,6 +14,8 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffectUtil;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.ai.attributes.Attribute;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ArmorItem;
@@ -33,6 +37,8 @@ import java.util.Map;
 
 
 public class ImperialArmorItem extends  ArmorItem{
+
+    boolean life = true;
     private static final Map<ArmorMaterial, MobEffectInstance> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, MobEffectInstance>()).build();
 
@@ -50,7 +56,10 @@ public class ImperialArmorItem extends  ArmorItem{
                 MobEffectInstance effectInstance = new MobEffectInstance(MobEffects.NIGHT_VISION, Integer.MAX_VALUE, 1, false, false);
                 effectInstance.setNoCounter(true);
                 player.addEffect(effectInstance);
-                player.setHealth(player.getMaxHealth());
+                if(life) {
+                    player.setHealth(player.getMaxHealth() + 20);
+                }
+                life = false;
                 player.onUpdateAbilities();
                //Magnetism TODO /mag
                 if(!Screen.hasShiftDown() && ModCommonConfigs.I_I_T_E_MAGNETISM.get()) {
@@ -64,6 +73,7 @@ public class ImperialArmorItem extends  ArmorItem{
                     }
                 }
             }else{
+                boolean life = true;
                 player.getAbilities().flying = false;
                 player.getAbilities().mayfly = false;
                 player.getAbilities().invulnerable = false;

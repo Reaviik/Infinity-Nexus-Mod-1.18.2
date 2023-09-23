@@ -25,7 +25,7 @@ public class ModTags {
     }
 
     public static class Items {
-        public static final TagKey<Item> INFINITY_HELMET = tag("infinity_helmet");
+        public static final TagKey<Item> INFINITY_ORE = forgeTag("infinity_ore");
         public static final TagKey<Item> PICKUP = tag("pickup");
 
         private static TagKey<Item> tag(String name) {
