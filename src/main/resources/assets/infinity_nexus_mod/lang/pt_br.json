@@ -5,6 +5,9 @@
   "item.infinity_nexus_mod.catalyst": "Ativador de Portal",
 
   "item.infinity_nexus_mod.wing": "Asa",
+  "item.infinity_nexus_mod.terrain_marker": "Marcador de Terreno",
+  "item.infinity_nexus_mod.item_dislocator": "Dislocador de Itens",
+
 
   "item.infinity_nexus_mod.imperial_3d_infinity_sword": "§fEspada de Infinity Imperial",
   "tooltip.infinity_nexus_mod.imperial_3d_infinity_sword":  "§eAplicas efeitos de §7Weakness §ee §9Wither §e ao atacar§r",
@@ -53,7 +56,7 @@
   "item.infinity_nexus_mod.sheet_clay_model": "Modelo de Chapa de Argila",
 
   "item.infinity_nexus_mod.copper_wire": "Fio de Cobre",
-  "item.infinity_nexus_mod.aluminum_wire": "Fio de Alumínio",
+  "item.infinity_nexus_mod.aluminum_wire": "Fio de Estanho",
   "item.infinity_nexus_mod.iron_wire": "Fio de Ferro",
   "item.infinity_nexus_mod.gold_wire": "Fio de Ouro",
   "item.infinity_nexus_mod.magic_wire": "Fio Mágico",
@@ -61,7 +64,7 @@
   "item.infinity_nexus_mod.industrial_wire": "Fio Industrial",
 
   "item.infinity_nexus_mod.copper_screw": "Parafuso de Cobre",
-  "item.infinity_nexus_mod.aluminum_screw": "Parafuso de Alumínio",
+  "item.infinity_nexus_mod.aluminum_screw": "Parafuso de Estanho",
   "item.infinity_nexus_mod.iron_screw": "Parafuso de Ferro",
   "item.infinity_nexus_mod.gold_screw": "Parafuso de Ouro",
   "item.infinity_nexus_mod.magic_screw": "Parafuso Mágico",
@@ -69,7 +72,7 @@
   "item.infinity_nexus_mod.industrial_screw": "Parafuso Industrial",
 
   "item.infinity_nexus_mod.copper_rod": "Barra de Cobre",
-  "item.infinity_nexus_mod.aluminum_rod": "Barra de Alumínio",
+  "item.infinity_nexus_mod.aluminum_rod": "Barra de Estanho",
   "item.infinity_nexus_mod.iron_rod": "Barra de Ferro",
   "item.infinity_nexus_mod.gold_rod": "Barra de Ouro",
   "item.infinity_nexus_mod.magic_rod": "Barra Mágica",
@@ -77,7 +80,7 @@
   "item.infinity_nexus_mod.industrial_rod": "Barra Industrial",
 
   "item.infinity_nexus_mod.copper_sheet": "Chapa de Cobre",
-  "item.infinity_nexus_mod.aluminum_sheet": "Chapa de Alumínio",
+  "item.infinity_nexus_mod.aluminum_sheet": "Chapa de Estanho",
   "item.infinity_nexus_mod.iron_sheet": "Chapa de Ferro",
   "item.infinity_nexus_mod.gold_sheet": "Chapa de Ouro",
   "item.infinity_nexus_mod.magic_sheet": "Chapa Mágica",
@@ -89,7 +92,7 @@
   "item.infinity_nexus_mod.infinity_nugget": "Pepita de Infinity",
 
   "block.infinity_nexus_mod.copper_machine_casing": "Chassi de Máquina de Cobre",
-  "block.infinity_nexus_mod.aluminum_machine_casing": "Chassi de Máquina de Alumínio",
+  "block.infinity_nexus_mod.aluminum_machine_casing": "Chassi de Máquina de Estanho",
   "block.infinity_nexus_mod.lead_machine_casing": "Chassi de Máquina de Chumbo",
   "block.infinity_nexus_mod.iron_machine_casing": "Chassi de Máquina de Ferro",
   "block.infinity_nexus_mod.gold_machine_casing": "Chassi de Máquina de Ouro",

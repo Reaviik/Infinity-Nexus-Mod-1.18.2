@@ -5,6 +5,8 @@
   "item.infinity_nexus_mod.catalyst": "Portal Activator",
 
   "item.infinity_nexus_mod.wing": "Wing",
+  "item.infinity_nexus_mod.terrain_marker": "Terrain Marker",
+  "item.infinity_nexus_mod.item_dislocator": "Item Dislocator",
 
 
   "item.infinity_nexus_mod.imperial_infinity_3d_sword": "§fImperial Infinity Sword",
@@ -71,7 +73,7 @@
   "item.infinity_nexus_mod.sheet_clay_model": "Sheet Clay Model",
 
   "item.infinity_nexus_mod.copper_wire": "Copper Wire",
-  "item.infinity_nexus_mod.aluminum_wire": "Aluminum Wire",
+  "item.infinity_nexus_mod.aluminum_wire": "Tin Wire",
   "item.infinity_nexus_mod.iron_wire": "Iron Wire",
   "item.infinity_nexus_mod.gold_wire": "Gold Wire",
   "item.infinity_nexus_mod.magic_wire": "Magic Wire",
@@ -79,7 +81,7 @@
   "item.infinity_nexus_mod.industrial_wire": "Industrial Wire",
 
   "item.infinity_nexus_mod.copper_screw": "Copper Screw",
-  "item.infinity_nexus_mod.aluminum_screw": "Aluminum Screw",
+  "item.infinity_nexus_mod.aluminum_screw": "Tin Screw",
   "item.infinity_nexus_mod.iron_screw": "Iron Screw",
   "item.infinity_nexus_mod.gold_screw": "Gold Screw",
   "item.infinity_nexus_mod.magic_screw": "Magic Screw",
@@ -87,7 +89,7 @@
   "item.infinity_nexus_mod.industrial_screw": "Industrial Screw",
 
   "item.infinity_nexus_mod.copper_rod": "Copper Rod",
-  "item.infinity_nexus_mod.aluminum_rod": "Aluminum Rod",
+  "item.infinity_nexus_mod.aluminum_rod": "Tin Rod",
   "item.infinity_nexus_mod.iron_rod": "Iron Rod",
   "item.infinity_nexus_mod.gold_rod": "Gold Rod",
   "item.infinity_nexus_mod.magic_rod": "Magic Rod",
@@ -95,7 +97,7 @@
   "item.infinity_nexus_mod.industrial_rod": "Industrial Rod",
 
   "item.infinity_nexus_mod.copper_sheet": "Copper Sheet",
-  "item.infinity_nexus_mod.aluminum_sheet": "Aluminum Sheet",
+  "item.infinity_nexus_mod.aluminum_sheet": "Tin Sheet",
   "item.infinity_nexus_mod.iron_sheet": "Iron Sheet",
   "item.infinity_nexus_mod.gold_sheet": "Gold Sheet",
   "item.infinity_nexus_mod.magic_sheet": "Magic Sheet",
@@ -107,7 +109,7 @@
   "item.infinity_nexus_mod.infinity_nugget": "Infinity Nugget",
 
   "block.infinity_nexus_mod.copper_machine_casing": "Copper Machine Casing",
-  "block.infinity_nexus_mod.aluminum_machine_casing": "Aluminum Machine Casing",
+  "block.infinity_nexus_mod.aluminum_machine_casing": "Tin Machine Casing",
   "block.infinity_nexus_mod.lead_machine_casing": "Lead Machine Casing",
   "block.infinity_nexus_mod.iron_machine_casing": "Iron Machine Casing",
   "block.infinity_nexus_mod.gold_machine_casing": "Gold Machine Casing",

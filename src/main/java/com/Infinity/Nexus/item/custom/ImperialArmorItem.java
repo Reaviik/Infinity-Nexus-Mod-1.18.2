@@ -2,24 +2,31 @@ package com.Infinity.Nexus.item.custom;
 
 import com.Infinity.Nexus.config.ModCommonConfigs;
 import com.Infinity.Nexus.item.ModArmorMaterials;
+import com.Infinity.Nexus.item.ModItems;
 import com.Infinity.Nexus.utils.ModTags;
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Multimap;
+import net.minecraft.Util;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.TextComponent;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffectUtil;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.ai.attributes.Attribute;
+import net.minecraft.world.entity.ai.attributes.AttributeInstance;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.AABB;
@@ -37,11 +44,7 @@ import java.util.Map;
 
 
 public class ImperialArmorItem extends  ArmorItem{
-
-    boolean life = true;
-    private static final Map<ArmorMaterial, MobEffectInstance> MATERIAL_TO_EFFECT_MAP =
-            (new ImmutableMap.Builder<ArmorMaterial, MobEffectInstance>()).build();
-
+    private boolean extralife = false;
     public ImperialArmorItem(ArmorMaterial material, EquipmentSlot slot, Properties settings) {
         super(material, slot, settings);
     }
@@ -50,45 +53,61 @@ public class ImperialArmorItem extends  ArmorItem{
     public void onArmorTick(ItemStack stack, Level world, Player player) {
         if(!world.isClientSide()) {
             if (hasFullSuitOfArmorOn(player)) {
+
                 player.getAbilities().mayfly = true;
                 player.getAbilities().invulnerable = true;
-                player.getFoodData().setFoodLevel(20);
+                player.getFoodData().setFoodLevel(22);
                 MobEffectInstance effectInstance = new MobEffectInstance(MobEffects.NIGHT_VISION, Integer.MAX_VALUE, 1, false, false);
                 effectInstance.setNoCounter(true);
                 player.addEffect(effectInstance);
-                if(life) {
-                    player.setHealth(player.getMaxHealth() + 20);
-                }
-                life = false;
-                player.onUpdateAbilities();
-               //Magnetism TODO /mag
-                if(!Screen.hasShiftDown() && ModCommonConfigs.I_I_T_E_MAGNETISM.get()) {
-                    int range = 5;
-                    BlockPos pos = new BlockPos(player.getX(), player.getY(), player.getZ());
-                    List<ItemEntity> entities = player.level.getEntitiesOfClass(ItemEntity.class, new AABB(pos.getX() + range, pos.getY() + range, pos.getZ() + range, pos.getX() - range, pos.getY() - range, pos.getZ() - range));
-                    for (ItemEntity item : entities) {
-                        if (item.isAlive() && !item.hasPickUpDelay() && (item.getItem().is(ModTags.Items.PICKUP))) {
-                            item.playerTouch((Player) player);
-                        }
+                extralife = true;
+                //----------------------------//----------------------------//
+                if (!player.getPersistentData().getBoolean("hasExtraLife")) {
+                    player.getPersistentData().putBoolean("hasExtraLife", true);
+                    AttributeInstance maxHealthAttribute = player.getAttribute(Attributes.MAX_HEALTH);
+                    if (maxHealthAttribute != null) {
+                        double currentMaxHealth = maxHealthAttribute.getValue();
+                        double newMaxHealth = currentMaxHealth + 20.0;
+                        maxHealthAttribute.removeModifiers();
+                        maxHealthAttribute.addPermanentModifier(new AttributeModifier("ArmorBonus", newMaxHealth - currentMaxHealth, AttributeModifier.Operation.ADDITION));
+                        player.setHealth(player.getHealth() + 20.0f);
                     }
                 }
+                //----------------------------//----------------------------//
+                player.onUpdateAbilities();
             }else{
-                boolean life = true;
+                //----------------------------//----------------------------//
+                if (player.getPersistentData().getBoolean("hasExtraLife")) {
+                player.getPersistentData().putBoolean("hasExtraLife", false);
+                AttributeInstance maxHealthAttribute = player.getAttribute(Attributes.MAX_HEALTH);
+                    if (maxHealthAttribute != null) {
+                        maxHealthAttribute.removeModifiers();
+                    }
+                }
+                //----------------------------//----------------------------//
                 player.getAbilities().flying = false;
                 player.getAbilities().mayfly = false;
                 player.getAbilities().invulnerable = false;
                 player.onUpdateAbilities();
+
+                if(extralife){
+                    extralife = false;
+                    player.hurt(DamageSource.CACTUS, 2f);
+                }
             }
         }
     }
     private boolean hasFullSuitOfArmorOn(Player player) {
-        ItemStack boots = player.getInventory().getArmor(0);
-        ItemStack leggings = player.getInventory().getArmor(1);
-        ItemStack breastplate = player.getInventory().getArmor(2);
-        ItemStack helmet = player.getInventory().getArmor(3);
-
-        return !helmet.isEmpty() && !breastplate.isEmpty()
-                && !leggings.isEmpty() && !boots.isEmpty();
+        Item boots = player.getInventory().getArmor(0).getItem();
+        Item leggings = player.getInventory().getArmor(1).getItem();
+        Item breastplate = player.getInventory().getArmor(2).getItem();
+        Item helmet = player.getInventory().getArmor(3).getItem();
+        boolean armor =
+                boots == ModItems.IMPERIAL_INFINITY_BOOTS.get()
+                && leggings == ModItems.IMPERIAL_INFINITY_LEGGINGS.get()
+                && breastplate == ModItems.IMPERIAL_INFINITY_CHESTPLATE.get()
+                && helmet == ModItems.IMPERIAL_INFINITY_HELMET.get();
+        return armor;
     }
     @Override
     public boolean isEnchantable(ItemStack stack) {

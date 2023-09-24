@@ -72,6 +72,8 @@ public class ModItems {
     public static final RegistryObject<Item> MAGIC_SHEET = ITEMS.register("magic_sheet",() -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS_PROGRESSION).rarity(Rarity.UNCOMMON)));
     public static final RegistryObject<Item> INDUSTRIAL_SHEET = ITEMS.register("industrial_sheet",() -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS_PROGRESSION).rarity(Rarity.EPIC)));
     public static final RegistryObject<Item> RAW_INGOT = ITEMS.register("raw_infinity",() -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS).rarity(Rarity.COMMON)));
+    public static final RegistryObject<Item> TERRAIN_MARKER = ITEMS.register("terrain_marker",() -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS_PROGRESSION).rarity(Rarity.COMMON)));
+    public static final RegistryObject<Item> ITEM_DISLOCATOR = ITEMS.register("item_dislocator",() -> new ItemDislocator(new Item.Properties().tab(ModTabs.INFINITY_NEXUS).rarity(Rarity.COMMON)));
     public static final RegistryObject<Item> INFINITY_INGOT = ITEMS.register("infinity_ingot",() -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS).rarity(Rarity.RARE).fireResistant()));
     public static final RegistryObject<Item> INFINITY_NUGGET = ITEMS.register("infinity_nugget",() -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS).rarity(Rarity.RARE).fireResistant()));
     public static final RegistryObject<Item> INFINITY_SINGULARITY = ITEMS.register("infinity_singularity",() -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS).rarity(Rarity.EPIC).fireResistant()));
