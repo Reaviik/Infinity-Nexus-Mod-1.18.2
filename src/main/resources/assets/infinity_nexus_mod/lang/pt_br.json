@@ -7,6 +7,9 @@
   "item.infinity_nexus_mod.wing": "Asa",
   "item.infinity_nexus_mod.terrain_marker": "Marcador de Terreno",
   "item.infinity_nexus_mod.item_dislocator": "Dislocador de Itens",
+  "chat.infinity_nexus_mod.item_dislocator_on": "§bDeslocador de Itens §2Ligado",
+  "chat.infinity_nexus_mod.item_dislocator_off": "§bDeslocador de Itens §cDesligado",
+  "tooltip.infinity_nexus_mod.item_dislocator": "§eDesloca items proximos até você em um raio de:§5 ",
 
 
   "item.infinity_nexus_mod.imperial_3d_infinity_sword": "§fEspada de Infinity Imperial",

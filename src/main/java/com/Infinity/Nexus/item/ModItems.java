@@ -13,7 +13,6 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import org.openjdk.nashorn.internal.runtime.regexp.joni.Warnings;
 
 
 public class ModItems {
@@ -103,13 +102,13 @@ public class ModItems {
     public static final RegistryObject<Item> IMPERIAL_INFINITY_BOW = ITEMS.register("imperial_infinity_bow",() -> new ModBow(new Item.Properties().tab(ModTabs.INFINITY_NEXUS)
             .durability(ModCommonConfigs.I_I_B_DURABILITY.get()).fireResistant(),ModCommonConfigs.I_I_B_DAMAGE.get()));
     //Tools
-    public static final RegistryObject<Item> IMPERIAL_INFINITY_HELMET = ITEMS.register("imperial_infinity_helmet",() -> new ImperialArmorItem(ModArmorMaterials.IMPERIAL, EquipmentSlot.HEAD,
+    public static final RegistryObject<Item> IMPERIAL_INFINITY_HELMET = ITEMS.register("imperial_infinity_helmet",() -> new ImperialInfinityArmorItem(ModArmorMaterials.IMPERIAL, EquipmentSlot.HEAD,
                     new Item.Properties().tab(ModTabs.INFINITY_NEXUS).stacksTo(1).rarity(Rarity.EPIC).fireResistant()));
-    public static final RegistryObject<Item> IMPERIAL_INFINITY_CHESTPLATE = ITEMS.register("imperial_infinity_chestplate",() -> new ImperialArmorItem(ModArmorMaterials.IMPERIAL, EquipmentSlot.CHEST,
+    public static final RegistryObject<Item> IMPERIAL_INFINITY_CHESTPLATE = ITEMS.register("imperial_infinity_chestplate",() -> new ImperialInfinityArmorItem(ModArmorMaterials.IMPERIAL, EquipmentSlot.CHEST,
                     new Item.Properties().tab(ModTabs.INFINITY_NEXUS).stacksTo(1).rarity(Rarity.EPIC).fireResistant()));
-    public static final RegistryObject<Item> IMPERIAL_INFINITY_LEGGINGS = ITEMS.register("imperial_infinity_leggings",() -> new ImperialArmorItem(ModArmorMaterials.IMPERIAL, EquipmentSlot.LEGS,
+    public static final RegistryObject<Item> IMPERIAL_INFINITY_LEGGINGS = ITEMS.register("imperial_infinity_leggings",() -> new ImperialInfinityArmorItem(ModArmorMaterials.IMPERIAL, EquipmentSlot.LEGS,
                     new Item.Properties().tab(ModTabs.INFINITY_NEXUS).stacksTo(1).rarity(Rarity.EPIC).fireResistant()));
-    public static final RegistryObject<Item> IMPERIAL_INFINITY_BOOTS = ITEMS.register("imperial_infinity_boots",() -> new ImperialArmorItem(ModArmorMaterials.IMPERIAL, EquipmentSlot.FEET,
+    public static final RegistryObject<Item> IMPERIAL_INFINITY_BOOTS = ITEMS.register("imperial_infinity_boots",() -> new ImperialInfinityArmorItem(ModArmorMaterials.IMPERIAL, EquipmentSlot.FEET,
                     new Item.Properties().tab(ModTabs.INFINITY_NEXUS).stacksTo(1).rarity(Rarity.EPIC).fireResistant()));
     //---------------------------------------------------------//---------------------------------------------------------//
     //Imperial Infinity 3D
