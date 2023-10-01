@@ -20,6 +20,16 @@ public class ModCommonConfigs {
     public static final ForgeConfigSpec.ConfigValue<Float> I_S_SPEED;
     public static final ForgeConfigSpec.ConfigValue<Integer> I_B_DURABILITY;
     public static final ForgeConfigSpec.ConfigValue<Integer> I_B_DAMAGE;
+    public static final ForgeConfigSpec.ConfigValue<Integer> I_A_ABSORPTION;
+    public static final ForgeConfigSpec.ConfigValue<Integer> I_A_REGENERATION;
+    public static final ForgeConfigSpec.ConfigValue<Integer> I_A_DURABILITY;
+    public static final ForgeConfigSpec.ConfigValue<Integer> I_A_E_VALUE;
+    public static final ForgeConfigSpec.ConfigValue<Float> I_A_TOUGHNESS;
+    public static final ForgeConfigSpec.ConfigValue<Float> I_A_K_RESISTANCE;
+    public static final ForgeConfigSpec.ConfigValue<Integer> I_A_H_ARMOR;
+    public static final ForgeConfigSpec.ConfigValue<Integer> I_A_C_ARMOR;
+    public static final ForgeConfigSpec.ConfigValue<Integer> I_A_L_ARMOR;
+    public static final ForgeConfigSpec.ConfigValue<Integer> I_A_B_ARMOR;
 
     //---------------------------------------------//---------------------------------------------//
     public static final ForgeConfigSpec.ConfigValue<Integer> I_I_T_DAMAGE;
@@ -29,7 +39,14 @@ public class ModCommonConfigs {
     public static final ForgeConfigSpec.ConfigValue<Integer> I_I_S_DAMAGE;
     public static final ForgeConfigSpec.ConfigValue<Float> I_I_S_SPEED;
     public static final ForgeConfigSpec.ConfigValue<Integer> I_I_B_DURABILITY;
+    public static final ForgeConfigSpec.ConfigValue<Integer> I_I_A_E_VALUE;
     public static final ForgeConfigSpec.ConfigValue<Integer> I_I_B_DAMAGE;
+    public static final ForgeConfigSpec.ConfigValue<Integer> I_I_A_N_VISION;
+    public static final ForgeConfigSpec.ConfigValue<Integer> I_I_A_D_SPEED;
+    public static final ForgeConfigSpec.ConfigValue<Integer> I_I_A_D_BOOST;
+    public static final ForgeConfigSpec.ConfigValue<Integer> I_I_A_LUCK;
+    public static final ForgeConfigSpec.ConfigValue<Integer> I_I_A_HERO;
+    public static final ForgeConfigSpec.ConfigValue<Integer> I_I_A_SPEED;
 
     //---------------------------------------------//---------------------------------------------//
     public static final ForgeConfigSpec.ConfigValue<Integer> I_O_C_SIZE;
@@ -40,7 +57,20 @@ public class ModCommonConfigs {
     //---------------------------------------------//---------------------------------------------//
     public static final ForgeConfigSpec.ConfigValue<Boolean> I_D_MAGNETISM;
     public static final ForgeConfigSpec.ConfigValue<Integer> I_D_RANGE;
+    public static final ForgeConfigSpec.ConfigValue<List<String>> I_D_BLACKLIST;
     static {
+
+        List<String> defaultBlacklist = new ArrayList<>();
+        defaultBlacklist.add("minecraft:stone");
+        defaultBlacklist.add("minecraft:dirt");
+        defaultBlacklist.add("minecraft:gravel");
+        defaultBlacklist.add("minecraft:deepslate");
+        defaultBlacklist.add("minecraft:cobblestone");
+        defaultBlacklist.add("minecraft:cobbled_deepslate");
+        defaultBlacklist.add("minecraft:granite");
+        defaultBlacklist.add("minecraft:diorite");
+        defaultBlacklist.add("minecraft:tuff");
+        defaultBlacklist.add("minecraft:dirt");
 
         BUILDER.push("Infinity Nexus Common Configs");
 
@@ -48,59 +78,97 @@ public class ModCommonConfigs {
 
         //Infinity Set
         I_T_DAMAGE = BUILDER.comment("Damage for Infinity Pickaxe/Axe/Shovel/Hoe")
-                .define("Infinity Tools Damage, Default 25", 25);
+                .define("I_T_DAMAGE", 25);
         I_T_HARVEST = BUILDER.comment("Harvest speed for Infinity Pickaxe/Axe/Shovel/Hoe")
-                .define("Infinity Tools Harvest Speed, Default 50", 50f);
+                .define("I_T_HARVEST", 50f);
         I_T_SPEED = BUILDER.comment("Attack speed for Infinity Pickaxe/Axe/Shovel/Hoe")
-                .define("Infinity Tools Attack Speed, Default 7", 7f);
+                .define("I_T_SPEED", 7f);
         I_T_E_VALUE = BUILDER.comment("Enchantment Value for Infinity Pickaxe/Axe/Shovel/Hoe/Sword")
-                .define("Infinity Tools Enchantment Value, Default 70", 70);
+                .define("I_T_E_VALUE", 70);
         I_S_DAMAGE = BUILDER.comment("Damage for Infinity Sword")
-                .define("Infinity Sword Damage, Default 40", 40);
+                .define("I_S_DAMAGE", 40);
         I_S_SPEED = BUILDER.comment("Harvest speed for Infinity Sword")
-                .define("Infinity Sword Attack Speed, Default 7", 7f);
+                .define("I_S_SPEED", 7f);
         I_B_DURABILITY = BUILDER.comment("Infinity Bow Durability")
-                .define("Infinity Bow Durability, Default 4500", 4500);
+                .define("I_B_DURABILITY", 4500);
+        I_A_ABSORPTION = BUILDER.comment("Infinity Armor Absorption Multiplier")
+                .define("I_A_ABSORPTION", 0);
+        I_A_REGENERATION = BUILDER.comment("Infinity Armor Regeneration Multiplier")
+                .define("I_A_REGENERATION", 1);
+        I_A_DURABILITY = BUILDER.comment("Infinity Armor Durability")
+                .define("I_A_DURABILITY", 1000);
+        I_A_E_VALUE = BUILDER.comment("Infinity Armor Enchantment Value")
+                .define("I_A_E_VALUE", 80);
+        I_A_TOUGHNESS = BUILDER.comment("Infinity Armor Toughness")
+                .define("I_A_TOUGHNESS", 8f);
+        I_A_K_RESISTANCE = BUILDER.comment("Infinity Armor Knockback Resistance")
+                .define("I_A_K_RESISTANCE", 8f);
+        I_A_H_ARMOR = BUILDER.comment("Infinity Armor Helmet Armor")
+                .define("I_A_H_ARMOR", 12);
+        I_A_C_ARMOR = BUILDER.comment("Infinity Armor Chestplate Armor")
+                .define("I_A_C_ARMOR", 20);
+        I_A_L_ARMOR = BUILDER.comment("Infinity Armor Leggings Armor")
+                .define("I_A_L_ARMOR", 15);
+        I_A_B_ARMOR = BUILDER.comment("Infinity Armor Boots Armor")
+                .define("I_A_B_ARMOR", 13);
         //---------------------------------------------//---------------------------------------------//
         I_B_DAMAGE = BUILDER.comment("Infinity Bow Damage")
-                .define("Infinity Bow Damage, Default 50", 50);
+                .define("I_B_DAMAGE", 50);
         //---------------------------------------------//---------------------------------------------//
 
         //Imperial Infinity Set
         I_I_T_DAMAGE = BUILDER.comment("Damage for Imperial Infinity Pickaxe/Axe/Shovel/Hoe")
-                .define("Imperial Infinity Tools Damage, Default 30", 30);
+                .define("I_I_T_DAMAGE", 30);
         I_I_T_HARVEST = BUILDER.comment("Harvest speed for Imperial Infinity Pickaxe/Axe/Shovel/Hoe")
-                .define("Imperial Infinity Tools Speed, Default 100", 100f);
+                .define("I_I_T_HARVEST", 100f);
         I_I_T_SPEED = BUILDER.comment("Attack speed for Imperial Infinity Pickaxe/Axe/Shovel/Hoe")
-                .define("Imperial Infinity Tools Attack Speed, Default 20", 20f);
+                .define("I_I_T_SPEED", 20f);
         I_I_T_E_VALUE = BUILDER.comment("Enchantment Value for Imperial Infinity Pickaxe/Axe/Shovel/Hoe/Sword")
-                .define("Imperial Infinity Tools Enchantment Value, Default 80", 80);
+                .define("I_I_T_E_VALUE", 80);
         I_I_S_DAMAGE = BUILDER.comment("Damage for Imperial Infinity Sword")
-                .define("Imperial Infinity Sword Damage, Default 50", 50);
+                .define("I_I_S_DAMAGE", 50);
         I_I_S_SPEED = BUILDER.comment("Harvest speed for Imperial Infinity Sword")
-                .define("Imperial Infinity Sword Attack Speed, Default 10", 10f);
+                .define("I_I_S_SPEED", 10f);
         I_I_B_DURABILITY = BUILDER.comment("Imperial Infinity Bow Durability")
-                .define("Imperial Infinity Bow Durability, Default -1", -1);
+                .define("I_I_B_DURABILITY", -1);
         I_I_B_DAMAGE = BUILDER.comment("Imperial Infinity Bow Damage")
-                .define("Imperial Infinity Bow Damage, Default 60", 60);
+                .define("I_I_B_DAMAGE", 60);
+        I_I_A_E_VALUE = BUILDER.comment("Imperial Infinity Armor Enchantment Value")
+                .define("I_I_A_E_VALUE", 100);
+        I_I_A_N_VISION = BUILDER.comment("Imperial Infinity Armor Night Vision Multiplier")
+                .define("I_I_A_N_VISION", 1);
+        I_I_A_D_SPEED = BUILDER.comment("Imperial Infinity Armor Dig Speed Multiplier")
+                .define("I_I_A_D_SPEED", 2);
+        I_I_A_D_BOOST = BUILDER.comment("Imperial Infinity Armor Damage Boost Multiplier")
+                .define("I_I_A_D_BOOST", 4);
+        I_I_A_LUCK = BUILDER.comment("Imperial Infinity Armor Luck Multiplier")
+                .define("I_I_A_LUCK", 4);
+        I_I_A_HERO = BUILDER.comment("Imperial Infinity Hero on The Village Multiplier")
+                .define("I_I_A_HERO", 4);
+        I_I_A_SPEED = BUILDER.comment("Imperial Infinity Walk Speed Multiplier")
+                .define("I_I_A_SPEED", 4);
 
         //---------------------------------------------//---------------------------------------------//
         I_D_MAGNETISM = BUILDER.comment("Item Dislocator can Magnetize Items")
-                .define("Can magnetize ", true);
+                .define("I_D_MAGNETISM", true);
         I_D_RANGE = BUILDER.comment("Item Dislocator Range to Magnetize Items")
-                .define("Range", 10);
+                .define("I_D_RANGE", 10);
+        I_D_BLACKLIST = BUILDER.comment("Item Dislocator List of Deleted Items")
+                .define("I_D_BLACKLIST", defaultBlacklist);
         //---------------------------------------------//---------------------------------------------//
         //Infinity Ore
         I_O_C_SIZE = BUILDER.comment("Infinity Ore Chunk Size")
-                .define("Infinity ore chunk size, Default 9", 9);
+                .define("I_O_C_SIZE", 1);
         I_O_P_CHUNK= BUILDER.comment("Infinity Ore Chunk, Per Chunk")
-                .define("Infinity Ore Placed Per Chunk Default 7", 7);
+                .define("I_O_P_CHUNK", 1);
         I_O_P_MAXY = BUILDER.comment("Infinity Ore Max Y Placement")
-                .define("Infinity Ore Placed Max Y, Default 22", 22);
+                .define("I_O_P_MAXY", 22);
         I_O_P_MIMY = BUILDER.comment("Infinity Ore Min Y Placement")
-                .define("Infinity Ore Placed Min Y, Default -22", -22);
+                .define("I_O_P_MIMY", -22);
         //---------------------------------------------//---------------------------------------------//
         BUILDER.pop();
         SPEC = BUILDER.build();
+
     }
+
 }

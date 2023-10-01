@@ -10,6 +10,7 @@ import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeInstance;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -44,24 +45,21 @@ public class ImperialInfinity3dArmorItem extends GeoArmorItem implements IAnimat
     public void onArmorTick(ItemStack stack, Level world, Player player) {
         if(!world.isClientSide()) {
             if (hasFullSuitOfArmorOn(player)) {
-
                 player.getAbilities().mayfly = true;
                 player.getAbilities().invulnerable = true;
-                player.getFoodData().setFoodLevel(22);
-                player.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, Integer.MAX_VALUE, 1, false, false));
-                player.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, Integer.MAX_VALUE, 1, false, false));
-                player.addEffect(new MobEffectInstance(MobEffects.HEALTH_BOOST, Integer.MAX_VALUE, 1, false, false));
-                player.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 3, 1, false, false));
-                player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 10, 1, false, false));
-                //----------------------------//----------------------------//
-                //----------------------------//----------------------------//
+                player.getFoodData().setSaturation(20);
+                player.getFoodData().setFoodLevel(20);
+                player.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 200, ModCommonConfigs.I_I_A_N_VISION.get(), false, false));
+                player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 200, ModCommonConfigs.I_I_A_SPEED.get(), false, false));
+                player.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 200, ModCommonConfigs.I_I_A_D_SPEED.get(), false, false));
+                player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 200, ModCommonConfigs.I_I_A_D_BOOST.get(), false, false));
+                player.addEffect(new MobEffectInstance(MobEffects.LUCK, 200, ModCommonConfigs.I_I_A_LUCK.get(), false, false));
+                player.addEffect(new MobEffectInstance(MobEffects.HERO_OF_THE_VILLAGE, 200, ModCommonConfigs.I_I_A_HERO.get(), false, false));
                 player.onUpdateAbilities();
             }else{
                 player.getAbilities().flying = false;
                 player.getAbilities().mayfly = false;
                 player.getAbilities().invulnerable = false;
-                //----------------------------//----------------------------//
-                //----------------------------//----------------------------//
                 player.onUpdateAbilities();
             }
         }
@@ -78,6 +76,12 @@ public class ImperialInfinity3dArmorItem extends GeoArmorItem implements IAnimat
                         && helmet == ModItems.IMPERIAL_INFINITY_3D_HELMET.get();
         return armor;
     }
+
+    @Override
+    public boolean makesPiglinsNeutral(ItemStack stack, LivingEntity wearer) {
+        return true;
+    }
+
     @Override
     public void registerControllers(AnimationData data) {
         data.addAnimationController(new AnimationController<ImperialInfinity3dArmorItem>(this, "controller",

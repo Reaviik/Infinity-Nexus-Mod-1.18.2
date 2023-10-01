@@ -9,7 +9,7 @@
   "item.infinity_nexus_mod.item_dislocator": "Item Dislocator",
   "chat.infinity_nexus_mod.item_dislocator_on": "§bItem Dislocator §2On",
   "chat.infinity_nexus_mod.item_dislocator_off": "§bItem Dislocator §cOff",
-  "tooltip.infinity_nexus_mod.item_dislocator": "§eMove items near you within a radius of:§5 ",
+  "tooltip.infinity_nexus_mod.item_dislocator": "§4WIPE §eDeletes items dropped near you within a radius of:§5 ",
 
 
   "item.infinity_nexus_mod.imperial_infinity_3d_sword": "§fImperial Infinity Sword",
@@ -30,6 +30,7 @@
   "item.infinity_nexus_mod.imperial_infinity_chestplate": "Imperial Infinity Chestplate",
   "item.infinity_nexus_mod.imperial_infinity_leggings": "Imperial Infinity Leggings",
   "item.infinity_nexus_mod.imperial_infinity_boots": "Imperial Infinity Boots",
+  "item.infinity_nexus.infinity_armor":"§bFull Armor Grant:\n§5- Creative Fly\n§5- Regeneration\n§5- Absorption",
   "item.infinity_nexus_mod.imperial_infinity_sword": "Imperial Infinity Sword",
   "tooltip.infinity_nexus_mod.imperial_infinity_sword":  "§eInflict effects §7Weakness §eand §9Wither §eon hit",
   "item.infinity_nexus_mod.imperial_infinity_pickaxe": "Imperial Infinity Pickaxe",
@@ -45,6 +46,7 @@
   "item.infinity_nexus_mod.infinity_chestplate": "Infinity Chestplate",
   "item.infinity_nexus_mod.infinity_leggings": "Infinity Leggings",
   "item.infinity_nexus_mod.infinity_boots": "Infinity Boots",
+  "item.infinity_nexus.imperial_infinity_armor":"§bFull Armor Grant:\n§5- Creative Fly\n§5- Absorption\n§5- Night Vision\n§5- Dig Speed\n§5- Damage Boost\n§5- Luck\n§5- Movement Speed",
   "item.infinity_nexus_mod.infinity_sword": "Infinity Sword",
   "tooltip.infinity_nexus_mod.infinity_sword":  "§eInflict effects §7Weakness §eand §9Wither §eon hit",
   "item.infinity_nexus_mod.infinity_pickaxe": "Infinity Pickaxe",

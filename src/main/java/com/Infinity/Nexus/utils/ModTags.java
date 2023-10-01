@@ -8,6 +8,7 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 
+
 public class ModTags {
     public static class Blocks {
         public static final TagKey<Block> EXPLORAR_PORTAL_FRAME
@@ -25,9 +26,16 @@ public class ModTags {
     }
 
     public static class Items {
-        public static final TagKey<Item> INFINITY_ORE = forgeTag("infinity_ore");
-        public static final TagKey<Item> PICKUP = tag("pickup");
+        //---------------------------------------------//---------------------------------------------//
 
+        public static final TagKey<Item> INFINITY_HELMET = tag("infinity_helmet");
+        public static final TagKey<Item> INFINITY_CHESTPLATE = tag("infinity_chestplate");
+        public static final TagKey<Item> INFINITY_LEGGINGS = tag("infinity_leggings");
+        public static final TagKey<Item> INFINITY_BOOTS = tag("infinity_boots");
+        //---------------------------------------------//---------------------------------------------//
+        public static final TagKey<Item> PICKUP = tag("pickup");
+        //---------------------------------------------//---------------------------------------------//
+        public static final TagKey<Item> INFINITY_ORE = forgeTag("infinity_ore");
         private static TagKey<Item> tag(String name) {
             return ItemTags.create(new ResourceLocation(InfinityNexus.MOD_ID, name));
         }

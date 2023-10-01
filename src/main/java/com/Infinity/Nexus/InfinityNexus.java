@@ -2,14 +2,20 @@ package com.Infinity.Nexus;
 
 import com.Infinity.Nexus.block.ModBlocks;
 import com.Infinity.Nexus.config.ModCommonConfigs;
+import com.Infinity.Nexus.effect.ModEffects;
 import com.Infinity.Nexus.item.ModItems;
+import com.Infinity.Nexus.potion.ModPotions;
+import com.Infinity.Nexus.utils.BetterBrewingRecipe;
 import com.Infinity.Nexus.utils.ModItemProperties;
 import com.Infinity.Nexus.villager.ModPOIs;
 import com.Infinity.Nexus.world.dimension.ModDimensions;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.data.tags.BlockTagsProvider;
+import net.minecraft.world.item.alchemy.Potions;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
@@ -41,6 +47,9 @@ public class InfinityNexus
 
         eventBus.addListener(this::clientSetup);
         eventBus.addListener(this::setup);
+
+        ModPotions.register(eventBus);
+        ModEffects.register(eventBus);
 
         GeckoLib.initialize();
 
@@ -99,6 +108,11 @@ public class InfinityNexus
     }
     private void setup(final FMLCommonSetupEvent event)
     {
+
+        BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.AWKWARD,
+                ModItems.INFINITY_INGOT.get(), ModPotions.FREEZE_POTION.get()));
+
+
         LOGGER.info("   §4_____§5_   __§9__________§3_   ______§b_______  __");
         LOGGER.info("  §4/_  _§5/ | / §9/ ____/  _§3/ | / /  _§b/_  __| \\/ /");
         LOGGER.info("   §4/ /§5/  |/ §9/ /_   / /§3/  |/ // /  §b/ /   \\  / ");
@@ -107,4 +121,5 @@ public class InfinityNexus
         LOGGER.info("§b          Infinity Nexus Mod");
 
     }
+
 }

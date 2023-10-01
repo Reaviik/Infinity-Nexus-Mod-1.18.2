@@ -1,0 +1,63 @@
+{
+  "temperature": 0.5,
+  "downfall": 0.5,
+  "precipitation": "none",
+  "category": "the_end",
+  "creature_spawn_probability": 0,
+  "effects": {
+    "sky_color": 0,
+    "fog_color": 0,
+    "water_color": 4159204,
+    "water_fog_color": 4342527,
+    "grass_color": 37905,
+    "foliage_color": 2068224,
+    "mood_sound": {
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000,
+      "block_search_extent": 8,
+      "offset": 2
+    }
+  },
+  "spawners": {
+    "monster": [],
+    "creature": [],
+    "ambient": [],
+    "axolotls": [],
+    "underground_water_creature": [],
+    "water_creature": [],
+    "water_ambient": [],
+    "misc": []
+  },
+  "spawn_costs": {},
+  "carvers": {
+    "air": [
+      "minecraft:nether_cave"
+    ]
+  },
+  "features": [
+    [
+      {
+        "feature": "minecraft:ore_andesite",
+        "placement": [
+          {
+            "type": "minecraft:count",
+            "count": 5
+          },
+          {
+            "type": "minecraft:in_square"
+          },
+          {
+            "type": "minecraft:count_on_every_layer",
+            "count": {
+              "type": "minecraft:uniform",
+              "value": {
+                "min_inclusive": 32,
+                "max_inclusive": 64
+              }
+            }
+          }
+        ]
+      }
+    ]
+  ]
+}

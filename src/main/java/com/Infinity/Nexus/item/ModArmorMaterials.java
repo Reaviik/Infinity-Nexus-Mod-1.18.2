@@ -1,6 +1,7 @@
 package com.Infinity.Nexus.item;
 
 import com.Infinity.Nexus.InfinityNexus;
+import com.Infinity.Nexus.config.ModCommonConfigs;
 import net.minecraft.client.gui.screens.Overlay;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
@@ -13,40 +14,59 @@ import net.minecraft.world.item.crafting.Ingredient;
 import java.util.function.Supplier;
 public enum ModArmorMaterials  implements ArmorMaterial {
 
-
-    IMPERIAL("imperial_infinity", -1, new int[]{22,25,28,22}, 80, SoundEvents.ARMOR_EQUIP_NETHERITE, 15.0F, 24.0F, () -> {
+    IMPERIAL("imperial_infinity", -1,
+            new int[]{0,0,0,0}, ModCommonConfigs.I_I_A_E_VALUE.get(), SoundEvents.ARMOR_EQUIP_NETHERITE, 0F, 0f, () -> {
         return Ingredient.of(ModItems.INFINITY_INGOT.get());
     }),
-    INFINITY("infinity", 1000, new int[] {12,15,18,12},80, SoundEvents.ARMOR_EQUIP_DIAMOND, 15.0F, 24.0F, () ->{
+    INFINITY("infinity", ModCommonConfigs.I_A_DURABILITY.get(),
+            new int[] {ModCommonConfigs.I_A_B_ARMOR.get(),ModCommonConfigs.I_A_L_ARMOR.get(),ModCommonConfigs.I_A_C_ARMOR.get(),ModCommonConfigs.I_A_H_ARMOR.get()},
+            ModCommonConfigs.I_A_E_VALUE.get(), SoundEvents.ARMOR_EQUIP_DIAMOND, ModCommonConfigs.I_A_TOUGHNESS.get(), ModCommonConfigs.I_A_K_RESISTANCE.get(), () ->{
         return Ingredient.of(ModItems.INFINITY_INGOT.get());
     }),
-    BLUE("blue_infinity", 1000, new int[] {12,15,18,12},80, SoundEvents.ARMOR_EQUIP_DIAMOND, 15.0F, 24.0F, () ->{
+    BLUE("blue_infinity", ModCommonConfigs.I_A_DURABILITY.get(),
+            new int[] {ModCommonConfigs.I_A_B_ARMOR.get(),ModCommonConfigs.I_A_L_ARMOR.get(),ModCommonConfigs.I_A_C_ARMOR.get(),ModCommonConfigs.I_A_H_ARMOR.get()},
+            ModCommonConfigs.I_A_E_VALUE.get(), SoundEvents.ARMOR_EQUIP_DIAMOND, ModCommonConfigs.I_A_TOUGHNESS.get(), ModCommonConfigs.I_A_K_RESISTANCE.get(), () ->{
         return Ingredient.of(ModItems.INFINITY_INGOT.get());
     }),
-    GOLD("gold_infinity", 1000, new int[] {12,15,18,12},80, SoundEvents.ARMOR_EQUIP_DIAMOND, 15.0F, 24.0F, () ->{
+    GOLD("gold_infinity", ModCommonConfigs.I_A_DURABILITY.get(),
+            new int[] {ModCommonConfigs.I_A_B_ARMOR.get(),ModCommonConfigs.I_A_L_ARMOR.get(),ModCommonConfigs.I_A_C_ARMOR.get(),ModCommonConfigs.I_A_H_ARMOR.get()},
+            ModCommonConfigs.I_A_E_VALUE.get(), SoundEvents.ARMOR_EQUIP_DIAMOND, ModCommonConfigs.I_A_TOUGHNESS.get(), ModCommonConfigs.I_A_K_RESISTANCE.get(), () ->{
         return Ingredient.of(ModItems.INFINITY_INGOT.get());
     }),
-    GREEN("green_infinity", 1000, new int[] {12,15,18,12},80, SoundEvents.ARMOR_EQUIP_DIAMOND, 15.0F, 24.0F, () ->{
+    GREEN("green_infinity", ModCommonConfigs.I_A_DURABILITY.get(),
+            new int[] {ModCommonConfigs.I_A_B_ARMOR.get(),ModCommonConfigs.I_A_L_ARMOR.get(),ModCommonConfigs.I_A_C_ARMOR.get(),ModCommonConfigs.I_A_H_ARMOR.get()},
+            ModCommonConfigs.I_A_E_VALUE.get(), SoundEvents.ARMOR_EQUIP_DIAMOND, ModCommonConfigs.I_A_TOUGHNESS.get(), ModCommonConfigs.I_A_K_RESISTANCE.get(), () ->{
         return Ingredient.of(ModItems.INFINITY_INGOT.get());
     }),
-    PINK("pink_infinity", 1000, new int[] {12,15,18,12},80, SoundEvents.ARMOR_EQUIP_DIAMOND, 15.0F, 24.0F, () ->{
+    PINK("pink_infinity", ModCommonConfigs.I_A_DURABILITY.get(),
+            new int[] {ModCommonConfigs.I_A_B_ARMOR.get(),ModCommonConfigs.I_A_L_ARMOR.get(),ModCommonConfigs.I_A_C_ARMOR.get(),ModCommonConfigs.I_A_H_ARMOR.get()},
+            ModCommonConfigs.I_A_E_VALUE.get(), SoundEvents.ARMOR_EQUIP_DIAMOND, ModCommonConfigs.I_A_TOUGHNESS.get(), ModCommonConfigs.I_A_K_RESISTANCE.get(), () ->{
         return Ingredient.of(ModItems.INFINITY_INGOT.get());
     }),
-    PURPLE("purple_infinity", 1000, new int[] {12,15,18,12},80, SoundEvents.ARMOR_EQUIP_DIAMOND, 15.0F, 24.0F, () ->{
+    PURPLE("purple_infinity", ModCommonConfigs.I_A_DURABILITY.get(),
+            new int[] {ModCommonConfigs.I_A_B_ARMOR.get(),ModCommonConfigs.I_A_L_ARMOR.get(),ModCommonConfigs.I_A_C_ARMOR.get(),ModCommonConfigs.I_A_H_ARMOR.get()},
+            ModCommonConfigs.I_A_E_VALUE.get(), SoundEvents.ARMOR_EQUIP_DIAMOND, ModCommonConfigs.I_A_TOUGHNESS.get(), ModCommonConfigs.I_A_K_RESISTANCE.get(), () ->{
         return Ingredient.of(ModItems.INFINITY_INGOT.get());
     }),
-    RED("red_infinity", 1000, new int[] {12,15,18,12},80, SoundEvents.ARMOR_EQUIP_DIAMOND, 15.0F, 24.0F, () ->{
+    RED("red_infinity", ModCommonConfigs.I_A_DURABILITY.get(),
+            new int[] {ModCommonConfigs.I_A_B_ARMOR.get(),ModCommonConfigs.I_A_L_ARMOR.get(),ModCommonConfigs.I_A_C_ARMOR.get(),ModCommonConfigs.I_A_H_ARMOR.get()},
+            ModCommonConfigs.I_A_E_VALUE.get(), SoundEvents.ARMOR_EQUIP_DIAMOND, ModCommonConfigs.I_A_TOUGHNESS.get(), ModCommonConfigs.I_A_K_RESISTANCE.get(), () ->{
         return Ingredient.of(ModItems.INFINITY_INGOT.get());
     }),
-    SILVER("silver_infinity", 1000, new int[] {12,15,18,12},80, SoundEvents.ARMOR_EQUIP_DIAMOND, 15.0F, 24.0F, () ->{
+    SILVER("silver_infinity", ModCommonConfigs.I_A_DURABILITY.get(),
+            new int[] {ModCommonConfigs.I_A_B_ARMOR.get(),ModCommonConfigs.I_A_L_ARMOR.get(),ModCommonConfigs.I_A_C_ARMOR.get(),ModCommonConfigs.I_A_H_ARMOR.get()},
+            ModCommonConfigs.I_A_E_VALUE.get(), SoundEvents.ARMOR_EQUIP_DIAMOND, ModCommonConfigs.I_A_TOUGHNESS.get(), ModCommonConfigs.I_A_K_RESISTANCE.get(), () ->{
         return Ingredient.of(ModItems.INFINITY_INGOT.get());
     }),
-    YELLOW("yellow_infinity", 1000, new int[] {12,15,18,12},80, SoundEvents.ARMOR_EQUIP_DIAMOND, 15.0F, 24.0F, () ->{
+    YELLOW("yellow_infinity", ModCommonConfigs.I_A_DURABILITY.get(),
+            new int[] {ModCommonConfigs.I_A_B_ARMOR.get(),ModCommonConfigs.I_A_L_ARMOR.get(),ModCommonConfigs.I_A_C_ARMOR.get(),ModCommonConfigs.I_A_H_ARMOR.get()},
+            ModCommonConfigs.I_A_E_VALUE.get(), SoundEvents.ARMOR_EQUIP_DIAMOND, ModCommonConfigs.I_A_TOUGHNESS.get(), ModCommonConfigs.I_A_K_RESISTANCE.get(), () ->{
         return Ingredient.of(ModItems.INFINITY_INGOT.get());
     });
 
     //Boots, Leggings, Chestplate, Helmet
-    private static final int[] HEALTH_PER_SLOT = new int[]{13, 15, 16, 11};
+
+    private static final int[] HEALTH_PER_SLOT = new int[]{13,15,20,12};
     private final String name;
     private final int durabilityMultiplier;
     private final int[] slotProtections;

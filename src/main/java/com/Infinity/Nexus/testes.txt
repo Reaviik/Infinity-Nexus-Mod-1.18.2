@@ -1,0 +1,19 @@
+/fill ~ ~ ~ ~-30 ~-30 ~-30 air
+
+/execute in infinity_nexus_mod:mining run tp ~ ~ ~
+
+
+
+-------70-------
+Grass
+-------69-------
+Dirt
+-------64-------
+Stone
+-------032-------
+Deepslate
+--------0--------
+Netherrack
+--------32-------
+EndStone
+--------64-------
