@@ -30,7 +30,7 @@ public class ModSword extends SwordItem{
     }
 
     @Override
-    public boolean hurtEnemy(ItemStack pStack, LivingEntity pAttacker, LivingEntity pTarget) {
+    public boolean hurtEnemy(ItemStack pStack, LivingEntity pTarget, LivingEntity pAttacker) {
         for (MobEffectInstance effect : effects) {
             pTarget.addEffect(new MobEffectInstance(effect.getEffect(), effect.getDuration()), pTarget);
         }

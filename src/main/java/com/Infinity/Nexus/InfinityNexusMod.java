@@ -3,19 +3,15 @@ package com.Infinity.Nexus;
 import com.Infinity.Nexus.block.ModBlocks;
 import com.Infinity.Nexus.config.ModCommonConfigs;
 import com.Infinity.Nexus.effect.ModEffects;
+import com.Infinity.Nexus.fluid.ModFluids;
 import com.Infinity.Nexus.item.ModItems;
 import com.Infinity.Nexus.potion.ModPotions;
-import com.Infinity.Nexus.utils.BetterBrewingRecipe;
 import com.Infinity.Nexus.utils.ModItemProperties;
 import com.Infinity.Nexus.villager.ModPOIs;
 import com.Infinity.Nexus.world.dimension.ModDimensions;
-import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
-import net.minecraft.data.tags.BlockTagsProvider;
-import net.minecraft.world.item.alchemy.Potions;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
@@ -23,19 +19,20 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import org.slf4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import software.bernie.geckolib3.GeckoLib;
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod(InfinityNexus.MOD_ID)
-public class InfinityNexus
+@Mod(InfinityNexusMod.MOD_ID)
+public class InfinityNexusMod
 {
 
     public static final String MOD_ID = "infinity_nexus_mod";
     // Directly reference a slf4j logger
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogManager.getLogger();
 
-    public InfinityNexus()
+    public InfinityNexusMod()
     {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
         //teste
@@ -50,6 +47,8 @@ public class InfinityNexus
 
         ModPotions.register(eventBus);
         ModEffects.register(eventBus);
+
+        ModFluids.register(eventBus);
 
         GeckoLib.initialize();
 
@@ -105,12 +104,17 @@ public class InfinityNexus
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.STEEL_MACHINE_CASING.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.INDUSTRIAL_MACHINE_CASING.get(), RenderType.translucent());
 
+
+        ItemBlockRenderTypes.setRenderLayer(ModFluids.MOLTEN_TINKERS_BLOCK.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModFluids.MOLTEN_TINKERS.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModFluids.MOLTEN_TINKERS_FLOWING.get(), RenderType.translucent());
+
     }
     private void setup(final FMLCommonSetupEvent event)
     {
 
-        BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.AWKWARD,
-                ModItems.INFINITY_INGOT.get(), ModPotions.FREEZE_POTION.get()));
+        //BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.AWKWARD,
+        //        ModItems.INFINITY_INGOT.get(), ModPotions.FREEZE_POTION.get()));
 
 
         LOGGER.info("   §4_____§5_   __§9__________§3_   ______§b_______  __");

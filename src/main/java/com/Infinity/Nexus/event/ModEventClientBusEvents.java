@@ -1,7 +1,7 @@
 package com.Infinity.Nexus.event;
 
 
-import com.Infinity.Nexus.InfinityNexus;
+import com.Infinity.Nexus.InfinityNexusMod;
 import com.Infinity.Nexus.entity.client.armor.Imperial3dArmorRenderer;
 import com.Infinity.Nexus.entity.client.armor.Infinity3dArmorRenderer;
 import com.Infinity.Nexus.item.custom.ImperialInfinity3dArmorItem;
@@ -12,7 +12,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import software.bernie.geckolib3.renderers.geo.GeoArmorRenderer;
 
-@Mod.EventBusSubscriber(modid = InfinityNexus.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+@Mod.EventBusSubscriber(modid = InfinityNexusMod.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class ModEventClientBusEvents {
 
     @SubscribeEvent

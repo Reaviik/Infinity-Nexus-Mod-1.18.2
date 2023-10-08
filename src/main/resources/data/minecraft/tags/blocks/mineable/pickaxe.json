@@ -13,6 +13,7 @@
     "infinity_nexus_mod:explorar_portal_frame",
     "infinity_nexus_mod:infinity_ore",
     "infinity_nexus_mod:deepslate_infinity_ore",
-    "infinity_nexus_mod:infinity_block"
+    "infinity_nexus_mod:infinity_block",
+    "infinity_nexus_mod:thermal_block"
   ]
 }

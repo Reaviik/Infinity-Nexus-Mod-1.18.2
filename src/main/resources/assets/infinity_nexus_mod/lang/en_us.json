@@ -13,7 +13,7 @@
 
 
   "item.infinity_nexus_mod.imperial_infinity_3d_sword": "§fImperial Infinity Sword",
-  "tooltip.infinity_nexus_mod.imperial_infinity_3d_sword":  "§eInflict effects §7Weakness §eand §9Wither §eon hit",
+  "tooltip.infinity_nexus_mod.imperial_infinity_3d_sword":  "§eInflict effects §7Weakness, §3Poison §eand §9Wither §eon hit",
   "item.infinity_nexus_mod.imperial_infinity_3d_helmet": "Imperial Infinity Helmet",
   "item.infinity_nexus_mod.imperial_infinity_3d_chestplate": "Imperial Infinity Chestplate",
   "item.infinity_nexus_mod.imperial_infinity_3d_leggings": "Imperial Infinity Leggings",
@@ -122,6 +122,15 @@
   "block.infinity_nexus_mod.steel_machine_casing": "Steel Machine Casing",
   "block.infinity_nexus_mod.energized_machine_casing": "Energized Machine Casing",
   "block.infinity_nexus_mod.industrial_machine_casing": "Industrial Machine Casing",
+
+  "block.infinity_nexus_mod.molten_tinkers_bucket": "Molten Tinkers",
+  "item.infinity_nexus_mod.molten_tinkers_bucket": "Tinkers Bucket",
+  "item.infinity_nexus_mod.extended_ingot": "Extended Ingot",
+  "item.infinity_nexus_mod.thermal_ingot": "Thermal Ingot",
+  "item.infinity_nexus_mod.botania_ingot": "Botania Ingot",
+  "item.infinity_nexus_mod.immersive_ingot": "Immersive Ingot",
+  "item.infinity_nexus_mod.mystical_ingot": "Mystical Ingot",
+  "item.infinity_nexus_mod.draconic_ingot": "Draconic Ingot",
 
   "block.infinity_nexus_mod.explorar_portal_frame": "Portal Block",
 

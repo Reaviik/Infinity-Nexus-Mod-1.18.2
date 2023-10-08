@@ -1,7 +1,8 @@
 package com.Infinity.Nexus.item;
 
-import com.Infinity.Nexus.InfinityNexus;
+import com.Infinity.Nexus.InfinityNexusMod;
 import com.Infinity.Nexus.config.ModCommonConfigs;
+import com.Infinity.Nexus.fluid.ModFluids;
 import com.Infinity.Nexus.item.custom.*;
 import com.Infinity.Nexus.tab.ModTabs;
 import net.minecraft.network.chat.TranslatableComponent;
@@ -17,7 +18,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
-            DeferredRegister.create(ForgeRegistries.ITEMS, InfinityNexus.MOD_ID);
+            DeferredRegister.create(ForgeRegistries.ITEMS, InfinityNexusMod.MOD_ID);
 
     //Casts
     public static final RegistryObject<Item> GOLD_WIRE_CAST = ITEMS.register("gold_wire_cast",() -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS_PROGRESSION).rarity(Rarity.COMMON)));
@@ -70,6 +71,16 @@ public class ModItems {
     public static final RegistryObject<Item> STEEL_SHEET = ITEMS.register("steel_sheet",() -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS_PROGRESSION).rarity(Rarity.UNCOMMON)));
     public static final RegistryObject<Item> MAGIC_SHEET = ITEMS.register("magic_sheet",() -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS_PROGRESSION).rarity(Rarity.UNCOMMON)));
     public static final RegistryObject<Item> INDUSTRIAL_SHEET = ITEMS.register("industrial_sheet",() -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS_PROGRESSION).rarity(Rarity.EPIC)));
+    //Mod Ingots
+    public static final RegistryObject<Item> TINKERS_INGOT = ITEMS.register("tinkers_ingot",() -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS_PROGRESSION).rarity(Rarity.EPIC)));
+    public static final RegistryObject<Item> TINKERS_BUCKET = ITEMS.register("molten_tinkers_bucket",() -> new BucketItem(ModFluids.MOLTEN_TINKERS,new Item.Properties().tab(ModTabs.INFINITY_NEXUS_PROGRESSION).stacksTo(1)));
+    public static final RegistryObject<Item> EXTENDED_INGOT = ITEMS.register("extended_ingot",() -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS_PROGRESSION).rarity(Rarity.EPIC)));
+    public static final RegistryObject<Item> THERMAL_INGOT = ITEMS.register("thermal_ingot",() -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS_PROGRESSION).rarity(Rarity.EPIC)));
+    public static final RegistryObject<Item> BOTANIA_INGOT = ITEMS.register("botania_ingot",() -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS_PROGRESSION).rarity(Rarity.EPIC)));
+    public static final RegistryObject<Item> IMMERSIVE_INGOT = ITEMS.register("immersive_ingot",() -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS_PROGRESSION).rarity(Rarity.EPIC)));
+    public static final RegistryObject<Item> MYSTICAL_INGOT = ITEMS.register("mystical_ingot",() -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS_PROGRESSION).rarity(Rarity.EPIC)));
+    public static final RegistryObject<Item> DRACONIC_INGOT = ITEMS.register("draconic_ingot",() -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS_PROGRESSION).rarity(Rarity.EPIC)));
+    //Misc
     public static final RegistryObject<Item> RAW_INGOT = ITEMS.register("raw_infinity",() -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS).rarity(Rarity.COMMON)));
     public static final RegistryObject<Item> TERRAIN_MARKER = ITEMS.register("terrain_marker",() -> new Item(new Item.Properties().tab(ModTabs.INFINITY_NEXUS_PROGRESSION).rarity(Rarity.COMMON)));
     public static final RegistryObject<Item> ITEM_DISLOCATOR = ITEMS.register("item_dislocator",() -> new ItemDislocator(new Item.Properties().tab(ModTabs.INFINITY_NEXUS).rarity(Rarity.COMMON)));
@@ -86,7 +97,8 @@ public class ModItems {
                     new TranslatableComponent("tooltip.infinity_nexus_mod.imperial_infinity_sword"),
                     new MobEffectInstance[]{
                             new MobEffectInstance(MobEffects.WEAKNESS, 200,3),
-                            new MobEffectInstance(MobEffects.WITHER, 200,3)
+                            new MobEffectInstance(MobEffects.WITHER, 200,3),
+                            new MobEffectInstance(MobEffects.POISON, 200,3)
                     }));
 
     public static final RegistryObject<Item> IMPERIAL_INFINITY_PAXEL = ITEMS.register("imperial_infinity_paxel",() -> new PaxelItem(ModTiers.IMPERIAL,55f, 55f,(properties) -> properties.tab(ModTabs.INFINITY_NEXUS).fireResistant(),
@@ -120,7 +132,8 @@ public class ModItems {
                     new TranslatableComponent("tooltip.infinity_nexus_mod.imperial_infinity_3d_sword"),
                     new MobEffectInstance[]{
                             new MobEffectInstance(MobEffects.WEAKNESS, 200,3),
-                            new MobEffectInstance(MobEffects.WITHER, 200,3)
+                            new MobEffectInstance(MobEffects.WITHER, 200,3),
+                            new MobEffectInstance(MobEffects.POISON, 200,3)
                     }));
     public static final RegistryObject<Item> IMPERIAL_INFINITY_3D_HELMET = ITEMS.register("imperial_infinity_3d_helmet",() -> new ImperialInfinity3dArmorItem(ModArmorMaterials.IMPERIAL, EquipmentSlot.HEAD,
             new Item.Properties().stacksTo(1).rarity(Rarity.EPIC).tab(CreativeModeTab.TAB_MISC).fireResistant()));

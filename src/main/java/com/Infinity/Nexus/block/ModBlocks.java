@@ -1,6 +1,6 @@
 package com.Infinity.Nexus.block;
 
-import com.Infinity.Nexus.InfinityNexus;
+import com.Infinity.Nexus.InfinityNexusMod;
 import com.Infinity.Nexus.block.custom.*;
 import com.Infinity.Nexus.item.ModItems;
 import com.Infinity.Nexus.tab.ModTabs;
@@ -23,7 +23,7 @@ import java.util.function.Supplier;
 
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
-            DeferredRegister.create(ForgeRegistries.BLOCKS, InfinityNexus.MOD_ID);
+            DeferredRegister.create(ForgeRegistries.BLOCKS, InfinityNexusMod.MOD_ID);
 
     //Custom
 
@@ -54,6 +54,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> INDUSTRIAL_MACHINE_CASING = registerBlock("industrial_machine_casing",
             () -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL).noOcclusion()
                     .strength(6f).lightLevel(LUZ -> {return 2;}).requiresCorrectToolForDrops()), ModTabs.INFINITY_NEXUS_PROGRESSION, Rarity.EPIC, "tooltip.infinity_nexus_mod.industrial_machine_casing");
+
+    public static final RegistryObject<Block> THERMAL_BLOCK = registerBlock("thermal_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL).noOcclusion()
+                    .strength(2f).requiresCorrectToolForDrops()), ModTabs.INFINITY_NEXUS_PROGRESSION, Rarity.EPIC, "tooltip.infinity_nexus_mod.thermal_block");
 
     public static final RegistryObject<Block> INFINITY_BLOCK = registerBlock("infinity_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL).noOcclusion()

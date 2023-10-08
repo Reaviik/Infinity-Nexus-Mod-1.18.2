@@ -1,6 +1,6 @@
 package com.Infinity.Nexus.villager;
 
-import com.Infinity.Nexus.InfinityNexus;
+import com.Infinity.Nexus.InfinityNexusMod;
 import com.Infinity.Nexus.block.ModBlocks;
 import net.minecraft.world.entity.ai.village.poi.PoiType;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -11,7 +11,7 @@ import net.minecraftforge.registries.RegistryObject;
 public class ModPOIs {
 
     public static final DeferredRegister<PoiType> POI
-            = DeferredRegister.create(ForgeRegistries.POI_TYPES, InfinityNexus.MOD_ID);
+            = DeferredRegister.create(ForgeRegistries.POI_TYPES, InfinityNexusMod.MOD_ID);
 
     public static final RegistryObject<PoiType> EXPLORAR_PORTAL =
             POI.register("explorar_portal", () -> new PoiType("explorar_portal",

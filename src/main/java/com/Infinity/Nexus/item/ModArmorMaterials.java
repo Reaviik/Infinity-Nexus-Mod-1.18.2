@@ -1,14 +1,12 @@
 package com.Infinity.Nexus.item;
 
-import com.Infinity.Nexus.InfinityNexus;
+import com.Infinity.Nexus.InfinityNexusMod;
 import com.Infinity.Nexus.config.ModCommonConfigs;
-import net.minecraft.client.gui.screens.Overlay;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.LazyLoadedValue;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ArmorMaterial;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 
 import java.util.function.Supplier;
@@ -108,7 +106,7 @@ public enum ModArmorMaterials  implements ArmorMaterial {
     }
 
     public String getName() {
-        return InfinityNexus.MOD_ID + ":" + this.name;
+        return InfinityNexusMod.MOD_ID + ":" + this.name;
     }
 
     public float getToughness() {

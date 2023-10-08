@@ -1,11 +1,10 @@
 package com.Infinity.Nexus.config;
 
+import com.google.common.collect.ImmutableMap;
+import com.google.gson.Gson;
 import net.minecraftforge.common.ForgeConfigSpec;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class ModCommonConfigs {
     public static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
@@ -58,7 +57,13 @@ public class ModCommonConfigs {
     public static final ForgeConfigSpec.ConfigValue<Boolean> I_D_MAGNETISM;
     public static final ForgeConfigSpec.ConfigValue<Integer> I_D_RANGE;
     public static final ForgeConfigSpec.ConfigValue<List<String>> I_D_BLACKLIST;
+    public static final ForgeConfigSpec.ConfigValue<List<String>> M_O_PLACED;
+
     static {
+        List<String> configList = new ArrayList<>();
+        configList.add("minecraft:emerald_ore=2");
+        configList.add("minecraft:diamond_ore=3");
+
 
         List<String> defaultBlacklist = new ArrayList<>();
         defaultBlacklist.add("minecraft:stone");
@@ -165,6 +170,9 @@ public class ModCommonConfigs {
                 .define("I_O_P_MAXY", 22);
         I_O_P_MIMY = BUILDER.comment("Infinity Ore Min Y Placement")
                 .define("I_O_P_MIMY", -22);
+        //---------------------------------------------//---------------------------------------------//
+        M_O_PLACED = BUILDER.comment("Mining Ore Placed Map")
+                .define("miningOrePlaced", configList);
         //---------------------------------------------//---------------------------------------------//
         BUILDER.pop();
         SPEC = BUILDER.build();

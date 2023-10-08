@@ -12,7 +12,7 @@
   "tooltip.infinity_nexus_mod.item_dislocator": "§4WIPE §eExclui itens largados perto de você em um raio de: §5",
 
   "item.infinity_nexus_mod.imperial_infinity_3d_sword": "§fEspada Imperial de Infinity",
-  "tooltip.infinity_nexus_mod.imperial_infinity_3d_sword": "§eCausa os efeitos §7Fraqueza §ee §9Definhamento §equando atinge",
+  "tooltip.infinity_nexus_mod.imperial_infinity_3d_sword": "§eCausa os efeitos §7Fraqueza, §3Veneno §ee §9Definhamento §equando atinge",
   "item.infinity_nexus_mod.imperial_infinity_3d_helmet": "Elmo Imperial de Infinity",
   "item.infinity_nexus_mod.imperial_infinity_3d_chestplate": "Peitoral Imperial de Infinity",
   "item.infinity_nexus_mod.imperial_infinity_3d_leggings": "Perneiras Imperiais de Infinity",
@@ -120,6 +120,15 @@
   "block.infinity_nexus_mod.steel_machine_casing": "Carcaça de Máquina de Aço",
   "block.infinity_nexus_mod.energized_machine_casing": "Carcaça de Máquina Energizado",
   "block.infinity_nexus_mod.industrial_machine_casing": "Carcaça de Máquina Industrial",
+
+  "block.infinity_nexus_mod.molten_tinkers_bucket": "Tinkers Derretido",
+  "item.infinity_nexus_mod.molten_tinkers_bucket": "Balde de Tinkers Fundido",
+  "item.infinity_nexus_mod.extended_ingot": "Lingote Estendido",
+  "item.infinity_nexus_mod.thermal_ingot": "Lingote Térmico",
+  "item.infinity_nexus_mod.botania_ingot": "Lingote de Botania",
+  "item.infinity_nexus_mod.immersive_ingot": "Lingote Imersivo",
+  "item.infinity_nexus_mod.mystical_ingot": "Lingote Místico",
+  "item.infinity_nexus_mod.draconic_ingot": "Lingote Draconico",
 
   "block.infinity_nexus_mod.explorar_portal_frame": "Bloco de Portal",
 

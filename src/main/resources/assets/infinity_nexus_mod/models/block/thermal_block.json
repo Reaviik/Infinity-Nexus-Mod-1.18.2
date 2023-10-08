@@ -1,0 +1,16 @@
+{
+	"parent": "minecraft:block/cube",
+	"textures": {
+		"north": "thermal:enderium_block",
+		"south": "thermal:enderium_block",
+		"east": "thermal:signalum_block",
+		"west": "thermal:signalum_block",
+		"up": "thermal:lumium_block",
+		"down": "thermal:lumium_block"
+	}
+}
+
+
+
+
+

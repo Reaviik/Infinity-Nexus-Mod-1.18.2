@@ -15,4 +15,5 @@ public class ModPlacedFeatures {
     public static final Holder<PlacedFeature> DEEPSLATE_INFINITY_ORE_PLACED = PlacementUtils.register("deepslate_infinity_ore_placed",
             ModConfiguredFeatures.INFINITY_ORE, ModOrePlacement.rareOrePlacement(ModCommonConfigs.I_O_P_CHUNK.get(), // VeinsPerChunk
                     HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(ModCommonConfigs.I_O_P_MIMY.get()), VerticalAnchor.aboveBottom(ModCommonConfigs.I_O_P_MAXY.get()))));
+
 }
