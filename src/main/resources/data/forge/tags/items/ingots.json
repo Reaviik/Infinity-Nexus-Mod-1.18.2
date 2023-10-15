@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "infinity_nexus_mod:infinity_ingot",
+    "infinity_nexus_mod:tinkers_ingot",
+    "infinity_nexus_mod:extended_ingot",
+    "infinity_nexus_mod:thermal_ingot",
+    "infinity_nexus_mod:botania_ingot",
+    "infinity_nexus_mod:immersive_ingot",
+    "infinity_nexus_mod:mystical_ingot",
+    "infinity_nexus_mod:draconic_ingot"
+  ]
+}

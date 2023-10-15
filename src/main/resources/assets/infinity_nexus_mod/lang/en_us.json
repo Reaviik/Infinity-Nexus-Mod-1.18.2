@@ -1,5 +1,7 @@
 {
-  "itemGroup.infinity_nexus_mod":"§x§9§0§0§0§9§dInfinity Nexus",
+  "itemGroup.infinity_nexus_mod_addition":"§x§9§0§0§0§9§dInfinity Nexus Addition",
+  "itemGroup.infinity_nexus_mod_progression":"§x§9§0§0§0§9§dInfinity Nexus Progression",
+  "itemGroup.infinity_nexus_mod_economy":"§x§9§0§0§0§9§dInfinity Nexus Econony",
   "tooltip.infinity_nexus.pressShift":"§bPress §eShift §bto see more",
 
   "item.infinity_nexus_mod.catalyst": "Portal Activator",
@@ -30,7 +32,7 @@
   "item.infinity_nexus_mod.imperial_infinity_chestplate": "Imperial Infinity Chestplate",
   "item.infinity_nexus_mod.imperial_infinity_leggings": "Imperial Infinity Leggings",
   "item.infinity_nexus_mod.imperial_infinity_boots": "Imperial Infinity Boots",
-  "item.infinity_nexus.infinity_armor":"§bFull Armor Grant:\n§5- Creative Fly\n§5- Regeneration\n§5- Absorption",
+  "item.infinity_nexus.infinity_armor":"§bFull Armor Grant:\n§5- Regeneration\n§5- Absorption",
   "item.infinity_nexus_mod.imperial_infinity_sword": "Imperial Infinity Sword",
   "tooltip.infinity_nexus_mod.imperial_infinity_sword":  "§eInflict effects §7Weakness §eand §9Wither §eon hit",
   "item.infinity_nexus_mod.imperial_infinity_pickaxe": "Imperial Infinity Pickaxe",
@@ -111,6 +113,7 @@
 
   "item.infinity_nexus_mod.raw_infinity": "Raw Infinity",
   "item.infinity_nexus_mod.infinity_ingot": "Infinity Ingot",
+  "item.infinity_nexus_mod.infinity_dust": "Infinity dust",
   "item.infinity_nexus_mod.infinity_nugget": "Infinity Nugget",
 
   "block.infinity_nexus_mod.copper_machine_casing": "Copper Machine Casing",
@@ -125,8 +128,10 @@
 
   "block.infinity_nexus_mod.molten_tinkers_bucket": "Molten Tinkers",
   "item.infinity_nexus_mod.molten_tinkers_bucket": "Tinkers Bucket",
+  "item.infinity_nexus_mod.tinkers_ingot": "Tinkers Ingot",
   "item.infinity_nexus_mod.extended_ingot": "Extended Ingot",
   "item.infinity_nexus_mod.thermal_ingot": "Thermal Ingot",
+  "block.infinity_nexus_mod.thermal_block": "Thermal Block",
   "item.infinity_nexus_mod.botania_ingot": "Botania Ingot",
   "item.infinity_nexus_mod.immersive_ingot": "Immersive Ingot",
   "item.infinity_nexus_mod.mystical_ingot": "Mystical Ingot",

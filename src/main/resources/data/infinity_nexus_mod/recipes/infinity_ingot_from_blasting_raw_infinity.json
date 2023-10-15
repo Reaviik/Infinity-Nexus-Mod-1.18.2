@@ -3,7 +3,10 @@
   "ingredient": {
     "item": "infinity_nexus_mod:raw_infinity"
   },
-  "result": "infinity_nexus_mod:infinity_ingot",
+  "result": {
+    "item": "infinity_nexus_mod:infinity_nugget",
+    "count": 2
+  },
   "experience": 0.7,
   "cookingtime": 100
 }

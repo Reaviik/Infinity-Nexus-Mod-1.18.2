@@ -3,7 +3,10 @@
   "ingredient": {
     "item": "infinity_nexus_mod:deepslate_infinity_ore"
   },
-  "result": "infinity_nexus_mod:infinity_ingot",
+  "result": {
+    "item": "infinity_nexus_mod:infinity_nugget",
+    "count": 5
+  },
   "experience": 0.7,
   "cookingtime": 200
 }
