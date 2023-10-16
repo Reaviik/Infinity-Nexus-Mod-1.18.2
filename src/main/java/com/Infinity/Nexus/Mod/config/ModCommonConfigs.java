@@ -54,7 +54,6 @@ public class ModCommonConfigs {
     //---------------------------------------------//---------------------------------------------//
     public static final ForgeConfigSpec.ConfigValue<Boolean> I_D_MAGNETISM;
     public static final ForgeConfigSpec.ConfigValue<Integer> I_D_RANGE;
-    public static final ForgeConfigSpec.ConfigValue<List<String>> I_D_BLACKLIST;
 
     static {
 
@@ -152,8 +151,6 @@ public class ModCommonConfigs {
                 .define("I_D_MAGNETISM", true);
         I_D_RANGE = BUILDER.comment("Item Dislocator Range to Magnetize Items")
                 .define("I_D_RANGE", 10);
-        I_D_BLACKLIST = BUILDER.comment("Item Dislocator List of Deleted Items")
-                .define("I_D_BLACKLIST", defaultBlacklist);
         //---------------------------------------------//---------------------------------------------//
         //Infinity Ore
         I_O_C_SIZE = BUILDER.comment("Infinity Ore Chunk Size")
@@ -167,7 +164,6 @@ public class ModCommonConfigs {
         //---------------------------------------------//---------------------------------------------//
         BUILDER.pop();
         SPEC = BUILDER.build();
-
     }
 
 }

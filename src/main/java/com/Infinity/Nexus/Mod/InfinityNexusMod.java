@@ -52,7 +52,7 @@ public class InfinityNexusMod
 
         ModPotions.register(eventBus);
         ModEffects.register(eventBus);
-
+        
         ModFluids.register(eventBus);
 
         GeckoLib.initialize();
