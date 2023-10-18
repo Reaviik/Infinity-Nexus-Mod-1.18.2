@@ -1,5 +1,7 @@
 {
-  "itemGroup.infinity_nexus_mod": "§x§9§0§0§0§9§dInfinity Nexus",
+  "itemGroup.infinity_nexus_mod_addition": "§x§9§0§0§0§9§dInfinity Nexus",
+  "itemGroup.infinity_nexus_mod_progression":"§x§9§0§0§0§9§dInfinity Nexus Progressão",
+  "itemGroup.infinity_nexus_mod_economy":"§x§9§0§0§0§9§dInfinity Nexus Economia",
   "tooltip.infinity_nexus.pressShift": "§bPressione §eShift §bpara ver mais informações",
 
   "item.infinity_nexus_mod.catalyst": "Ativador de Portal",
@@ -11,25 +13,27 @@
   "chat.infinity_nexus_mod.item_dislocator_off": "§bDeslocador de Itens §cDesligado",
   "tooltip.infinity_nexus_mod.item_dislocator": "§4WIPE §eExclui itens largados perto de você em um raio de: §5",
 
-  "item.infinity_nexus_mod.imperial_infinity_3d_sword": "§fEspada Imperial de Infinity",
+  "item.infinity_nexus_mod.imperial_infinity_3d_sword": "§fEspada Imperial de Infinity 3D",
+  "item.infinity_nexus_mod.imperial_infinity_3d_shield": "§fEscudo Imperial de Infinity 3D",
   "tooltip.infinity_nexus_mod.imperial_infinity_3d_sword": "§eCausa os efeitos §7Fraqueza, §3Veneno §ee §9Definhamento §equando atinge",
-  "item.infinity_nexus_mod.imperial_infinity_3d_helmet": "Elmo Imperial de Infinity",
-  "item.infinity_nexus_mod.imperial_infinity_3d_chestplate": "Peitoral Imperial de Infinity",
-  "item.infinity_nexus_mod.imperial_infinity_3d_leggings": "Perneiras Imperiais de Infinity",
-  "item.infinity_nexus_mod.imperial_infinity_3d_boots": "Botas Imperiais de Infinity",
+  "item.infinity_nexus_mod.imperial_infinity_3d_helmet": "Elmo Imperial de Infinity 3D",
+  "item.infinity_nexus_mod.imperial_infinity_3d_chestplate": "Peitoral Imperial de Infinity 3D",
+  "item.infinity_nexus_mod.imperial_infinity_3d_leggings": "Perneiras Imperiais de Infinity 3D",
+  "item.infinity_nexus_mod.imperial_infinity_3d_boots": "Botas Imperiais de Infinity 3D",
 
-  "item.infinity_nexus_mod.infinity_3d_sword": "§fEspada de Infinity",
+  "item.infinity_nexus_mod.infinity_3d_sword": "§fEspada de Infinity 3D",
+  "item.infinity_nexus_mod.infinity_3d_shield": "§fEscudo de Infinity 3D",
   "tooltip.infinity_nexus_mod.infinity_3d_sword": "§eCausa os efeitos §7Fraqueza §ee §9Definhamento §equando atinge",
-  "item.infinity_nexus_mod.infinity_3d_helmet": "Elmo de Infinity",
-  "item.infinity_nexus_mod.infinity_3d_chestplate": "Peitoral de Infinity",
-  "item.infinity_nexus_mod.infinity_3d_leggings": "Perneiras de Infinity",
-  "item.infinity_nexus_mod.infinity_3d_boots": "Botas de Infinity",
+  "item.infinity_nexus_mod.infinity_3d_helmet": "Elmo de Infinity 3D",
+  "item.infinity_nexus_mod.infinity_3d_chestplate": "Peitoral de Infinity 3D",
+  "item.infinity_nexus_mod.infinity_3d_leggings": "Perneiras de Infinity 3D",
+  "item.infinity_nexus_mod.infinity_3d_boots": "Botas de Infinity 3D",
 
   "item.infinity_nexus_mod.imperial_infinity_helmet": "Elmo Imperial de Infinity",
   "item.infinity_nexus_mod.imperial_infinity_chestplate": "Peitoral Imperial de Infinity",
   "item.infinity_nexus_mod.imperial_infinity_leggings": "Perneiras Imperiais de Infinity",
   "item.infinity_nexus_mod.imperial_infinity_boots": "Botas Imperiais de Infinity",
-  "item.infinity_nexus.infinity_armor": "§bConcede uma armadura completa com:\n§5- Regeneração\n§5- Absorção",
+  "item.infinity_nexus.infinity_armor": "§bArmadura completa concede: §6Voo Criativo §5- Regeneração and §5 Absorção",
   "item.infinity_nexus_mod.imperial_infinity_sword": "Espada Imperial de Infinity",
   "tooltip.infinity_nexus_mod.imperial_infinity_sword": "§eCausa os efeitos §7Fraqueza §ee §9Definhamento §equando atinge",
   "item.infinity_nexus_mod.imperial_infinity_pickaxe": "Picareta Imperial de Infinity",
@@ -124,6 +128,11 @@
 
   "block.infinity_nexus_mod.molten_tinkers_bucket": "Tinkers Derretido",
   "item.infinity_nexus_mod.molten_tinkers_bucket": "Balde de Tinkers Fundido",
+  "block.infinity_nexus_mod.molten_infinity_bucket": "Infinity Derretido",
+  "item.infinity_nexus_mod.molten_infinity_bucket": "Balde de Infinity Fundido",
+  "block.infinity_nexus_mod.molten_starliquid_bucket": "Starliquid Derretido",
+  "item.infinity_nexus_mod.molten_starliquid_bucket": "Balde de Starliquid Fundido",
+
   "item.infinity_nexus_mod.tinkers_ingot": "Lingote de Tinkers",
   "item.infinity_nexus_mod.extended_ingot": "Lingote Estendido",
   "item.infinity_nexus_mod.thermal_ingot": "Lingote Térmico",
@@ -138,6 +147,12 @@
   "block.infinity_nexus_mod.infinity_block": "Bloco de Infinity",
   "block.infinity_nexus_mod.infinity_ore": "Minério de Infinity",
   "block.infinity_nexus_mod.deepslate_infinity_ore": "Minério de Infinity do Abluso",
+
+  "item.minecraft.potion.effect.freeze_potion": "Poção de Congelamento",
+  "item.minecraft.splash_potion.effect.freeze_potion": "Poção de Congelamento Arremessável",
+  "item.minecraft.lingering_potion.effect.freeze_potion": "Poção de Congelamento Persistente",
+  "item.minecraft.tipped_arrow.effect.freeze_potion": "Arrow of Freeze Potion",
+  "effect.infinity_nexus_mod.freeze": "Congelamento",
 
   "block.infinity_nexus_mod.empty_basic_metal_box": "Caixa Básica de Metal Vazia",
 
@@ -215,5 +230,7 @@
   "item.infinity_nexus_mod.yellow_infinity_helmet": "Elmo Amarelo de Infinity",
   "item.infinity_nexus_mod.yellow_infinity_chestplate": "Peitoral Amarelo de Infinity",
   "item.infinity_nexus_mod.yellow_infinity_leggings": "Perneiras Amarelas de Infinity",
-  "item.infinity_nexus_mod.yellow_infinity_boots": "Botas Amarelas de Infinity"
+  "item.infinity_nexus_mod.yellow_infinity_boots": "Botas Amarelas de Infinity",
+
+  "tooltip.infinity_nexus.wipe": "§4Wip"
 }

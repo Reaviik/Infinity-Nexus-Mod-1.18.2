@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "## ",
+    "#$&",
+    "## "
+  ],
+  "key": {
+    "#": {
+      "item": "infinity_nexus_mod:infinity_ingot"
+    },
+    "&": {
+      "item": "minecraft:oak_planks"
+    },
+    "$": {
+      "item": "infinity_nexus_mod:infinity_singularity"
+    }
+  },
+  "result": {
+    "item": "infinity_nexus_mod:imperial_infinity_3d_shield"
+  }
+}

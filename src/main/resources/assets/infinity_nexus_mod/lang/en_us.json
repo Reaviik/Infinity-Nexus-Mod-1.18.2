@@ -14,25 +14,27 @@
   "tooltip.infinity_nexus_mod.item_dislocator": "§4WIPE §eDeletes items dropped near you within a radius of:§5 ",
 
 
-  "item.infinity_nexus_mod.imperial_infinity_3d_sword": "§fImperial Infinity Sword",
-  "tooltip.infinity_nexus_mod.imperial_infinity_3d_sword":  "§eInflict effects §7Weakness, §3Poison §eand §9Wither §eon hit",
-  "item.infinity_nexus_mod.imperial_infinity_3d_helmet": "Imperial Infinity Helmet",
-  "item.infinity_nexus_mod.imperial_infinity_3d_chestplate": "Imperial Infinity Chestplate",
-  "item.infinity_nexus_mod.imperial_infinity_3d_leggings": "Imperial Infinity Leggings",
-  "item.infinity_nexus_mod.imperial_infinity_3d_boots": "Imperial Infinity Boots",
+  "item.infinity_nexus_mod.imperial_infinity_3d_sword": "§f3D Imperial Infinity Sword",
+  "item.infinity_nexus_mod.imperial_infinity_3d_shield": "§f3D Imperial Infinity Shield",
+  "tooltip.infinity_nexus_mod.imperial_infinity_3d_sword":  "§e3D Inflict effects §7Weakness, §3Poison §eand §9Wither §eon hit",
+  "item.infinity_nexus_mod.imperial_infinity_3d_helmet": "3D Imperial Infinity Helmet",
+  "item.infinity_nexus_mod.imperial_infinity_3d_chestplate": "3D Imperial Infinity Chestplate",
+  "item.infinity_nexus_mod.imperial_infinity_3d_leggings": "3D Imperial Infinity Leggings",
+  "item.infinity_nexus_mod.imperial_infinity_3d_boots": "3D Imperial Infinity Boots",
 
-  "item.infinity_nexus_mod.infinity_3d_sword": "§fInfinity Sword",
-  "tooltip.infinity_nexus_mod.infinity_3d_sword":  "§eInflict effects §7Weakness §eand §9Wither §eon hit",
-  "item.infinity_nexus_mod.infinity_3d_helmet": "Infinity Helmet",
-  "item.infinity_nexus_mod.infinity_3d_chestplate": "Infinity Chestplate",
-  "item.infinity_nexus_mod.infinity_3d_leggings": "Infinity Leggings",
-  "item.infinity_nexus_mod.infinity_3d_boots": "Infinity Boots",
+  "item.infinity_nexus_mod.infinity_3d_sword": "§f3D Infinity Sword",
+  "item.infinity_nexus_mod.infinity_3d_shield": "§f3D Infinity Shield",
+  "tooltip.infinity_nexus_mod.infinity_3d_sword":  "§e3D Inflict effects §7Weakness §eand §9Wither §eon hit",
+  "item.infinity_nexus_mod.infinity_3d_helmet": "3D Infinity Helmet",
+  "item.infinity_nexus_mod.infinity_3d_chestplate": "3D Infinity Chestplate",
+  "item.infinity_nexus_mod.infinity_3d_leggings": "3D Infinity Leggings",
+  "item.infinity_nexus_mod.infinity_3d_boots": "3D Infinity Boots",
 
   "item.infinity_nexus_mod.imperial_infinity_helmet": "Imperial Infinity Helmet",
   "item.infinity_nexus_mod.imperial_infinity_chestplate": "Imperial Infinity Chestplate",
   "item.infinity_nexus_mod.imperial_infinity_leggings": "Imperial Infinity Leggings",
   "item.infinity_nexus_mod.imperial_infinity_boots": "Imperial Infinity Boots",
-  "item.infinity_nexus.infinity_armor":"§bFull Armor Grant:\n§5- Regeneration\n§5- Absorption",
+  "item.infinity_nexus.infinity_armor":"§bFull Armor Grant: §6Creative fly §5 Regeneration and §5 Absorption",
   "item.infinity_nexus_mod.imperial_infinity_sword": "Imperial Infinity Sword",
   "tooltip.infinity_nexus_mod.imperial_infinity_sword":  "§eInflict effects §7Weakness §eand §9Wither §eon hit",
   "item.infinity_nexus_mod.imperial_infinity_pickaxe": "Imperial Infinity Pickaxe",
@@ -128,6 +130,12 @@
 
   "block.infinity_nexus_mod.molten_tinkers_bucket": "Molten Tinkers",
   "item.infinity_nexus_mod.molten_tinkers_bucket": "Tinkers Bucket",
+  "block.infinity_nexus_mod.molten_infinity_bucket": "Molten Infinity",
+  "item.infinity_nexus_mod.molten_infinity_bucket": "Infinity Bucket",
+  "block.infinity_nexus_mod.molten_starliquid_bucket": "Molten Starliquid",
+  "item.infinity_nexus_mod.molten_starliquid_bucket": "Starliquid Bucket",
+
+
   "item.infinity_nexus_mod.tinkers_ingot": "Tinkers Ingot",
   "item.infinity_nexus_mod.extended_ingot": "Extended Ingot",
   "item.infinity_nexus_mod.thermal_ingot": "Thermal Ingot",
@@ -142,6 +150,12 @@
   "block.infinity_nexus_mod.infinity_block": "Infinity Block",
   "block.infinity_nexus_mod.infinity_ore": "Infinity Ore",
   "block.infinity_nexus_mod.deepslate_infinity_ore": "Deepslate Infinity Ore",
+
+  "item.minecraft.potion.effect.freeze_potion": "Freeze Potion",
+  "item.minecraft.splash_potion.effect.freeze_potion": "Splash Potion of Freeze",
+  "item.minecraft.lingering_potion.effect.freeze_potion": "Lingering Potion of Freeze",
+  "item.minecraft.tipped_arrow.effect.freeze_potion": "Flecha de Poção de Congelamento",
+  "effect.infinity_nexus_mod.freeze": "Freeze",
 
   "block.infinity_nexus_mod.empty_basic_metal_box": "Empty Basic Metal Box",
 
@@ -220,5 +234,7 @@
   "item.infinity_nexus_mod.yellow_infinity_helmet": "Yellow Infinity Helmet",
   "item.infinity_nexus_mod.yellow_infinity_chestplate": "Yellow Infinity Chestplate",
   "item.infinity_nexus_mod.yellow_infinity_leggings": "Yellow Infinity Leggings",
-  "item.infinity_nexus_mod.yellow_infinity_boots": "Yellow Infinity Boots"
+  "item.infinity_nexus_mod.yellow_infinity_boots": "Yellow Infinity Boots",
+
+  "tooltip.infinity_nexus.wipe": "§4Wip"
 }

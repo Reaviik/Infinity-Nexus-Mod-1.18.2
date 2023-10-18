@@ -29,13 +29,14 @@ public class Infinity3dArmorItem extends GeoArmorItem implements IAnimatable {
     public void onArmorTick(ItemStack stack, Level world, Player player) {
         if(!world.isClientSide()) {
             if (InfinityArmorItem.hasFullSuitOfArmorOn(player)) {
-
+                player.getAbilities().mayfly = true;
                 //Ad player effects
                 player.getFoodData().setSaturation(5);
                 player.getFoodData().setFoodLevel(19);
                 player.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 200, ModCommonConfigs.I_A_ABSORPTION.get(), false, false));
                 player.onUpdateAbilities();
             }else{
+                player.getAbilities().mayfly = false;
                 //Remove Player Effects
                 player.onUpdateAbilities();
             }

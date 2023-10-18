@@ -131,21 +131,24 @@ public class ModItems {
     //TODO configs
     public static final RegistryObject<Item> IMPERIAL_INFINITY_3D_SWORD = ITEMS.register("imperial_infinity_3d_sword",
             () -> new ModSword(ModTiers.IMPERIAL, ModCommonConfigs.I_I_S_DAMAGE.get(), ModCommonConfigs.I_I_S_SPEED.get(),
-                    new Item.Properties().tab(CreativeModeTab.TAB_MISC).stacksTo(1).fireResistant(),
+                    new Item.Properties().tab(ModTabs.INFINITY_NEXUS).stacksTo(1).fireResistant(),
                     new TranslatableComponent("tooltip.infinity_nexus_mod.imperial_infinity_3d_sword"),
                     new MobEffectInstance[]{
                             new MobEffectInstance(MobEffects.WEAKNESS, 200,3),
                             new MobEffectInstance(MobEffects.WITHER, 200,3),
                             new MobEffectInstance(MobEffects.POISON, 200,3)
                     }));
+    public static final RegistryObject<Item> IMPERIAL_INFINITY_3D_SHIELD = ITEMS.register("imperial_infinity_3d_shield",() -> new ModShields(new Item.Properties().tab(ModTabs.INFINITY_NEXUS).stacksTo(1).fireResistant(),
+            new TranslatableComponent("tooltip.infinity_nexus_mod.infinity_sword")));
+
     public static final RegistryObject<Item> IMPERIAL_INFINITY_3D_HELMET = ITEMS.register("imperial_infinity_3d_helmet",() -> new ImperialInfinity3dArmorItem(ModArmorMaterials.IMPERIAL, EquipmentSlot.HEAD,
-            new Item.Properties().stacksTo(1).rarity(Rarity.EPIC).tab(CreativeModeTab.TAB_MISC).fireResistant()));
+            new Item.Properties().stacksTo(1).rarity(Rarity.EPIC).tab(ModTabs.INFINITY_NEXUS).fireResistant()));
     public static final RegistryObject<Item> IMPERIAL_INFINITY_3D_CHESTPLATE = ITEMS.register("imperial_infinity_3d_chestplate",() -> new ImperialInfinity3dArmorItem(ModArmorMaterials.IMPERIAL, EquipmentSlot.CHEST,
-            new Item.Properties().stacksTo(1).rarity(Rarity.EPIC).tab(CreativeModeTab.TAB_MISC).fireResistant()));
+            new Item.Properties().stacksTo(1).rarity(Rarity.EPIC).tab(ModTabs.INFINITY_NEXUS).fireResistant()));
     public static final RegistryObject<Item> IMPERIAL_INFINITY_3D_LEGGINGS = ITEMS.register("imperial_infinity_3d_leggings",() -> new ImperialInfinity3dArmorItem(ModArmorMaterials.IMPERIAL, EquipmentSlot.LEGS,
-            new Item.Properties().stacksTo(1).rarity(Rarity.EPIC).tab(CreativeModeTab.TAB_MISC).fireResistant()));
+            new Item.Properties().stacksTo(1).rarity(Rarity.EPIC).tab(ModTabs.INFINITY_NEXUS).fireResistant()));
     public static final RegistryObject<Item> IMPERIAL_INFINITY_3D_BOOTS = ITEMS.register("imperial_infinity_3d_boots",() -> new ImperialInfinity3dArmorItem(ModArmorMaterials.IMPERIAL, EquipmentSlot.FEET,
-            new Item.Properties().stacksTo(1).rarity(Rarity.EPIC).tab(CreativeModeTab.TAB_MISC).fireResistant()));
+            new Item.Properties().stacksTo(1).rarity(Rarity.EPIC).tab(ModTabs.INFINITY_NEXUS).fireResistant()));
 
     //---------------------------------------------------------//---------------------------------------------------------//
     //Infinity
@@ -170,7 +173,6 @@ public class ModItems {
                     new Item.Properties().tab(ModTabs.INFINITY_NEXUS).fireResistant()));
     public static final RegistryObject<Item> INFINITY_BOW = ITEMS.register("infinity_bow",() -> new ModBow(new Item.Properties().tab(ModTabs.INFINITY_NEXUS)
             .durability(ModCommonConfigs.I_B_DURABILITY.get()).fireResistant(), ModCommonConfigs.I_B_DAMAGE.get()));
-
     //Tools
     public static final RegistryObject<Item> INFINITY_HELMET = ITEMS.register("infinity_helmet",() -> new InfinityArmorItem(ModArmorMaterials.INFINITY, EquipmentSlot.HEAD,
                     new Item.Properties().tab(ModTabs.INFINITY_NEXUS).stacksTo(1).rarity(Rarity.RARE).fireResistant()));
@@ -185,20 +187,23 @@ public class ModItems {
     //---------------------------------------------------------//---------------------------------------------------------//
     public static final RegistryObject<Item> INFINITY_3D_SWORD = ITEMS.register("infinity_3d_sword",
             () -> new ModSword(ModTiers.INFINITY, ModCommonConfigs.I_S_DAMAGE.get(), ModCommonConfigs.I_S_SPEED.get(),//+4
-                    new Item.Properties().stacksTo(1).tab(CreativeModeTab.TAB_MISC).fireResistant(),
+                    new Item.Properties().stacksTo(1).tab(ModTabs.INFINITY_NEXUS).fireResistant(),
                     new TranslatableComponent("tooltip.infinity_nexus_mod.infinity_3d_sword"),
                     new MobEffectInstance[]{
                             new MobEffectInstance(MobEffects.WEAKNESS, 200,2),
                             new MobEffectInstance(MobEffects.WITHER, 200,2)
                     }));
+    public static final RegistryObject<Item> INFINITY_3D_SHIELD = ITEMS.register("infinity_3d_shield",() -> new ModShields(new Item.Properties().tab(ModTabs.INFINITY_NEXUS).stacksTo(1).fireResistant(),
+            new TranslatableComponent("tooltip.infinity_nexus_mod.infinity_sword")));
+
     public static final RegistryObject<Item> INFINITY_3D_HELMET = ITEMS.register("infinity_3d_helmet",() -> new Infinity3dArmorItem(ModArmorMaterials.INFINITY, EquipmentSlot.HEAD,
-            new Item.Properties().stacksTo(1).rarity(Rarity.RARE).tab(CreativeModeTab.TAB_MISC).fireResistant()));
+            new Item.Properties().stacksTo(1).rarity(Rarity.RARE).tab(ModTabs.INFINITY_NEXUS).fireResistant()));
     public static final RegistryObject<Item> INFINITY_3D_CHESTPLATE = ITEMS.register("infinity_3d_chestplate",() -> new Infinity3dArmorItem(ModArmorMaterials.INFINITY, EquipmentSlot.CHEST,
-            new Item.Properties().stacksTo(1).rarity(Rarity.RARE).tab(CreativeModeTab.TAB_MISC).fireResistant()));
+            new Item.Properties().stacksTo(1).rarity(Rarity.RARE).tab(ModTabs.INFINITY_NEXUS).fireResistant()));
     public static final RegistryObject<Item> INFINITY_3D_LEGGINGS = ITEMS.register("infinity_3d_leggings",() -> new Infinity3dArmorItem(ModArmorMaterials.INFINITY, EquipmentSlot.LEGS,
-            new Item.Properties().stacksTo(1).rarity(Rarity.RARE).tab(CreativeModeTab.TAB_MISC).fireResistant()));
+            new Item.Properties().stacksTo(1).rarity(Rarity.RARE).tab(ModTabs.INFINITY_NEXUS).fireResistant()));
     public static final RegistryObject<Item> INFINITY_3D_BOOTS = ITEMS.register("infinity_3d_boots",() -> new Infinity3dArmorItem(ModArmorMaterials.INFINITY, EquipmentSlot.FEET,
-            new Item.Properties().stacksTo(1).rarity(Rarity.RARE).tab(CreativeModeTab.TAB_MISC).fireResistant()));
+            new Item.Properties().stacksTo(1).rarity(Rarity.RARE).tab(ModTabs.INFINITY_NEXUS).fireResistant()));
     //Tools
     //---------------------------------------------------------//---------------------------------------------------------//
     //Misc
@@ -276,7 +281,7 @@ public class ModItems {
                     new Item.Properties().stacksTo(1).rarity(Rarity.RARE).fireResistant()));
 
     public static final RegistryObject<Item> PURPLE_INFINITY_3D_SWORD = ITEMS.register("purple_infinity_3d_sword",() -> new ModSword(ModTiers.INFINITY, ModCommonConfigs.I_S_DAMAGE.get(), ModCommonConfigs.I_S_SPEED.get(),//+4
-                    new Item.Properties().stacksTo(1).tab(CreativeModeTab.TAB_MISC).fireResistant(),
+                    new Item.Properties().stacksTo(1).fireResistant(),
                     new TranslatableComponent("tooltip.infinity_nexus_mod.purple_infinity_3d_sword"),
                     new MobEffectInstance[]{
                             new MobEffectInstance(MobEffects.WEAKNESS, 200,1),

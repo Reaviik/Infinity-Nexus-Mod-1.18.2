@@ -6,6 +6,7 @@ import com.Infinity.Nexus.Mod.effect.ModEffects;
 import com.Infinity.Nexus.Mod.fluid.ModFluids;
 import com.Infinity.Nexus.Mod.item.ModItems;
 import com.Infinity.Nexus.Mod.potion.ModPotions;
+import com.Infinity.Nexus.Mod.utils.BetterBrewingRecipe;
 import com.Infinity.Nexus.Mod.utils.ModItemProperties;
 import com.Infinity.Nexus.Mod.villager.ModPOIs;
 import com.Infinity.Nexus.Mod.world.dimension.ModDimensions;
@@ -14,7 +15,9 @@ import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.alchemy.Potions;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -40,7 +43,7 @@ public class InfinityNexusMod
     public InfinityNexusMod()
     {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
-        //teste
+
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
 
@@ -121,8 +124,8 @@ public class InfinityNexusMod
     private void setup(final FMLCommonSetupEvent event)
     {
 
-        //BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.AWKWARD,
-        //        ModItems.INFINITY_INGOT.get(), ModPotions.FREEZE_POTION.get()));
+        BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.AWKWARD,
+                ModItems.INFINITY_INGOT.get(), ModPotions.FREEZE_POTION.get()));
 
 
         LOGGER.info("   §4_____§5_   __§9__________§3_   ______§b_______  __");

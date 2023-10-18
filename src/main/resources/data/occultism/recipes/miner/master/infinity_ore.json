@@ -1,0 +1,10 @@
+{
+  "type": "occultism:miner",
+  "ingredient": {
+    "tag": "occultism:miners/master"
+  },
+  "result": {
+    "item": "infinity_nexus_mod:infinity_ore"
+  },
+  "weight": 100
+}

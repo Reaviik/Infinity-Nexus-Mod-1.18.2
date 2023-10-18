@@ -1,5 +1,6 @@
 package com.Infinity.Nexus.Mod.effect;
 
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.LivingEntity;
@@ -18,6 +19,7 @@ public class FreezeEffect extends MobEffect {
 
             pLivingEntity.teleportTo(x, y, z);
             pLivingEntity.setDeltaMovement(0, 0, 0);
+            pLivingEntity.hurt(DamageSource.FREEZE,1);
         }
         super.applyEffectTick(pLivingEntity, pAmplifier);
     }

@@ -1,0 +1,28 @@
+{
+  "type": "occultism:crushing",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ores/infinity"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:dusts/infinity"
+      }
+    }
+  ],
+  "ingredient": {
+    "tag": "forge:ores/infinity"
+  },
+  "result": {
+    "tag": "forge:dusts/infinity",
+    "count": 2
+  },
+  "crushing_time": 1000,
+  "ignore_crushing_multiplier": false
+}

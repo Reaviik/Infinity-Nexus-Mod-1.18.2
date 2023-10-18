@@ -23,7 +23,7 @@ public class InfinityArmorItem extends ArmorItem {
     public void onArmorTick(ItemStack stack, Level world, Player player) {
         if(!world.isClientSide()) {
             if (hasFullSuitOfArmorOn(player)) {
-
+                player.getAbilities().mayfly = true;
                 //Ad player effects
                 player.fireImmune();
                 player.getFoodData().setSaturation(5);
@@ -32,6 +32,7 @@ public class InfinityArmorItem extends ArmorItem {
                 player.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 200, ModCommonConfigs.I_A_REGENERATION.get(), false, false));
                 player.onUpdateAbilities();
             }else{
+                player.getAbilities().mayfly = false;
                 player.onUpdateAbilities();
             }
         }

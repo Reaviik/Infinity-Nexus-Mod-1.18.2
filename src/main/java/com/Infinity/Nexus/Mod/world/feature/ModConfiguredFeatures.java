@@ -17,7 +17,7 @@ public class ModConfiguredFeatures {
             OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ModBlocks.INFINITY_ORE.get().defaultBlockState()),
             OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.DEEPSLATE_INFINITY_ORE.get().defaultBlockState()));
 
-    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> INFINITY_ORE = FeatureUtils.register("infinity_ore",
+    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> INFINITY_ORE = FeatureUtils.register("infinity_ore.json",
             Feature.ORE, new OreConfiguration(OVERWORLD_INFINITY_ORES, ModCommonConfigs.I_O_C_SIZE.get()));
 
 }
