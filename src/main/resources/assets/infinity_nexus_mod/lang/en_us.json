@@ -129,10 +129,13 @@
   "block.infinity_nexus_mod.industrial_machine_casing": "Industrial Machine Casing",
 
   "block.infinity_nexus_mod.molten_tinkers_bucket": "Molten Tinkers",
+  "fluid.infinity_nexus_mod.molten_tinkers": "Molten Tinkers",
   "item.infinity_nexus_mod.molten_tinkers_bucket": "Tinkers Bucket",
   "block.infinity_nexus_mod.molten_infinity_bucket": "Molten Infinity",
+  "fluid.infinity_nexus_mod.molten_infinity": "Molten Infinity",
   "item.infinity_nexus_mod.molten_infinity_bucket": "Infinity Bucket",
   "block.infinity_nexus_mod.molten_starliquid_bucket": "Molten Starliquid",
+  "fluid.infinity_nexus_mod.molten_starliquid": "Molten Starliquid",
   "item.infinity_nexus_mod.molten_starliquid_bucket": "Starliquid Bucket",
 
 

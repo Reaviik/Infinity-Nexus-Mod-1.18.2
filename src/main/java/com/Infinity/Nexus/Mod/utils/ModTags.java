@@ -91,6 +91,7 @@ public class ModTags {
 
         //---------------------------------------------//---------------------------------------------//
         private static TagKey<Item> tag(String name) {
+            System.out.println("\n\n\n\n"+InfinityNexusMod.MOD_ID+name+"\n\n\n\n");
             return ItemTags.create(new ResourceLocation(InfinityNexusMod.MOD_ID, name));
         }
 

@@ -34,10 +34,10 @@ public class Infinity3dArmorItem extends GeoArmorItem implements IAnimatable {
                 player.getFoodData().setSaturation(5);
                 player.getFoodData().setFoodLevel(19);
                 player.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 200, ModCommonConfigs.I_A_ABSORPTION.get(), false, false));
+                player.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 200, ModCommonConfigs.I_A_REGENERATION.get(), false, false));
                 player.onUpdateAbilities();
             }else{
                 player.getAbilities().mayfly = false;
-                //Remove Player Effects
                 player.onUpdateAbilities();
             }
         }

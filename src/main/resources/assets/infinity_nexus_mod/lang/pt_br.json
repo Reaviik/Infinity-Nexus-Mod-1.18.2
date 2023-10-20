@@ -127,10 +127,13 @@
   "block.infinity_nexus_mod.industrial_machine_casing": "Carcaça de Máquina Industrial",
 
   "block.infinity_nexus_mod.molten_tinkers_bucket": "Tinkers Derretido",
+  "fluid.infinity_nexus_mod.molten_tinkers": "Tinkers Derretido",
   "item.infinity_nexus_mod.molten_tinkers_bucket": "Balde de Tinkers Fundido",
   "block.infinity_nexus_mod.molten_infinity_bucket": "Infinity Derretido",
+  "fluid.infinity_nexus_mod.molten_infinity": "Infinity Derretido",
   "item.infinity_nexus_mod.molten_infinity_bucket": "Balde de Infinity Fundido",
   "block.infinity_nexus_mod.molten_starliquid_bucket": "Starliquid Derretido",
+  "fluid.infinity_nexus_mod.molten_starliquid": "Starliquid Derretido",
   "item.infinity_nexus_mod.molten_starliquid_bucket": "Balde de Starliquid Fundido",
 
   "item.infinity_nexus_mod.tinkers_ingot": "Lingote de Tinkers",

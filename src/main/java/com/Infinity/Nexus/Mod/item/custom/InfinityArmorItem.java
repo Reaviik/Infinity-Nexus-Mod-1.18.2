@@ -28,8 +28,8 @@ public class InfinityArmorItem extends ArmorItem {
                 player.fireImmune();
                 player.getFoodData().setSaturation(5);
                 player.getFoodData().setFoodLevel(19);
-                player.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 200, ModCommonConfigs.I_A_ABSORPTION.get(), false, false));
-                player.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 200, ModCommonConfigs.I_A_REGENERATION.get(), false, false));
+                player.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 400, ModCommonConfigs.I_A_ABSORPTION.get(), false, false));
+                player.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 400, ModCommonConfigs.I_A_REGENERATION.get(), false, false));
                 player.onUpdateAbilities();
             }else{
                 player.getAbilities().mayfly = false;
@@ -43,12 +43,11 @@ public class InfinityArmorItem extends ArmorItem {
         ItemStack breastplate = player.getInventory().getArmor(2).getItem().getDefaultInstance();
         ItemStack helmet = player.getInventory().getArmor(3).getItem().getDefaultInstance();
 
-
         boolean armor =
                 boots.is(ModTags.Items.INFINITY_BOOTS)
-                        && leggings.is(ModTags.Items.INFINITY_LEGGINGS)
-                        && breastplate.is(ModTags.Items.INFINITY_CHESTPLATE)
-                        && helmet.is(ModTags.Items.INFINITY_HELMET);
+                && leggings.is(ModTags.Items.INFINITY_LEGGINGS)
+                && breastplate.is(ModTags.Items.INFINITY_CHESTPLATE)
+                && helmet.is(ModTags.Items.INFINITY_HELMET);
         return armor;
     }
     @Override
